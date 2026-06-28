@@ -1,0 +1,25 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import FilterBar from "../components/FilterBar.astro";
+import NewThisWeek from "../components/NewThisWeek.astro";
+import CategorySection from "../components/CategorySection.astro";
+import { categoriesWithCounts, allResources, generatedAt } from "../lib/resources.ts";
+
+const cats = categoriesWithCounts();
+const total = allResources.length;
+const updated = new Date(generatedAt).toLocaleDateString("es-ES", { dateStyle: "long" });
+---
+<BaseLayout title="DevRadar — tu radar de repos, webs y skills">
+  <section class="hero">
+    <h1>Tu radar de desarrollo</h1>
+    <p>Repositorios, webs de referencia y skills relevantes para .NET, Angular, arquitectura y para trabajar con Claude — curados y categorizados automáticamente.</p>
+    <p class="meta">{total} recursos · actualizado el {updated}</p>
+  </section>
+
+  <FilterBar />
+  <NewThisWeek />
+
+  {cats.map((c) => (
+    <CategorySection icon={c.icon} label={c.label} slug={c.slug} items={c.items} />
+  ))}
+</BaseLayout>

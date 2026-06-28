@@ -1,0 +1,22 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ResourceCard from "../../components/ResourceCard.astro";
+import { CATEGORIES } from "../../lib/categories.ts";
+import { byCategory } from "../../lib/resources.ts";
+
+export function getStaticPaths() {
+  return CATEGORIES.map((c) => ({ params: { slug: c.slug }, props: { category: c } }));
+}
+
+const { category } = Astro.props;
+const items = byCategory(category.slug).sort((a, b) => b.relevanceScore - a.relevanceScore);
+---
+<BaseLayout title={`${category.label} — DevRadar`}>
+  <section class="hero">
+    <h1>{category.icon} {category.label}</h1>
+    <p class="meta">{items.length} recursos en esta categoría</p>
+  </section>
+  {items.length === 0
+    ? <p class="empty">Aún no hay recursos en esta categoría.</p>
+    : <div class="grid">{items.map((r) => <ResourceCard resource={r} />)}</div>}
+</BaseLayout>

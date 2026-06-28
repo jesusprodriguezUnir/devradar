@@ -1,0 +1,46 @@
+---
+import "../styles/global.css";
+import { generatedAt } from "../lib/resources.ts";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+const { title = "DevRadar", description = "Repos, webs y skills relevantes para .NET, Angular, arquitectura y Claude." } = Astro.props;
+const base = import.meta.env.BASE_URL;
+const updated = new Date(generatedAt).toLocaleString("es-ES", { dateStyle: "medium", timeStyle: "short" });
+const path = Astro.url.pathname.replace(/\/$/, "");
+const isActive = (href: string) => (path === href.replace(/\/$/, "") ? "page" : undefined);
+---
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><text y='14' font-size='14'>📡</text></svg>" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <a class="brand" href={base}>Dev<span>Radar</span></a>
+        <nav class="nav">
+          <a href={base} aria-current={isActive(base)}>Inicio</a>
+          <a href={`${base}tipo/repo`}>Repos</a>
+          <a href={`${base}tipo/skill`}>Skills</a>
+          <a href={`${base}tipo/website`}>Webs</a>
+          <a href={`${base}acerca`} aria-current={isActive(`${base}acerca`)}>Acerca</a>
+        </nav>
+      </div>
+    </header>
+    <main class="container">
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <div class="container">
+        DevRadar · datos actualizados el {updated} · generado estáticamente y desplegado en GitHub Pages.
+      </div>
+    </footer>
+  </body>
+</html>

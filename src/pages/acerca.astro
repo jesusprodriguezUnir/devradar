@@ -1,0 +1,16 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { allResources, generatedAt } from "../lib/resources.ts";
+const updated = new Date(generatedAt).toLocaleString("es-ES", { dateStyle: "long", timeStyle: "short" });
+---
+<BaseLayout title="Acerca — DevRadar">
+  <section class="hero">
+    <h1>Acerca de DevRadar</h1>
+    <p>Panel estático que cura y categoriza recursos relevantes para mi día a día como arquitecto .NET / Angular y para trabajar con Claude.</p>
+  </section>
+  <div class="section" style="max-width:70ch">
+    <p>Cada cierto tiempo, un pipeline ejecutado en GitHub Actions descubre repositorios mediante la GitHub Search API, los combina con un <em>seed</em> curado de webs y skills, los puntúa por relevancia y los categoriza con reglas (y Claude para lo ambiguo). El resultado es un <code>resources.json</code> versionado que Astro convierte en este sitio estático.</p>
+    <p>Tipos de recurso: <strong>repos</strong> de GitHub, <strong>webs</strong> de referencia y <strong>skills</strong> para Claude / agentes. La búsqueda y los filtros funcionan en el navegador, sin servidor.</p>
+    <p class="meta">Catálogo actual: {allResources.length} recursos · última actualización: {updated}.</p>
+  </div>
+</BaseLayout>

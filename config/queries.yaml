@@ -1,0 +1,91 @@
+# Consultas a la GitHub Search API. Cada entrada origina una busqueda.
+# `q` usa la sintaxis de calificadores de GitHub Search.
+# `defaultCategory` se aplica si las reglas no encuentran categoria mejor.
+# `weight` ajusta la relevancia de los resultados de esa query.
+# {{since}} se sustituye en runtime por una fecha (pushed reciente).
+
+defaults:
+  minStars: 150
+  perQuery: 15        # cuantos resultados conservar por query (tras filtrar)
+  pushedSinceDays: 365
+
+queries:
+  - id: dotnet-core
+    type: repo
+    q: "topic:dotnet stars:>{{minStars}} pushed:>{{since}}"
+    defaultCategory: dotnet-backend
+    weight: 1.0
+
+  - id: aspnetcore
+    type: repo
+    q: "topic:aspnetcore stars:>{{minStars}} pushed:>{{since}}"
+    defaultCategory: dotnet-backend
+    weight: 1.0
+
+  - id: efcore
+    type: repo
+    q: "topic:entity-framework-core stars:>100 pushed:>{{since}}"
+    defaultCategory: dotnet-backend
+    weight: 0.9
+
+  - id: angular
+    type: repo
+    q: "topic:angular stars:>{{minStars}} pushed:>{{since}}"
+    defaultCategory: angular-frontend
+    weight: 1.0
+
+  - id: angular-state
+    type: repo
+    q: "topic:ngrx stars:>100 pushed:>{{since}}"
+    defaultCategory: angular-frontend
+    weight: 0.8
+
+  - id: architecture
+    type: repo
+    q: "topic:clean-architecture stars:>{{minStars}} pushed:>{{since}}"
+    defaultCategory: architecture-patterns
+    weight: 1.0
+
+  - id: ddd
+    type: repo
+    q: "topic:domain-driven-design stars:>100 pushed:>{{since}}"
+    defaultCategory: architecture-patterns
+    weight: 0.9
+
+  - id: system-design
+    type: repo
+    q: "topic:system-design stars:>1000 pushed:>{{since}}"
+    defaultCategory: architecture-patterns
+    weight: 0.8
+
+  # --- Claude / Agentes IA / Skills ---
+  - id: claude-code
+    type: skill
+    q: "topic:claude-code stars:>50 pushed:>{{since}}"
+    defaultCategory: claude-ai
+    weight: 1.2
+
+  - id: claude-code-plugin
+    type: skill
+    q: "topic:claude-code-plugin stars:>20 pushed:>{{since}}"
+    defaultCategory: claude-ai
+    weight: 1.2
+
+  - id: agent-skills
+    type: skill
+    q: "topic:agent-skills stars:>20 pushed:>{{since}}"
+    defaultCategory: claude-ai
+    weight: 1.1
+
+  - id: mcp-servers
+    type: skill
+    q: "topic:mcp stars:>200 pushed:>{{since}}"
+    defaultCategory: claude-ai
+    weight: 1.0
+
+  # --- DevOps / Tooling ---
+  - id: devops-dotnet
+    type: repo
+    q: "topic:dotnet topic:docker stars:>200 pushed:>{{since}}"
+    defaultCategory: devops-tooling
+    weight: 0.7

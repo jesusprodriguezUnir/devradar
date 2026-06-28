@@ -1,0 +1,17 @@
+---
+import ResourceCard from "./ResourceCard.astro";
+import type { Resource } from "../lib/resources.ts";
+
+interface Props { icon: string; label: string; slug: string; items: Resource[]; }
+const { icon, label, slug, items } = Astro.props;
+const base = import.meta.env.BASE_URL;
+---
+<section class="section" id={slug} data-section={slug}>
+  <div class="section-head">
+    <h2>{icon} <a href={`${base}categoria/${slug}`}>{label}</a></h2>
+    <span class="count">{items.length}</span>
+  </div>
+  <div class="grid">
+    {items.map((r) => <ResourceCard resource={r} />)}
+  </div>
+</section>

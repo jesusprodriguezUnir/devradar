@@ -1,0 +1,24 @@
+{
+  "name": "devradar",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "description": "Panel estatico que cura y categoriza repos, webs y skills relevantes para .NET, Angular, arquitectura y Claude.",
+  "scripts": {
+    "ingest": "tsx scripts/ingest/index.ts",
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check"
+  },
+  "dependencies": {
+    "astro": "^5.2.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.0",
+    "yaml": "^2.6.0"
+  }
+}

@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.astro/
+.env
+.DS_Store
+npm-debug.log*
+
+# La cache de clasificaciones SI se versiona (reproducibilidad y coste cero en estado estacionario).
+# Si prefieres no versionarla, descomenta:
+# .cache/

@@ -1,0 +1,23 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ResourceCard from "../../components/ResourceCard.astro";
+import { byType } from "../../lib/resources.ts";
+import { TYPE_LABELS } from "../../lib/categories.ts";
+
+export function getStaticPaths() {
+  return (["repo", "skill", "website"] as const).map((type) => ({ params: { type } }));
+}
+
+const { type } = Astro.params as { type: "repo" | "skill" | "website" };
+const items = byType(type).sort((a, b) => b.relevanceScore - a.relevanceScore);
+const labels: Record<string, string> = { repo: "Repositorios", skill: "Skills", website: "Webs de referencia" };
+---
+<BaseLayout title={`${labels[type]} — DevRadar`}>
+  <section class="hero">
+    <h1>{labels[type]}</h1>
+    <p class="meta">{items.length} recursos de tipo «{TYPE_LABELS[type]}»</p>
+  </section>
+  {items.length === 0
+    ? <p class="empty">Aún no hay recursos de este tipo.</p>
+    : <div class="grid">{items.map((r) => <ResourceCard resource={r} />)}</div>}
+</BaseLayout>

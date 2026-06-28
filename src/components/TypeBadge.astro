@@ -1,0 +1,6 @@
+---
+import { TYPE_LABELS } from "../lib/categories.ts";
+interface Props { type: "repo" | "website" | "skill"; }
+const { type } = Astro.props;
+---
+<span class={`badge ${type}`}>{TYPE_LABELS[type]}</span>

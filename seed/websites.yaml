@@ -1,0 +1,67 @@
+# Webs de referencia curadas a mano (type=website).
+# No vienen de la GitHub API: tu las mantienes. El pipeline valida la URL en build.
+websites:
+  - name: "Microsoft Learn — .NET"
+    url: "https://learn.microsoft.com/dotnet/"
+    category: dotnet-backend
+    tags: [dotnet, docs, microsoft, referencia]
+    summary_es: "Documentacion oficial de .NET, C# y ASP.NET Core. Tu referencia de cabecera."
+    featured: true
+
+  - name: ".NET API Browser"
+    url: "https://learn.microsoft.com/dotnet/api/"
+    category: dotnet-backend
+    tags: [dotnet, api, referencia]
+    summary_es: "Buscador de toda la API de .NET por namespace, tipo y miembro."
+
+  - name: "Angular (angular.dev)"
+    url: "https://angular.dev/"
+    category: angular-frontend
+    tags: [angular, docs, referencia]
+    summary_es: "Documentacion oficial moderna de Angular: signals, standalone, control flow."
+    featured: true
+
+  - name: "RxJS"
+    url: "https://rxjs.dev/"
+    category: angular-frontend
+    tags: [rxjs, reactive, referencia]
+    summary_es: "Documentacion de RxJS, operadores y diagramas de marbles."
+
+  - name: "Refactoring Guru — Patrones y Refactoring"
+    url: "https://refactoring.guru/"
+    category: architecture-patterns
+    tags: [patrones, refactoring, design-patterns]
+    summary_es: "Patrones de diseno y refactorings explicados con ejemplos en varios lenguajes."
+    featured: true
+
+  - name: "Microservices.io (Chris Richardson)"
+    url: "https://microservices.io/"
+    category: architecture-patterns
+    tags: [microservicios, patrones, arquitectura]
+    summary_es: "Catalogo de patrones de microservicios: saga, CQRS, API gateway, etc."
+
+  - name: "Martin Fowler — bliki"
+    url: "https://martinfowler.com/"
+    category: architecture-patterns
+    tags: [arquitectura, patrones, refactoring]
+    summary_es: "Articulos de referencia sobre arquitectura, microservicios y diseno de software."
+
+  - name: "MDN Web Docs"
+    url: "https://developer.mozilla.org/"
+    category: learning-reference
+    tags: [web, javascript, html, css, referencia]
+    summary_es: "La referencia definitiva de la plataforma web: HTML, CSS, JS y APIs del navegador."
+    featured: true
+
+  - name: "Anthropic — Documentacion de Claude"
+    url: "https://docs.claude.com/"
+    category: claude-ai
+    tags: [claude, anthropic, docs, agentes]
+    summary_es: "Documentacion oficial de Claude: API, tool use, prompt engineering y skills."
+    featured: true
+
+  - name: "Model Context Protocol (MCP)"
+    url: "https://modelcontextprotocol.io/"
+    category: claude-ai
+    tags: [mcp, agentes, protocolo, claude]
+    summary_es: "Especificacion y guias del protocolo MCP para conectar herramientas a agentes."

@@ -1,0 +1,38 @@
+---
+import TypeBadge from "./TypeBadge.astro";
+import { formatStars, categoryLabel, type Resource } from "../lib/resources.ts";
+
+interface Props { resource: Resource; }
+const { resource: r } = Astro.props;
+const searchText = [r.name, r.summary_es, r.tags.join(" "), r.language ?? ""].join(" ").toLowerCase();
+---
+<article
+  class={`card js-card ${r.stale ? "stale" : ""}`}
+  data-type={r.type}
+  data-category={r.category}
+  data-language={r.language ?? ""}
+  data-search={searchText}
+>
+  <div class="card-top">
+    <TypeBadge type={r.type} />
+    {r.featured && <span class="featured-dot" title="Destacado">★</span>}
+    {r.stale && <span class="tag" title="No refrescado en el último run">stale</span>}
+  </div>
+
+  <h3><a href={r.url} target="_blank" rel="noopener noreferrer">{r.name}</a></h3>
+  <p>{r.summary_es}</p>
+
+  {r.tags.length > 0 && (
+    <div class="tags">
+      {r.tags.slice(0, 4).map((t) => <span class="tag">{t}</span>)}
+    </div>
+  )}
+
+  <div class="card-foot">
+    <span>{categoryLabel(r.category)}</span>
+    {r.language && <span>· {r.language}</span>}
+    {r.stars !== null && <span class="star">· ★ {formatStars(r.stars)}</span>}
+    {r.starsDelta > 0 && <span title="Nuevas estrellas desde el último run">· +{r.starsDelta}</span>}
+    {r.license && <span>· {r.license}</span>}
+  </div>
+</article>

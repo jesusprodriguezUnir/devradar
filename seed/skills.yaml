@@ -1,0 +1,29 @@
+# Skills / plugins "ancla" para Claude y agentes (type=skill).
+# Se anaden si o si al catalogo aunque no salgan en las busquedas, y se enriquecen
+# con metadatos de GitHub si `repo` apunta a un repositorio (owner/name).
+skills:
+  - name: "ponytail"
+    repo: "DietrichGebert/ponytail"
+    url: "https://github.com/DietrichGebert/ponytail"
+    category: claude-ai
+    tags: [claude-code, skill, yagni, prompt-engineering]
+    summary_es: "Skill que hace que el agente escriba el minimo codigo necesario (mentalidad dev senior vago)."
+    claudeCompatible: true
+    featured: true
+
+  - name: "Anthropic — Skills oficiales"
+    repo: "anthropics/skills"
+    url: "https://github.com/anthropics/skills"
+    category: claude-ai
+    tags: [claude, skills, anthropic, oficial]
+    summary_es: "Coleccion oficial de skills de Anthropic (docx, pdf, pptx, xlsx y mas)."
+    claudeCompatible: true
+    featured: true
+
+  - name: "Awesome MCP Servers"
+    repo: "punkpeye/awesome-mcp-servers"
+    url: "https://github.com/punkpeye/awesome-mcp-servers"
+    category: claude-ai
+    tags: [mcp, awesome-list, agentes, conectores]
+    summary_es: "Lista curada de servidores MCP para conectar herramientas externas a tu agente."
+    claudeCompatible: true
