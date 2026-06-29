@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-29T17:51:20.480Z",
+  "generatedAt": "2026-06-29T17:55:43.559Z",
   "count": 181,
   "resources": [
     {
@@ -18,7 +18,7 @@
         "oficial"
       ],
       "language": "Python",
-      "stars": 156598,
+      "stars": 156599,
       "starsDelta": 0,
       "lastCommit": "2026-06-27T16:07:58Z",
       "license": null,
@@ -28,7 +28,7 @@
       "claudeCompatible": true,
       "stale": false,
       "addedAt": "2026-06-28T21:57:31.999Z",
-      "updatedAt": "2026-06-29T17:51:19.859Z"
+      "updatedAt": "2026-06-29T17:55:42.937Z"
     },
     {
       "id": "skill:punkpeye/awesome-mcp-servers",
@@ -56,7 +56,7 @@
       "claudeCompatible": true,
       "stale": false,
       "addedAt": "2026-06-28T21:57:32.002Z",
-      "updatedAt": "2026-06-29T17:51:20.472Z"
+      "updatedAt": "2026-06-29T17:55:43.552Z"
     },
     {
       "id": "skill:DietrichGebert/ponytail",
@@ -74,7 +74,7 @@
         "prompt-engineering"
       ],
       "language": "JavaScript",
-      "stars": 66925,
+      "stars": 66927,
       "starsDelta": 0,
       "lastCommit": "2026-06-29T05:26:32Z",
       "license": "MIT",
@@ -84,7 +84,7 @@
       "claudeCompatible": true,
       "stale": false,
       "addedAt": "2026-06-28T21:57:31.985Z",
-      "updatedAt": "2026-06-29T17:51:19.220Z"
+      "updatedAt": "2026-06-29T17:55:42.256Z"
     },
     {
       "id": "website:https://learn.microsoft.com/dotnet/api/",
@@ -111,7 +111,7 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-28T21:57:32.002Z",
-      "updatedAt": "2026-06-29T17:51:20.472Z"
+      "updatedAt": "2026-06-29T17:55:43.552Z"
     },
     {
       "id": "website:https://angular.dev/",
@@ -138,7 +138,7 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-28T21:57:32.002Z",
-      "updatedAt": "2026-06-29T17:51:20.472Z"
+      "updatedAt": "2026-06-29T17:55:43.552Z"
     },
     {
       "id": "website:https://docs.claude.com/",
@@ -166,7 +166,7 @@
       "claudeCompatible": true,
       "stale": false,
       "addedAt": "2026-06-28T21:57:32.002Z",
-      "updatedAt": "2026-06-29T17:51:20.472Z"
+      "updatedAt": "2026-06-29T17:55:43.552Z"
     },
     {
       "id": "website:https://martinfowler.com/",
@@ -193,7 +193,7 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-28T21:57:32.002Z",
-      "updatedAt": "2026-06-29T17:51:20.472Z"
+      "updatedAt": "2026-06-29T17:55:43.552Z"
     },
     {
       "id": "website:https://developer.mozilla.org/",
@@ -222,7 +222,7 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-28T21:57:32.002Z",
-      "updatedAt": "2026-06-29T17:51:20.472Z"
+      "updatedAt": "2026-06-29T17:55:43.552Z"
     },
     {
       "id": "website:https://microservices.io/",
@@ -249,7 +249,7 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-28T21:57:32.002Z",
-      "updatedAt": "2026-06-29T17:51:20.472Z"
+      "updatedAt": "2026-06-29T17:55:43.552Z"
     },
     {
       "id": "website:https://learn.microsoft.com/dotnet/",
@@ -277,7 +277,7 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-28T21:57:32.002Z",
-      "updatedAt": "2026-06-29T17:51:20.472Z"
+      "updatedAt": "2026-06-29T17:55:43.552Z"
     },
     {
       "id": "website:https://modelcontextprotocol.io/",
@@ -305,7 +305,7 @@
       "claudeCompatible": true,
       "stale": false,
       "addedAt": "2026-06-28T21:57:32.002Z",
-      "updatedAt": "2026-06-29T17:51:20.472Z"
+      "updatedAt": "2026-06-29T17:55:43.552Z"
     },
     {
       "id": "website:https://refactoring.guru/",
@@ -332,7 +332,7 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-28T21:57:32.002Z",
-      "updatedAt": "2026-06-29T17:51:20.472Z"
+      "updatedAt": "2026-06-29T17:55:43.552Z"
     },
     {
       "id": "website:https://rxjs.dev/",
@@ -359,7 +359,127 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-28T21:57:32.002Z",
-      "updatedAt": "2026-06-29T17:51:20.472Z"
+      "updatedAt": "2026-06-29T17:55:43.552Z"
+    },
+    {
+      "id": "skill:safishamsi/graphify",
+      "type": "skill",
+      "name": "safishamsi/graphify",
+      "owner": "safishamsi",
+      "url": "https://github.com/safishamsi/graphify",
+      "description": "AI coding assistant skill (Claude Code, Codex, OpenCode, Cursor, Gemini CLI, and more). Turn any folder of code, SQL schemas, R scripts, shell scripts, docs, papers, images, or videos into a queryable knowledge graph. App code + database schema + infrastructure in one graph.",
+      "summary_es": "AI coding assistant skill (Claude Code, Codex, OpenCode, Cursor, Gemini CLI, and more). Turn any folder of code, SQL schemas, R scripts, shell scripts, docs, papers, images, or videos into a queryabl…",
+      "category": "claude-ai",
+      "tags": [
+        "antigravity",
+        "claude-code",
+        "codex",
+        "gemini",
+        "graphrag",
+        "knowledge-graph"
+      ],
+      "language": "Python",
+      "stars": 74227,
+      "starsDelta": 4,
+      "lastCommit": "2026-06-29T15:30:10Z",
+      "license": "MIT",
+      "source": "search",
+      "relevanceScore": 1.082,
+      "featured": false,
+      "claudeCompatible": true,
+      "stale": false,
+      "addedAt": "2026-06-29T07:29:14.719Z",
+      "updatedAt": "2026-06-29T17:55:30.261Z"
+    },
+    {
+      "id": "skill:nextlevelbuilder/ui-ux-pro-max-skill",
+      "type": "skill",
+      "name": "nextlevelbuilder/ui-ux-pro-max-skill",
+      "owner": "nextlevelbuilder",
+      "url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
+      "description": "An AI SKILL that provide design intelligence for building professional UI/UX multiple platforms",
+      "summary_es": "An AI SKILL that provide design intelligence for building professional UI/UX multiple platforms",
+      "category": "claude-ai",
+      "tags": [
+        "ai-skills",
+        "antigravity",
+        "claude",
+        "claude-code",
+        "codex",
+        "command-line"
+      ],
+      "language": "Python",
+      "stars": 97883,
+      "starsDelta": 2,
+      "lastCommit": "2026-06-29T17:00:03Z",
+      "license": "MIT",
+      "source": "search",
+      "relevanceScore": 1.081,
+      "featured": false,
+      "claudeCompatible": true,
+      "stale": false,
+      "addedAt": "2026-06-29T07:29:14.719Z",
+      "updatedAt": "2026-06-29T17:55:30.261Z"
+    },
+    {
+      "id": "skill:ruvnet/ruflo",
+      "type": "skill",
+      "name": "ruvnet/ruflo",
+      "owner": "ruvnet",
+      "url": "https://github.com/ruvnet/ruflo",
+      "description": "🌊 The leading agent meta-harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning swarm intelligence, RAG integration, and native Claude Code / Codex Integration",
+      "summary_es": "🌊 The leading agent meta-harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning swarm intellig…",
+      "category": "claude-ai",
+      "tags": [
+        "agentic-ai",
+        "agentic-framework",
+        "agentic-rag",
+        "agentic-workflow",
+        "agents",
+        "ai-agents"
+      ],
+      "language": "TypeScript",
+      "stars": 62041,
+      "starsDelta": 1,
+      "lastCommit": "2026-06-29T16:04:24Z",
+      "license": "MIT",
+      "source": "search",
+      "relevanceScore": 1.081,
+      "featured": false,
+      "claudeCompatible": true,
+      "stale": false,
+      "addedAt": "2026-06-29T07:29:14.719Z",
+      "updatedAt": "2026-06-29T17:55:30.261Z"
+    },
+    {
+      "id": "skill:affaan-m/ECC",
+      "type": "skill",
+      "name": "affaan-m/ECC",
+      "owner": "affaan-m",
+      "url": "https://github.com/affaan-m/ECC",
+      "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+      "summary_es": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+      "category": "claude-ai",
+      "tags": [
+        "ai-agents",
+        "anthropic",
+        "claude",
+        "claude-code",
+        "developer-tools",
+        "llm"
+      ],
+      "language": "JavaScript",
+      "stars": 223391,
+      "starsDelta": 1,
+      "lastCommit": "2026-06-29T04:55:36Z",
+      "license": "MIT",
+      "source": "search",
+      "relevanceScore": 1.08,
+      "featured": false,
+      "claudeCompatible": true,
+      "stale": false,
+      "addedAt": "2026-06-29T07:29:14.719Z",
+      "updatedAt": "2026-06-29T17:55:30.261Z"
     },
     {
       "id": "skill:farion1231/cc-switch",
@@ -380,46 +500,16 @@
       ],
       "language": "Rust",
       "stars": 110598,
-      "starsDelta": 354,
+      "starsDelta": 0,
       "lastCommit": "2026-06-29T15:40:20Z",
       "license": "MIT",
       "source": "search",
-      "relevanceScore": 1.2,
+      "relevanceScore": 1.08,
       "featured": false,
       "claudeCompatible": true,
       "stale": false,
       "addedAt": "2026-06-29T07:29:14.719Z",
-      "updatedAt": "2026-06-29T17:51:07.306Z"
-    },
-    {
-      "id": "skill:nextlevelbuilder/ui-ux-pro-max-skill",
-      "type": "skill",
-      "name": "nextlevelbuilder/ui-ux-pro-max-skill",
-      "owner": "nextlevelbuilder",
-      "url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
-      "description": "An AI SKILL that provide design intelligence for building professional UI/UX multiple platforms",
-      "summary_es": "An AI SKILL that provide design intelligence for building professional UI/UX multiple platforms",
-      "category": "claude-ai",
-      "tags": [
-        "ai-skills",
-        "antigravity",
-        "claude",
-        "claude-code",
-        "codex",
-        "command-line"
-      ],
-      "language": "Python",
-      "stars": 97881,
-      "starsDelta": 284,
-      "lastCommit": "2026-06-29T17:00:03Z",
-      "license": "MIT",
-      "source": "search",
-      "relevanceScore": 1.2,
-      "featured": false,
-      "claudeCompatible": true,
-      "stale": false,
-      "addedAt": "2026-06-29T07:29:14.719Z",
-      "updatedAt": "2026-06-29T17:51:07.306Z"
+      "updatedAt": "2026-06-29T17:55:30.261Z"
     },
     {
       "id": "skill:NousResearch/hermes-agent",
@@ -440,106 +530,16 @@
       ],
       "language": "Python",
       "stars": 205587,
-      "starsDelta": 368,
+      "starsDelta": 0,
       "lastCommit": "2026-06-29T17:09:55Z",
       "license": "MIT",
       "source": "search",
-      "relevanceScore": 1.2,
+      "relevanceScore": 1.08,
       "featured": false,
       "claudeCompatible": true,
       "stale": false,
       "addedAt": "2026-06-29T07:29:14.719Z",
-      "updatedAt": "2026-06-29T17:51:07.306Z"
-    },
-    {
-      "id": "skill:safishamsi/graphify",
-      "type": "skill",
-      "name": "safishamsi/graphify",
-      "owner": "safishamsi",
-      "url": "https://github.com/safishamsi/graphify",
-      "description": "AI coding assistant skill (Claude Code, Codex, OpenCode, Cursor, Gemini CLI, and more). Turn any folder of code, SQL schemas, R scripts, shell scripts, docs, papers, images, or videos into a queryable knowledge graph. App code + database schema + infrastructure in one graph.",
-      "summary_es": "AI coding assistant skill (Claude Code, Codex, OpenCode, Cursor, Gemini CLI, and more). Turn any folder of code, SQL schemas, R scripts, shell scripts, docs, papers, images, or videos into a queryabl…",
-      "category": "claude-ai",
-      "tags": [
-        "antigravity",
-        "claude-code",
-        "codex",
-        "gemini",
-        "graphrag",
-        "knowledge-graph"
-      ],
-      "language": "Python",
-      "stars": 74223,
-      "starsDelta": 307,
-      "lastCommit": "2026-06-29T15:30:10Z",
-      "license": "MIT",
-      "source": "search",
-      "relevanceScore": 1.2,
-      "featured": false,
-      "claudeCompatible": true,
-      "stale": false,
-      "addedAt": "2026-06-29T07:29:14.719Z",
-      "updatedAt": "2026-06-29T17:51:07.306Z"
-    },
-    {
-      "id": "skill:affaan-m/ECC",
-      "type": "skill",
-      "name": "affaan-m/ECC",
-      "owner": "affaan-m",
-      "url": "https://github.com/affaan-m/ECC",
-      "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
-      "summary_es": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
-      "category": "claude-ai",
-      "tags": [
-        "ai-agents",
-        "anthropic",
-        "claude",
-        "claude-code",
-        "developer-tools",
-        "llm"
-      ],
-      "language": "JavaScript",
-      "stars": 223390,
-      "starsDelta": 198,
-      "lastCommit": "2026-06-29T04:55:36Z",
-      "license": "MIT",
-      "source": "search",
-      "relevanceScore": 1.198,
-      "featured": false,
-      "claudeCompatible": true,
-      "stale": false,
-      "addedAt": "2026-06-29T07:29:14.719Z",
-      "updatedAt": "2026-06-29T17:51:07.306Z"
-    },
-    {
-      "id": "skill:addyosmani/agent-skills",
-      "type": "skill",
-      "name": "addyosmani/agent-skills",
-      "owner": "addyosmani",
-      "url": "https://github.com/addyosmani/agent-skills",
-      "description": "Production-grade engineering skills for AI coding agents.",
-      "summary_es": "Production-grade engineering skills for AI coding agents.",
-      "category": "claude-ai",
-      "tags": [
-        "agent-skills",
-        "antigravity",
-        "antigravity-ide",
-        "claude-code",
-        "cursor",
-        "skills"
-      ],
-      "language": "Shell",
-      "stars": 67920,
-      "starsDelta": 169,
-      "lastCommit": "2026-06-28T18:11:20Z",
-      "license": "MIT",
-      "source": "search",
-      "relevanceScore": 1.181,
-      "featured": false,
-      "claudeCompatible": true,
-      "stale": false,
-      "addedAt": "2026-06-29T07:29:14.719Z",
-      "updatedAt": "2026-06-29T17:51:07.306Z"
+      "updatedAt": "2026-06-29T17:55:30.261Z"
     },
     {
       "id": "skill:rtk-ai/rtk",
@@ -560,106 +560,16 @@
       ],
       "language": "Rust",
       "stars": 67004,
-      "starsDelta": 168,
+      "starsDelta": 0,
       "lastCommit": "2026-06-29T12:24:34Z",
       "license": "Apache-2.0",
       "source": "search",
-      "relevanceScore": 1.181,
+      "relevanceScore": 1.08,
       "featured": false,
       "claudeCompatible": true,
       "stale": false,
       "addedAt": "2026-06-29T07:29:14.719Z",
-      "updatedAt": "2026-06-29T17:51:07.306Z"
-    },
-    {
-      "id": "skill:JuliusBrussee/caveman",
-      "type": "skill",
-      "name": "JuliusBrussee/caveman",
-      "owner": "JuliusBrussee",
-      "url": "https://github.com/JuliusBrussee/caveman",
-      "description": "🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman",
-      "summary_es": "🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman",
-      "category": "claude-ai",
-      "tags": [
-        "ai",
-        "anthropic",
-        "caveman",
-        "claude",
-        "claude-code",
-        "llm"
-      ],
-      "language": "JavaScript",
-      "stars": 77929,
-      "starsDelta": 176,
-      "lastCommit": "2026-06-12T13:51:06Z",
-      "license": "MIT",
-      "source": "search",
-      "relevanceScore": 1.171,
-      "featured": false,
-      "claudeCompatible": true,
-      "stale": false,
-      "addedAt": "2026-06-29T07:29:14.719Z",
-      "updatedAt": "2026-06-29T17:51:07.306Z"
-    },
-    {
-      "id": "skill:Egonex-AI/Understand-Anything",
-      "type": "skill",
-      "name": "Egonex-AI/Understand-Anything",
-      "owner": "Egonex-AI",
-      "url": "https://github.com/Egonex-AI/Understand-Anything",
-      "description": "Graphs that teach > graphs that impress. Turn any code into an interactive knowledge graph you can explore, search, and ask questions about. Works with Claude Code, Codex, Cursor, Copilot, Gemini CLI, and more.",
-      "summary_es": "Graphs that teach > graphs that impress. Turn any code into an interactive knowledge graph you can explore, search, and ask questions about. Works with Claude Code, Codex, Cursor, Copilot, Gemini CLI…",
-      "category": "claude-ai",
-      "tags": [
-        "antigravity-skills",
-        "business-knowledge",
-        "claude-code",
-        "claude-skills",
-        "codebase-analysis",
-        "codex"
-      ],
-      "language": "TypeScript",
-      "stars": 69175,
-      "starsDelta": 143,
-      "lastCommit": "2026-06-23T20:29:48Z",
-      "license": "MIT",
-      "source": "search",
-      "relevanceScore": 1.161,
-      "featured": false,
-      "claudeCompatible": true,
-      "stale": false,
-      "addedAt": "2026-06-29T07:29:14.719Z",
-      "updatedAt": "2026-06-29T17:51:07.306Z"
-    },
-    {
-      "id": "skill:shareAI-lab/learn-claude-code",
-      "type": "skill",
-      "name": "shareAI-lab/learn-claude-code",
-      "owner": "shareAI-lab",
-      "url": "https://github.com/shareAI-lab/learn-claude-code",
-      "description": "Bash is all you need -  A nano claude code–like 「agent harness」, built from 0 to 1",
-      "summary_es": "Bash is all you need -  A nano claude code–like 「agent harness」, built from 0 to 1",
-      "category": "claude-ai",
-      "tags": [
-        "agent",
-        "agent-development",
-        "ai-agent",
-        "claude",
-        "claude-code",
-        "educational"
-      ],
-      "language": "Python",
-      "stars": 68989,
-      "starsDelta": 104,
-      "lastCommit": "2026-06-26T19:36:35Z",
-      "license": "MIT",
-      "source": "search",
-      "relevanceScore": 1.14,
-      "featured": false,
-      "claudeCompatible": true,
-      "stale": false,
-      "addedAt": "2026-06-29T07:29:14.719Z",
-      "updatedAt": "2026-06-29T17:51:07.306Z"
+      "updatedAt": "2026-06-29T17:55:30.261Z"
     },
     {
       "id": "skill:thedotmack/claude-mem",
@@ -680,136 +590,192 @@
       ],
       "language": "JavaScript",
       "stars": 85055,
-      "starsDelta": 95,
+      "starsDelta": 0,
       "lastCommit": "2026-06-29T17:27:39Z",
       "license": "Apache-2.0",
       "source": "search",
-      "relevanceScore": 1.137,
+      "relevanceScore": 1.08,
       "featured": false,
       "claudeCompatible": true,
       "stale": false,
       "addedAt": "2026-06-29T07:29:14.719Z",
-      "updatedAt": "2026-06-29T17:51:07.306Z"
+      "updatedAt": "2026-06-29T17:55:30.261Z"
     },
     {
-      "id": "skill:ruvnet/ruflo",
+      "id": "skill:addyosmani/agent-skills",
       "type": "skill",
-      "name": "ruvnet/ruflo",
-      "owner": "ruvnet",
-      "url": "https://github.com/ruvnet/ruflo",
-      "description": "🌊 The leading agent meta-harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning swarm intelligence, RAG integration, and native Claude Code / Codex Integration",
-      "summary_es": "🌊 The leading agent meta-harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning swarm intellig…",
+      "name": "addyosmani/agent-skills",
+      "owner": "addyosmani",
+      "url": "https://github.com/addyosmani/agent-skills",
+      "description": "Production-grade engineering skills for AI coding agents.",
+      "summary_es": "Production-grade engineering skills for AI coding agents.",
       "category": "claude-ai",
       "tags": [
-        "agentic-ai",
-        "agentic-framework",
-        "agentic-rag",
-        "agentic-workflow",
-        "agents",
-        "ai-agents"
+        "agent-skills",
+        "antigravity",
+        "antigravity-ide",
+        "claude-code",
+        "cursor",
+        "skills"
       ],
-      "language": "TypeScript",
-      "stars": 62040,
-      "starsDelta": 82,
-      "lastCommit": "2026-06-29T16:04:24Z",
+      "language": "Shell",
+      "stars": 67920,
+      "starsDelta": 0,
+      "lastCommit": "2026-06-28T18:11:20Z",
       "license": "MIT",
       "source": "search",
-      "relevanceScore": 1.129,
+      "relevanceScore": 1.079,
       "featured": false,
       "claudeCompatible": true,
       "stale": false,
       "addedAt": "2026-06-29T07:29:14.719Z",
-      "updatedAt": "2026-06-29T17:51:07.306Z"
+      "updatedAt": "2026-06-29T17:55:30.261Z"
     },
     {
-      "id": "skill:nexu-io/open-design",
+      "id": "skill:shareAI-lab/learn-claude-code",
       "type": "skill",
-      "name": "nexu-io/open-design",
-      "owner": "nexu-io",
-      "url": "https://github.com/nexu-io/open-design",
-      "description": "🎨 Local-first, open-source Claude Design alternative. 🖥️ Native desktop app. ⚡ 259+ Skills · ✨ 142+ Design Systems 🖼️ Web · desktop · mobile prototypes · slides · images · videos · HyperFrames 📦 Sandboxed preview · HTML/PDF/PPTX/MP4 export 🤖 Claude Code / OpenClaw / Codex / Cursor / OpenCode / Qwen / Copilot / Hermes / Kimi & 17+ CLIs.",
-      "summary_es": "🎨 Local-first, open-source Claude Design alternative. 🖥️ Native desktop app. ⚡ 259+ Skills · ✨ 142+ Design Systems 🖼️ Web · desktop · mobile prototypes · slides · images · videos · HyperFrames 📦 …",
+      "name": "shareAI-lab/learn-claude-code",
+      "owner": "shareAI-lab",
+      "url": "https://github.com/shareAI-lab/learn-claude-code",
+      "description": "Bash is all you need -  A nano claude code–like 「agent harness」, built from 0 to 1",
+      "summary_es": "Bash is all you need -  A nano claude code–like 「agent harness」, built from 0 to 1",
       "category": "claude-ai",
       "tags": [
-        "agent-skills",
-        "ai-agents",
-        "ai-design",
-        "byok",
-        "claude-code-for-design",
-        "claude-design"
-      ],
-      "language": "TypeScript",
-      "stars": 72835,
-      "starsDelta": 242,
-      "lastCommit": "2026-06-29T17:40:39Z",
-      "license": "Apache-2.0",
-      "source": "search",
-      "relevanceScore": 1.1,
-      "featured": false,
-      "claudeCompatible": true,
-      "stale": false,
-      "addedAt": "2026-06-29T07:29:20.440Z",
-      "updatedAt": "2026-06-29T17:51:12.922Z"
-    },
-    {
-      "id": "skill:topoteretes/cognee",
-      "type": "skill",
-      "name": "topoteretes/cognee",
-      "owner": "topoteretes",
-      "url": "https://github.com/topoteretes/cognee",
-      "description": "Cognee is the open-source AI memory platform for agents. Give your AI agents persistent long-term memory across sessions with a self-hosted knowledge graph engine.",
-      "summary_es": "Cognee is the open-source AI memory platform for agents. Give your AI agents persistent long-term memory across sessions with a self-hosted knowledge graph engine.",
-      "category": "claude-ai",
-      "tags": [
-        "agent-memory",
-        "agent-skills",
-        "ai",
-        "ai-agents",
-        "ai-memory",
-        "cognitive-architecture"
-      ],
-      "language": "Python",
-      "stars": 25554,
-      "starsDelta": 441,
-      "lastCommit": "2026-06-29T16:07:38Z",
-      "license": "Apache-2.0",
-      "source": "search",
-      "relevanceScore": 1.1,
-      "featured": false,
-      "claudeCompatible": true,
-      "stale": false,
-      "addedAt": "2026-06-29T07:29:20.441Z",
-      "updatedAt": "2026-06-29T17:51:12.922Z"
-    },
-    {
-      "id": "skill:ComposioHQ/awesome-claude-skills",
-      "type": "skill",
-      "name": "ComposioHQ/awesome-claude-skills",
-      "owner": "ComposioHQ",
-      "url": "https://github.com/ComposioHQ/awesome-claude-skills",
-      "description": "A curated list of awesome Claude Skills, resources, and tools for customizing Claude AI workflows",
-      "summary_es": "A curated list of awesome Claude Skills, resources, and tools for customizing Claude AI workflows",
-      "category": "claude-ai",
-      "tags": [
-        "agent-skills",
-        "ai-agents",
-        "antigravity",
-        "automation",
+        "agent",
+        "agent-development",
+        "ai-agent",
         "claude",
-        "claude-code"
+        "claude-code",
+        "educational"
       ],
       "language": "Python",
-      "stars": 66305,
-      "starsDelta": 50,
-      "lastCommit": "2026-05-22T03:17:49Z",
-      "license": null,
+      "stars": 68989,
+      "starsDelta": 0,
+      "lastCommit": "2026-06-26T19:36:35Z",
+      "license": "MIT",
       "source": "search",
       "relevanceScore": 1.078,
       "featured": false,
       "claudeCompatible": true,
       "stale": false,
       "addedAt": "2026-06-29T07:29:14.719Z",
-      "updatedAt": "2026-06-29T17:51:07.306Z"
+      "updatedAt": "2026-06-29T17:55:30.261Z"
+    },
+    {
+      "id": "skill:Egonex-AI/Understand-Anything",
+      "type": "skill",
+      "name": "Egonex-AI/Understand-Anything",
+      "owner": "Egonex-AI",
+      "url": "https://github.com/Egonex-AI/Understand-Anything",
+      "description": "Graphs that teach > graphs that impress. Turn any code into an interactive knowledge graph you can explore, search, and ask questions about. Works with Claude Code, Codex, Cursor, Copilot, Gemini CLI, and more.",
+      "summary_es": "Graphs that teach > graphs that impress. Turn any code into an interactive knowledge graph you can explore, search, and ask questions about. Works with Claude Code, Codex, Cursor, Copilot, Gemini CLI…",
+      "category": "claude-ai",
+      "tags": [
+        "antigravity-skills",
+        "business-knowledge",
+        "claude-code",
+        "claude-skills",
+        "codebase-analysis",
+        "codex"
+      ],
+      "language": "TypeScript",
+      "stars": 69176,
+      "starsDelta": 1,
+      "lastCommit": "2026-06-23T20:29:48Z",
+      "license": "MIT",
+      "source": "search",
+      "relevanceScore": 1.076,
+      "featured": false,
+      "claudeCompatible": true,
+      "stale": false,
+      "addedAt": "2026-06-29T07:29:14.719Z",
+      "updatedAt": "2026-06-29T17:55:30.261Z"
+    },
+    {
+      "id": "skill:JuliusBrussee/caveman",
+      "type": "skill",
+      "name": "JuliusBrussee/caveman",
+      "owner": "JuliusBrussee",
+      "url": "https://github.com/JuliusBrussee/caveman",
+      "description": "🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman",
+      "summary_es": "🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman",
+      "category": "claude-ai",
+      "tags": [
+        "ai",
+        "anthropic",
+        "caveman",
+        "claude",
+        "claude-code",
+        "llm"
+      ],
+      "language": "JavaScript",
+      "stars": 77930,
+      "starsDelta": 1,
+      "lastCommit": "2026-06-12T13:51:06Z",
+      "license": "MIT",
+      "source": "search",
+      "relevanceScore": 1.066,
+      "featured": false,
+      "claudeCompatible": true,
+      "stale": false,
+      "addedAt": "2026-06-29T07:29:14.719Z",
+      "updatedAt": "2026-06-29T17:55:30.261Z"
+    },
+    {
+      "id": "skill:gsd-build/get-shit-done",
+      "type": "skill",
+      "name": "gsd-build/get-shit-done",
+      "owner": "gsd-build",
+      "url": "https://github.com/gsd-build/get-shit-done",
+      "description": "A light-weight and powerful meta-prompting, context engineering and spec-driven development system for Claude Code by TÂCHES.",
+      "summary_es": "A light-weight and powerful meta-prompting, context engineering and spec-driven development system for Claude Code by TÂCHES.",
+      "category": "claude-ai",
+      "tags": [
+        "claude-code",
+        "context-engineering",
+        "meta-prompting",
+        "spec-driven-development"
+      ],
+      "language": "JavaScript",
+      "stars": 64575,
+      "starsDelta": 0,
+      "lastCommit": "2026-05-31T17:46:54Z",
+      "license": "MIT",
+      "source": "search",
+      "relevanceScore": 1.056,
+      "featured": false,
+      "claudeCompatible": true,
+      "stale": false,
+      "addedAt": "2026-06-29T07:29:14.719Z",
+      "updatedAt": "2026-06-29T17:55:30.261Z"
+    },
+    {
+      "id": "skill:revfactory/harness",
+      "type": "skill",
+      "name": "revfactory/harness",
+      "owner": "revfactory",
+      "url": "https://github.com/revfactory/harness",
+      "description": "A meta-skill that designs domain-specific agent teams, defines specialized agents, and generates the skills they use.",
+      "summary_es": "A meta-skill that designs domain-specific agent teams, defines specialized agents, and generates the skills they use.",
+      "category": "claude-ai",
+      "tags": [
+        "claude-code",
+        "claude-code-plugin",
+        "harness",
+        "harness-engineering"
+      ],
+      "language": "HTML",
+      "stars": 8083,
+      "starsDelta": 0,
+      "lastCommit": "2026-06-10T05:30:36Z",
+      "license": "Apache-2.0",
+      "source": "search",
+      "relevanceScore": 1.051,
+      "featured": false,
+      "claudeCompatible": true,
+      "stale": false,
+      "addedAt": "2026-06-29T07:29:17.645Z",
+      "updatedAt": "2026-06-29T17:55:33.259Z"
     },
     {
       "id": "skill:kyegomez/OpenMythos",
@@ -830,102 +796,46 @@
       ],
       "language": "Python",
       "stars": 14441,
-      "starsDelta": 38,
+      "starsDelta": 0,
       "lastCommit": "2026-05-23T11:58:48Z",
       "license": "MIT",
       "source": "search",
-      "relevanceScore": 1.072,
+      "relevanceScore": 1.049,
       "featured": false,
       "claudeCompatible": true,
       "stale": false,
       "addedAt": "2026-06-29T07:29:17.645Z",
-      "updatedAt": "2026-06-29T17:51:10.167Z"
+      "updatedAt": "2026-06-29T17:55:33.259Z"
     },
     {
-      "id": "skill:revfactory/harness",
+      "id": "skill:ComposioHQ/awesome-claude-skills",
       "type": "skill",
-      "name": "revfactory/harness",
-      "owner": "revfactory",
-      "url": "https://github.com/revfactory/harness",
-      "description": "A meta-skill that designs domain-specific agent teams, defines specialized agents, and generates the skills they use.",
-      "summary_es": "A meta-skill that designs domain-specific agent teams, defines specialized agents, and generates the skills they use.",
-      "category": "claude-ai",
-      "tags": [
-        "claude-code",
-        "claude-code-plugin",
-        "harness",
-        "harness-engineering"
-      ],
-      "language": "HTML",
-      "stars": 8083,
-      "starsDelta": 20,
-      "lastCommit": "2026-06-10T05:30:36Z",
-      "license": "Apache-2.0",
-      "source": "search",
-      "relevanceScore": 1.063,
-      "featured": false,
-      "claudeCompatible": true,
-      "stale": false,
-      "addedAt": "2026-06-29T07:29:17.645Z",
-      "updatedAt": "2026-06-29T17:51:10.167Z"
-    },
-    {
-      "id": "skill:gsd-build/get-shit-done",
-      "type": "skill",
-      "name": "gsd-build/get-shit-done",
-      "owner": "gsd-build",
-      "url": "https://github.com/gsd-build/get-shit-done",
-      "description": "A light-weight and powerful meta-prompting, context engineering and spec-driven development system for Claude Code by TÂCHES.",
-      "summary_es": "A light-weight and powerful meta-prompting, context engineering and spec-driven development system for Claude Code by TÂCHES.",
-      "category": "claude-ai",
-      "tags": [
-        "claude-code",
-        "context-engineering",
-        "meta-prompting",
-        "spec-driven-development"
-      ],
-      "language": "JavaScript",
-      "stars": 64575,
-      "starsDelta": 6,
-      "lastCommit": "2026-05-31T17:46:54Z",
-      "license": "MIT",
-      "source": "search",
-      "relevanceScore": 1.06,
-      "featured": false,
-      "claudeCompatible": true,
-      "stale": false,
-      "addedAt": "2026-06-29T07:29:14.719Z",
-      "updatedAt": "2026-06-29T17:51:07.306Z"
-    },
-    {
-      "id": "skill:VoltAgent/awesome-agent-skills",
-      "type": "skill",
-      "name": "VoltAgent/awesome-agent-skills",
-      "owner": "VoltAgent",
-      "url": "https://github.com/VoltAgent/awesome-agent-skills",
-      "description": "A curated collection of 1000+ agent skills from official dev teams and the community, compatible with Claude Code, Codex, Gemini CLI, Cursor, and more.",
-      "summary_es": "A curated collection of 1000+ agent skills from official dev teams and the community, compatible with Claude Code, Codex, Gemini CLI, Cursor, and more.",
+      "name": "ComposioHQ/awesome-claude-skills",
+      "owner": "ComposioHQ",
+      "url": "https://github.com/ComposioHQ/awesome-claude-skills",
+      "description": "A curated list of awesome Claude Skills, resources, and tools for customizing Claude AI workflows",
+      "summary_es": "A curated list of awesome Claude Skills, resources, and tools for customizing Claude AI workflows",
       "category": "claude-ai",
       "tags": [
         "agent-skills",
         "ai-agents",
-        "antigravity-skills",
-        "awesome",
-        "awesome-list",
-        "awesome-lists"
+        "antigravity",
+        "automation",
+        "claude",
+        "claude-code"
       ],
-      "language": null,
-      "stars": 26835,
-      "starsDelta": 66,
-      "lastCommit": "2026-06-24T05:59:59Z",
-      "license": "MIT",
+      "language": "Python",
+      "stars": 66305,
+      "starsDelta": 0,
+      "lastCommit": "2026-05-22T03:17:49Z",
+      "license": null,
       "source": "search",
-      "relevanceScore": 1.022,
+      "relevanceScore": 1.048,
       "featured": false,
       "claudeCompatible": true,
       "stale": false,
-      "addedAt": "2026-06-29T07:29:20.441Z",
-      "updatedAt": "2026-06-29T17:51:12.922Z"
+      "addedAt": "2026-06-29T07:29:14.719Z",
+      "updatedAt": "2026-06-29T17:55:30.261Z"
     },
     {
       "id": "skill:nyldn/claude-octopus",
@@ -946,136 +856,16 @@
       ],
       "language": "Shell",
       "stars": 3703,
-      "starsDelta": 1,
+      "starsDelta": 0,
       "lastCommit": "2026-06-25T02:50:04Z",
       "license": "MIT",
       "source": "search",
-      "relevanceScore": 1.019,
+      "relevanceScore": 1.018,
       "featured": false,
       "claudeCompatible": true,
       "stale": false,
       "addedAt": "2026-06-29T07:29:17.645Z",
-      "updatedAt": "2026-06-29T17:51:10.167Z"
-    },
-    {
-      "id": "skill:googleworkspace/cli",
-      "type": "skill",
-      "name": "googleworkspace/cli",
-      "owner": "googleworkspace",
-      "url": "https://github.com/googleworkspace/cli",
-      "description": "Google Workspace CLI — one command-line tool for Drive, Gmail, Calendar, Sheets, Docs, Chat, Admin, and more. Dynamically built from Google Discovery Service. Includes AI agent skills.",
-      "summary_es": "Google Workspace CLI — one command-line tool for Drive, Gmail, Calendar, Sheets, Docs, Chat, Admin, and more. Dynamically built from Google Discovery Service. Includes AI agent skills.",
-      "category": "claude-ai",
-      "tags": [
-        "agent-skills",
-        "ai-agent",
-        "automation",
-        "cli",
-        "discovery-api",
-        "gemini-cli-extension"
-      ],
-      "language": "Rust",
-      "stars": 29144,
-      "starsDelta": 50,
-      "lastCommit": "2026-06-28T23:24:40Z",
-      "license": "Apache-2.0",
-      "source": "search",
-      "relevanceScore": 1.017,
-      "featured": false,
-      "claudeCompatible": true,
-      "stale": false,
-      "addedAt": "2026-06-29T07:29:20.441Z",
-      "updatedAt": "2026-06-29T17:51:12.922Z"
-    },
-    {
-      "id": "skill:K-Dense-AI/scientific-agent-skills",
-      "type": "skill",
-      "name": "K-Dense-AI/scientific-agent-skills",
-      "owner": "K-Dense-AI",
-      "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
-      "description": "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 160,000+ scientists worldwide. 140 ready-to-use skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
-      "summary_es": "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 160,000+ scientists worldwide. 140 ready-to-use skills plus 100+ scientific databases covering biology, chemis…",
-      "category": "claude-ai",
-      "tags": [
-        "agent-skills",
-        "ai-scientist",
-        "bioinformatics",
-        "chemoinformatics",
-        "claude",
-        "claude-skills"
-      ],
-      "language": "Python",
-      "stars": 29589,
-      "starsDelta": 40,
-      "lastCommit": "2026-06-29T17:45:05Z",
-      "license": "MIT",
-      "source": "search",
-      "relevanceScore": 1.012,
-      "featured": false,
-      "claudeCompatible": true,
-      "stale": false,
-      "addedAt": "2026-06-29T07:29:20.441Z",
-      "updatedAt": "2026-06-29T17:51:12.922Z"
-    },
-    {
-      "id": "skill:sickn33/antigravity-awesome-skills",
-      "type": "skill",
-      "name": "sickn33/antigravity-awesome-skills",
-      "owner": "sickn33",
-      "url": "https://github.com/sickn33/antigravity-awesome-skills",
-      "description": "Installable GitHub library of 1,600+ agentic skills for Claude Code, Cursor, Codex CLI, Gemini CLI, Antigravity, and more. Includes specialized plugins, installer CLI, bundles, workflows, and official/community skill collections.",
-      "summary_es": "Installable GitHub library of 1,600+ agentic skills for Claude Code, Cursor, Codex CLI, Gemini CLI, Antigravity, and more. Includes specialized plugins, installer CLI, bundles, workflows, and officia…",
-      "category": "claude-ai",
-      "tags": [
-        "agent-skills",
-        "agentic-skills",
-        "ai-agent-skills",
-        "ai-agents",
-        "ai-coding",
-        "ai-workflows"
-      ],
-      "language": "Python",
-      "stars": 42017,
-      "starsDelta": 39,
-      "lastCommit": "2026-06-29T13:08:20Z",
-      "license": "MIT",
-      "source": "search",
-      "relevanceScore": 1.011,
-      "featured": false,
-      "claudeCompatible": true,
-      "stale": false,
-      "addedAt": "2026-06-29T07:29:20.440Z",
-      "updatedAt": "2026-06-29T17:51:12.922Z"
-    },
-    {
-      "id": "skill:hesreallyhim/awesome-claude-code",
-      "type": "skill",
-      "name": "hesreallyhim/awesome-claude-code",
-      "owner": "hesreallyhim",
-      "url": "https://github.com/hesreallyhim/awesome-claude-code",
-      "description": "A curated list of awesome skills, hooks, slash-commands, agent orchestrators, applications, and plugins for Claude Code by Anthropic",
-      "summary_es": "A curated list of awesome skills, hooks, slash-commands, agent orchestrators, applications, and plugins for Claude Code by Anthropic",
-      "category": "claude-ai",
-      "tags": [
-        "agent-skills",
-        "agentic-code",
-        "agentic-coding",
-        "ai-workflow-optimization",
-        "ai-workflows",
-        "anthropic"
-      ],
-      "language": "Python",
-      "stars": 47588,
-      "starsDelta": 34,
-      "lastCommit": "2026-06-29T08:05:37Z",
-      "license": "NOASSERTION",
-      "source": "search",
-      "relevanceScore": 1.008,
-      "featured": false,
-      "claudeCompatible": true,
-      "stale": false,
-      "addedAt": "2026-06-29T07:29:20.440Z",
-      "updatedAt": "2026-06-29T17:51:12.922Z"
+      "updatedAt": "2026-06-29T17:55:33.259Z"
     },
     {
       "id": "skill:nowork-studio/NotFair",
@@ -1096,46 +886,16 @@
       ],
       "language": "TypeScript",
       "stars": 3015,
-      "starsDelta": 4,
+      "starsDelta": 0,
       "lastCommit": "2026-06-24T00:45:00Z",
       "license": "MIT",
       "source": "search",
-      "relevanceScore": 1.007,
+      "relevanceScore": 1.005,
       "featured": false,
       "claudeCompatible": true,
       "stale": false,
       "addedAt": "2026-06-29T07:29:17.645Z",
-      "updatedAt": "2026-06-29T17:51:10.167Z"
-    },
-    {
-      "id": "skill:github/awesome-copilot",
-      "type": "skill",
-      "name": "github/awesome-copilot",
-      "owner": "github",
-      "url": "https://github.com/github/awesome-copilot",
-      "description": "Community-contributed instructions, agents, skills, and configurations to help you make the most of GitHub Copilot.",
-      "summary_es": "Community-contributed instructions, agents, skills, and configurations to help you make the most of GitHub Copilot.",
-      "category": "claude-ai",
-      "tags": [
-        "agent-skills",
-        "agents",
-        "ai",
-        "awesome",
-        "custom-agents",
-        "github-copilot"
-      ],
-      "language": "Python",
-      "stars": 35908,
-      "starsDelta": 27,
-      "lastCommit": "2026-06-29T03:50:42Z",
-      "license": "MIT",
-      "source": "search",
-      "relevanceScore": 1.004,
-      "featured": false,
-      "claudeCompatible": true,
-      "stale": false,
-      "addedAt": "2026-06-29T07:29:20.440Z",
-      "updatedAt": "2026-06-29T17:51:12.922Z"
+      "updatedAt": "2026-06-29T17:55:33.259Z"
     },
     {
       "id": "skill:rohitg00/pro-workflow",
@@ -1156,76 +916,16 @@
       ],
       "language": "JavaScript",
       "stars": 2474,
-      "starsDelta": 18,
+      "starsDelta": 0,
       "lastCommit": "2026-06-22T20:24:32Z",
       "license": null,
       "source": "search",
-      "relevanceScore": 1.003,
+      "relevanceScore": 0.992,
       "featured": false,
       "claudeCompatible": true,
       "stale": false,
       "addedAt": "2026-06-29T07:29:17.645Z",
-      "updatedAt": "2026-06-29T17:51:10.167Z"
-    },
-    {
-      "id": "skill:headroomlabs-ai/headroom",
-      "type": "skill",
-      "name": "headroomlabs-ai/headroom",
-      "owner": "headroomlabs-ai",
-      "url": "https://github.com/headroomlabs-ai/headroom",
-      "description": "Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 60-95% fewer tokens, same answers. Library, proxy, MCP server.",
-      "summary_es": "Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 60-95% fewer tokens, same answers. Library, proxy, MCP server.",
-      "category": "claude-ai",
-      "tags": [
-        "agent",
-        "ai",
-        "anthropic",
-        "claude-code",
-        "compression",
-        "context-engineering"
-      ],
-      "language": "Python",
-      "stars": 53714,
-      "starsDelta": 383,
-      "lastCommit": "2026-06-29T16:07:18Z",
-      "license": "Apache-2.0",
-      "source": "search",
-      "relevanceScore": 1,
-      "featured": false,
-      "claudeCompatible": true,
-      "stale": false,
-      "addedAt": "2026-06-29T07:29:23.329Z",
-      "updatedAt": "2026-06-29T17:51:15.753Z"
-    },
-    {
-      "id": "skill:wshobson/agents",
-      "type": "skill",
-      "name": "wshobson/agents",
-      "owner": "wshobson",
-      "url": "https://github.com/wshobson/agents",
-      "description": "Multi-harness agentic plugin marketplace for Claude Code, Codex CLI, Cursor, OpenCode, GitHub Copilot, and Gemini CLI",
-      "summary_es": "Multi-harness agentic plugin marketplace for Claude Code, Codex CLI, Cursor, OpenCode, GitHub Copilot, and Gemini CLI",
-      "category": "claude-ai",
-      "tags": [
-        "agent-skills",
-        "agentic-ai",
-        "agents",
-        "ai-agents",
-        "anthropic",
-        "automation"
-      ],
-      "language": "Python",
-      "stars": 37327,
-      "starsDelta": 18,
-      "lastCommit": "2026-06-29T01:08:41Z",
-      "license": "MIT",
-      "source": "search",
-      "relevanceScore": 0.999,
-      "featured": false,
-      "claudeCompatible": true,
-      "stale": false,
-      "addedAt": "2026-06-29T07:29:20.440Z",
-      "updatedAt": "2026-06-29T17:51:12.922Z"
+      "updatedAt": "2026-06-29T17:55:33.259Z"
     },
     {
       "id": "skill:CherryHQ/cherry-studio",
@@ -1245,17 +945,287 @@
         "deepseek"
       ],
       "language": "TypeScript",
-      "stars": 47967,
-      "starsDelta": 14,
+      "stars": 47968,
+      "starsDelta": 1,
       "lastCommit": "2026-06-29T17:50:42Z",
       "license": "AGPL-3.0",
       "source": "search",
-      "relevanceScore": 0.998,
+      "relevanceScore": 0.991,
       "featured": false,
       "claudeCompatible": true,
       "stale": false,
       "addedAt": "2026-06-29T07:29:20.440Z",
-      "updatedAt": "2026-06-29T17:51:12.922Z"
+      "updatedAt": "2026-06-29T17:55:36.090Z"
+    },
+    {
+      "id": "skill:nexu-io/open-design",
+      "type": "skill",
+      "name": "nexu-io/open-design",
+      "owner": "nexu-io",
+      "url": "https://github.com/nexu-io/open-design",
+      "description": "🎨 Local-first, open-source Claude Design alternative. 🖥️ Native desktop app. ⚡ 259+ Skills · ✨ 142+ Design Systems 🖼️ Web · desktop · mobile prototypes · slides · images · videos · HyperFrames 📦 Sandboxed preview · HTML/PDF/PPTX/MP4 export 🤖 Claude Code / OpenClaw / Codex / Cursor / OpenCode / Qwen / Copilot / Hermes / Kimi & 17+ CLIs.",
+      "summary_es": "🎨 Local-first, open-source Claude Design alternative. 🖥️ Native desktop app. ⚡ 259+ Skills · ✨ 142+ Design Systems 🖼️ Web · desktop · mobile prototypes · slides · images · videos · HyperFrames 📦 …",
+      "category": "claude-ai",
+      "tags": [
+        "agent-skills",
+        "ai-agents",
+        "ai-design",
+        "byok",
+        "claude-code-for-design",
+        "claude-design"
+      ],
+      "language": "TypeScript",
+      "stars": 72836,
+      "starsDelta": 1,
+      "lastCommit": "2026-06-29T17:40:39Z",
+      "license": "Apache-2.0",
+      "source": "search",
+      "relevanceScore": 0.991,
+      "featured": false,
+      "claudeCompatible": true,
+      "stale": false,
+      "addedAt": "2026-06-29T07:29:20.440Z",
+      "updatedAt": "2026-06-29T17:55:36.090Z"
+    },
+    {
+      "id": "skill:topoteretes/cognee",
+      "type": "skill",
+      "name": "topoteretes/cognee",
+      "owner": "topoteretes",
+      "url": "https://github.com/topoteretes/cognee",
+      "description": "Cognee is the open-source AI memory platform for agents. Give your AI agents persistent long-term memory across sessions with a self-hosted knowledge graph engine.",
+      "summary_es": "Cognee is the open-source AI memory platform for agents. Give your AI agents persistent long-term memory across sessions with a self-hosted knowledge graph engine.",
+      "category": "claude-ai",
+      "tags": [
+        "agent-memory",
+        "agent-skills",
+        "ai",
+        "ai-agents",
+        "ai-memory",
+        "cognitive-architecture"
+      ],
+      "language": "Python",
+      "stars": 25556,
+      "starsDelta": 2,
+      "lastCommit": "2026-06-29T16:07:38Z",
+      "license": "Apache-2.0",
+      "source": "search",
+      "relevanceScore": 0.991,
+      "featured": false,
+      "claudeCompatible": true,
+      "stale": false,
+      "addedAt": "2026-06-29T07:29:20.441Z",
+      "updatedAt": "2026-06-29T17:55:36.090Z"
+    },
+    {
+      "id": "skill:wshobson/agents",
+      "type": "skill",
+      "name": "wshobson/agents",
+      "owner": "wshobson",
+      "url": "https://github.com/wshobson/agents",
+      "description": "Multi-harness agentic plugin marketplace for Claude Code, Codex CLI, Cursor, OpenCode, GitHub Copilot, and Gemini CLI",
+      "summary_es": "Multi-harness agentic plugin marketplace for Claude Code, Codex CLI, Cursor, OpenCode, GitHub Copilot, and Gemini CLI",
+      "category": "claude-ai",
+      "tags": [
+        "agent-skills",
+        "agentic-ai",
+        "agents",
+        "ai-agents",
+        "anthropic",
+        "automation"
+      ],
+      "language": "Python",
+      "stars": 37329,
+      "starsDelta": 2,
+      "lastCommit": "2026-06-29T01:08:41Z",
+      "license": "MIT",
+      "source": "search",
+      "relevanceScore": 0.991,
+      "featured": false,
+      "claudeCompatible": true,
+      "stale": false,
+      "addedAt": "2026-06-29T07:29:20.440Z",
+      "updatedAt": "2026-06-29T17:55:36.090Z"
+    },
+    {
+      "id": "skill:github/awesome-copilot",
+      "type": "skill",
+      "name": "github/awesome-copilot",
+      "owner": "github",
+      "url": "https://github.com/github/awesome-copilot",
+      "description": "Community-contributed instructions, agents, skills, and configurations to help you make the most of GitHub Copilot.",
+      "summary_es": "Community-contributed instructions, agents, skills, and configurations to help you make the most of GitHub Copilot.",
+      "category": "claude-ai",
+      "tags": [
+        "agent-skills",
+        "agents",
+        "ai",
+        "awesome",
+        "custom-agents",
+        "github-copilot"
+      ],
+      "language": "Python",
+      "stars": 35908,
+      "starsDelta": 0,
+      "lastCommit": "2026-06-29T03:50:42Z",
+      "license": "MIT",
+      "source": "search",
+      "relevanceScore": 0.99,
+      "featured": false,
+      "claudeCompatible": true,
+      "stale": false,
+      "addedAt": "2026-06-29T07:29:20.440Z",
+      "updatedAt": "2026-06-29T17:55:36.090Z"
+    },
+    {
+      "id": "skill:googleworkspace/cli",
+      "type": "skill",
+      "name": "googleworkspace/cli",
+      "owner": "googleworkspace",
+      "url": "https://github.com/googleworkspace/cli",
+      "description": "Google Workspace CLI — one command-line tool for Drive, Gmail, Calendar, Sheets, Docs, Chat, Admin, and more. Dynamically built from Google Discovery Service. Includes AI agent skills.",
+      "summary_es": "Google Workspace CLI — one command-line tool for Drive, Gmail, Calendar, Sheets, Docs, Chat, Admin, and more. Dynamically built from Google Discovery Service. Includes AI agent skills.",
+      "category": "claude-ai",
+      "tags": [
+        "agent-skills",
+        "ai-agent",
+        "automation",
+        "cli",
+        "discovery-api",
+        "gemini-cli-extension"
+      ],
+      "language": "Rust",
+      "stars": 29145,
+      "starsDelta": 1,
+      "lastCommit": "2026-06-28T23:24:40Z",
+      "license": "Apache-2.0",
+      "source": "search",
+      "relevanceScore": 0.99,
+      "featured": false,
+      "claudeCompatible": true,
+      "stale": false,
+      "addedAt": "2026-06-29T07:29:20.441Z",
+      "updatedAt": "2026-06-29T17:55:36.090Z"
+    },
+    {
+      "id": "skill:hesreallyhim/awesome-claude-code",
+      "type": "skill",
+      "name": "hesreallyhim/awesome-claude-code",
+      "owner": "hesreallyhim",
+      "url": "https://github.com/hesreallyhim/awesome-claude-code",
+      "description": "A curated list of awesome skills, hooks, slash-commands, agent orchestrators, applications, and plugins for Claude Code by Anthropic",
+      "summary_es": "A curated list of awesome skills, hooks, slash-commands, agent orchestrators, applications, and plugins for Claude Code by Anthropic",
+      "category": "claude-ai",
+      "tags": [
+        "agent-skills",
+        "agentic-code",
+        "agentic-coding",
+        "ai-workflow-optimization",
+        "ai-workflows",
+        "anthropic"
+      ],
+      "language": "Python",
+      "stars": 47588,
+      "starsDelta": 0,
+      "lastCommit": "2026-06-29T08:05:37Z",
+      "license": "NOASSERTION",
+      "source": "search",
+      "relevanceScore": 0.99,
+      "featured": false,
+      "claudeCompatible": true,
+      "stale": false,
+      "addedAt": "2026-06-29T07:29:20.440Z",
+      "updatedAt": "2026-06-29T17:55:36.090Z"
+    },
+    {
+      "id": "skill:K-Dense-AI/scientific-agent-skills",
+      "type": "skill",
+      "name": "K-Dense-AI/scientific-agent-skills",
+      "owner": "K-Dense-AI",
+      "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
+      "description": "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 160,000+ scientists worldwide. 140 ready-to-use skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
+      "summary_es": "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 160,000+ scientists worldwide. 140 ready-to-use skills plus 100+ scientific databases covering biology, chemis…",
+      "category": "claude-ai",
+      "tags": [
+        "agent-skills",
+        "ai-scientist",
+        "bioinformatics",
+        "chemoinformatics",
+        "claude",
+        "claude-skills"
+      ],
+      "language": "Python",
+      "stars": 29589,
+      "starsDelta": 0,
+      "lastCommit": "2026-06-29T17:45:05Z",
+      "license": "MIT",
+      "source": "search",
+      "relevanceScore": 0.99,
+      "featured": false,
+      "claudeCompatible": true,
+      "stale": false,
+      "addedAt": "2026-06-29T07:29:20.441Z",
+      "updatedAt": "2026-06-29T17:55:36.090Z"
+    },
+    {
+      "id": "skill:sickn33/antigravity-awesome-skills",
+      "type": "skill",
+      "name": "sickn33/antigravity-awesome-skills",
+      "owner": "sickn33",
+      "url": "https://github.com/sickn33/antigravity-awesome-skills",
+      "description": "Installable GitHub library of 1,600+ agentic skills for Claude Code, Cursor, Codex CLI, Gemini CLI, Antigravity, and more. Includes specialized plugins, installer CLI, bundles, workflows, and official/community skill collections.",
+      "summary_es": "Installable GitHub library of 1,600+ agentic skills for Claude Code, Cursor, Codex CLI, Gemini CLI, Antigravity, and more. Includes specialized plugins, installer CLI, bundles, workflows, and officia…",
+      "category": "claude-ai",
+      "tags": [
+        "agent-skills",
+        "agentic-skills",
+        "ai-agent-skills",
+        "ai-agents",
+        "ai-coding",
+        "ai-workflows"
+      ],
+      "language": "Python",
+      "stars": 42017,
+      "starsDelta": 0,
+      "lastCommit": "2026-06-29T13:08:20Z",
+      "license": "MIT",
+      "source": "search",
+      "relevanceScore": 0.99,
+      "featured": false,
+      "claudeCompatible": true,
+      "stale": false,
+      "addedAt": "2026-06-29T07:29:20.440Z",
+      "updatedAt": "2026-06-29T17:55:36.090Z"
+    },
+    {
+      "id": "skill:VoltAgent/awesome-agent-skills",
+      "type": "skill",
+      "name": "VoltAgent/awesome-agent-skills",
+      "owner": "VoltAgent",
+      "url": "https://github.com/VoltAgent/awesome-agent-skills",
+      "description": "A curated collection of 1000+ agent skills from official dev teams and the community, compatible with Claude Code, Codex, Gemini CLI, Cursor, and more.",
+      "summary_es": "A curated collection of 1000+ agent skills from official dev teams and the community, compatible with Claude Code, Codex, Gemini CLI, Cursor, and more.",
+      "category": "claude-ai",
+      "tags": [
+        "agent-skills",
+        "ai-agents",
+        "antigravity-skills",
+        "awesome",
+        "awesome-list",
+        "awesome-lists"
+      ],
+      "language": null,
+      "stars": 26835,
+      "starsDelta": 0,
+      "lastCommit": "2026-06-24T05:59:59Z",
+      "license": "MIT",
+      "source": "search",
+      "relevanceScore": 0.986,
+      "featured": false,
+      "claudeCompatible": true,
+      "stale": false,
+      "addedAt": "2026-06-29T07:29:20.441Z",
+      "updatedAt": "2026-06-29T17:55:36.090Z"
     },
     {
       "id": "skill:VoltAgent/awesome-openclaw-skills",
@@ -1276,16 +1246,16 @@
       ],
       "language": null,
       "stars": 50751,
-      "starsDelta": 16,
+      "starsDelta": 0,
       "lastCommit": "2026-06-24T05:50:01Z",
       "license": "MIT",
       "source": "search",
-      "relevanceScore": 0.995,
+      "relevanceScore": 0.986,
       "featured": false,
       "claudeCompatible": true,
       "stale": false,
       "addedAt": "2026-06-29T07:29:20.440Z",
-      "updatedAt": "2026-06-29T17:51:12.922Z"
+      "updatedAt": "2026-06-29T17:55:36.090Z"
     },
     {
       "id": "skill:zilliztech/memsearch",
@@ -1306,46 +1276,16 @@
       ],
       "language": "Python",
       "stars": 2162,
-      "starsDelta": 4,
+      "starsDelta": 0,
       "lastCommit": "2026-06-22T09:52:51Z",
       "license": "MIT",
       "source": "search",
-      "relevanceScore": 0.987,
+      "relevanceScore": 0.984,
       "featured": false,
       "claudeCompatible": true,
       "stale": false,
       "addedAt": "2026-06-29T07:29:17.645Z",
-      "updatedAt": "2026-06-29T17:51:10.167Z"
-    },
-    {
-      "id": "skill:D4Vinci/Scrapling",
-      "type": "skill",
-      "name": "D4Vinci/Scrapling",
-      "owner": "D4Vinci",
-      "url": "https://github.com/D4Vinci/Scrapling",
-      "description": "🕷️ An adaptive Web Scraping framework that handles everything from a single request to a full-scale crawl!",
-      "summary_es": "🕷️ An adaptive Web Scraping framework that handles everything from a single request to a full-scale crawl!",
-      "category": "claude-ai",
-      "tags": [
-        "ai",
-        "ai-scraping",
-        "automation",
-        "crawler",
-        "crawling",
-        "crawling-python"
-      ],
-      "language": "Python",
-      "stars": 67102,
-      "starsDelta": 164,
-      "lastCommit": "2026-06-26T08:59:06Z",
-      "license": "BSD-3-Clause",
-      "source": "search",
-      "relevanceScore": 0.98,
-      "featured": false,
-      "claudeCompatible": true,
-      "stale": false,
-      "addedAt": "2026-06-29T07:29:23.329Z",
-      "updatedAt": "2026-06-29T17:51:15.753Z"
+      "updatedAt": "2026-06-29T17:55:33.259Z"
     },
     {
       "id": "skill:timescale/pg-aiguide",
@@ -1375,7 +1315,7 @@
       "claudeCompatible": true,
       "stale": false,
       "addedAt": "2026-06-29T07:29:17.645Z",
-      "updatedAt": "2026-06-29T17:51:10.167Z"
+      "updatedAt": "2026-06-29T17:55:33.259Z"
     },
     {
       "id": "skill:wondelai/skills",
@@ -1395,17 +1335,17 @@
         "claude-code-skills"
       ],
       "language": "Shell",
-      "stars": 1490,
-      "starsDelta": 3,
+      "stars": 1491,
+      "starsDelta": 1,
       "lastCommit": "2026-06-26T17:31:24Z",
       "license": "MIT",
       "source": "search",
-      "relevanceScore": 0.968,
+      "relevanceScore": 0.967,
       "featured": false,
       "claudeCompatible": true,
       "stale": false,
       "addedAt": "2026-06-29T07:29:17.645Z",
-      "updatedAt": "2026-06-29T17:51:10.167Z"
+      "updatedAt": "2026-06-29T17:55:33.259Z"
     },
     {
       "id": "skill:activeloopai/hivemind",
@@ -1435,7 +1375,7 @@
       "claudeCompatible": true,
       "stale": false,
       "addedAt": "2026-06-29T07:29:17.645Z",
-      "updatedAt": "2026-06-29T17:51:10.167Z"
+      "updatedAt": "2026-06-29T17:55:33.259Z"
     },
     {
       "id": "skill:kenryu42/cc-safety-net",
@@ -1465,7 +1405,7 @@
       "claudeCompatible": true,
       "stale": false,
       "addedAt": "2026-06-29T07:29:17.645Z",
-      "updatedAt": "2026-06-29T17:51:10.167Z"
+      "updatedAt": "2026-06-29T17:55:33.259Z"
     },
     {
       "id": "skill:hyhmrright/brooks-lint",
@@ -1486,46 +1426,16 @@
       ],
       "language": "JavaScript",
       "stars": 1167,
-      "starsDelta": 1,
+      "starsDelta": 0,
       "lastCommit": "2026-06-27T11:32:11Z",
       "license": "MIT",
       "source": "search",
-      "relevanceScore": 0.953,
+      "relevanceScore": 0.952,
       "featured": false,
       "claudeCompatible": true,
       "stale": false,
       "addedAt": "2026-06-29T07:29:17.645Z",
-      "updatedAt": "2026-06-29T17:51:10.167Z"
-    },
-    {
-      "id": "skill:n8n-io/n8n",
-      "type": "skill",
-      "name": "n8n-io/n8n",
-      "owner": "n8n-io",
-      "url": "https://github.com/n8n-io/n8n",
-      "description": "Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.",
-      "summary_es": "Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.",
-      "category": "claude-ai",
-      "tags": [
-        "ai",
-        "apis",
-        "automation",
-        "cli",
-        "data-flow",
-        "development"
-      ],
-      "language": "TypeScript",
-      "stars": 194515,
-      "starsDelta": 85,
-      "lastCommit": "2026-06-29T17:33:16Z",
-      "license": "NOASSERTION",
-      "source": "search",
-      "relevanceScore": 0.942,
-      "featured": false,
-      "claudeCompatible": true,
-      "stale": false,
-      "addedAt": "2026-06-29T07:29:23.329Z",
-      "updatedAt": "2026-06-29T17:51:15.753Z"
+      "updatedAt": "2026-06-29T17:55:33.259Z"
     },
     {
       "id": "skill:ComposioHQ/awesome-claude-plugins",
@@ -1546,76 +1456,16 @@
       ],
       "language": "JavaScript",
       "stars": 1786,
-      "starsDelta": 4,
+      "starsDelta": 0,
       "lastCommit": "2026-05-01T07:08:01Z",
       "license": null,
       "source": "search",
-      "relevanceScore": 0.933,
+      "relevanceScore": 0.93,
       "featured": false,
       "claudeCompatible": true,
       "stale": false,
       "addedAt": "2026-06-29T07:29:17.645Z",
-      "updatedAt": "2026-06-29T17:51:10.167Z"
-    },
-    {
-      "id": "skill:langgenius/dify",
-      "type": "skill",
-      "name": "langgenius/dify",
-      "owner": "langgenius",
-      "url": "https://github.com/langgenius/dify",
-      "description": "Production-ready platform for agentic workflow development.",
-      "summary_es": "Production-ready platform for agentic workflow development.",
-      "category": "claude-ai",
-      "tags": [
-        "agent",
-        "agentic-ai",
-        "agentic-framework",
-        "agentic-workflow",
-        "ai",
-        "automation"
-      ],
-      "language": "TypeScript",
-      "stars": 146989,
-      "starsDelta": 63,
-      "lastCommit": "2026-06-29T17:35:38Z",
-      "license": "NOASSERTION",
-      "source": "search",
-      "relevanceScore": 0.931,
-      "featured": false,
-      "claudeCompatible": true,
-      "stale": false,
-      "addedAt": "2026-06-29T07:29:23.329Z",
-      "updatedAt": "2026-06-29T17:51:15.753Z"
-    },
-    {
-      "id": "skill:open-webui/open-webui",
-      "type": "skill",
-      "name": "open-webui/open-webui",
-      "owner": "open-webui",
-      "url": "https://github.com/open-webui/open-webui",
-      "description": "User-friendly AI Interface (Supports Ollama, OpenAI API, ...)",
-      "summary_es": "User-friendly AI Interface (Supports Ollama, OpenAI API, ...)",
-      "category": "claude-ai",
-      "tags": [
-        "ai",
-        "llm",
-        "llm-ui",
-        "llm-webui",
-        "llms",
-        "mcp"
-      ],
-      "language": "Python",
-      "stars": 143441,
-      "starsDelta": 54,
-      "lastCommit": "2026-06-29T17:46:39Z",
-      "license": "NOASSERTION",
-      "source": "search",
-      "relevanceScore": 0.927,
-      "featured": false,
-      "claudeCompatible": true,
-      "stale": false,
-      "addedAt": "2026-06-29T07:29:23.329Z",
-      "updatedAt": "2026-06-29T17:51:15.753Z"
+      "updatedAt": "2026-06-29T17:55:33.259Z"
     },
     {
       "id": "skill:agenticnotetaking/arscontexta",
@@ -1636,252 +1486,16 @@
       ],
       "language": "Shell",
       "stars": 3427,
-      "starsDelta": 3,
+      "starsDelta": 0,
       "lastCommit": "2026-02-24T23:54:21Z",
       "license": "MIT",
-      "source": "search",
-      "relevanceScore": 0.916,
-      "featured": false,
-      "claudeCompatible": true,
-      "stale": false,
-      "addedAt": "2026-06-29T07:29:17.645Z",
-      "updatedAt": "2026-06-29T17:51:10.167Z"
-    },
-    {
-      "id": "skill:lobehub/lobehub",
-      "type": "skill",
-      "name": "lobehub/lobehub",
-      "owner": "lobehub",
-      "url": "https://github.com/lobehub/lobehub",
-      "description": "🤯 LobeHub is your Chief Agent Operator, organizing your agents into 7×24 operations by hiring, scheduling, and reporting on your entire AI team.",
-      "summary_es": "🤯 LobeHub is your Chief Agent Operator, organizing your agents into 7×24 operations by hiring, scheduling, and reporting on your entire AI team.",
-      "category": "claude-ai",
-      "tags": [
-        "agent",
-        "agent-collaboration",
-        "agent-harness",
-        "ai",
-        "cao",
-        "chatgpt"
-      ],
-      "language": "TypeScript",
-      "stars": 79239,
-      "starsDelta": 31,
-      "lastCommit": "2026-06-29T17:48:30Z",
-      "license": "NOASSERTION",
       "source": "search",
       "relevanceScore": 0.915,
       "featured": false,
       "claudeCompatible": true,
       "stale": false,
-      "addedAt": "2026-06-29T07:29:23.329Z",
-      "updatedAt": "2026-06-29T17:51:15.753Z"
-    },
-    {
-      "id": "skill:upstash/context7",
-      "type": "skill",
-      "name": "upstash/context7",
-      "owner": "upstash",
-      "url": "https://github.com/upstash/context7",
-      "description": "Context7 Platform -- Up-to-date code documentation for LLMs and AI code editors",
-      "summary_es": "Context7 Platform -- Up-to-date code documentation for LLMs and AI code editors",
-      "category": "claude-ai",
-      "tags": [
-        "llm",
-        "mcp",
-        "mcp-server",
-        "vibe-coding"
-      ],
-      "language": "TypeScript",
-      "stars": 58302,
-      "starsDelta": 28,
-      "lastCommit": "2026-06-29T14:06:13Z",
-      "license": "MIT",
-      "source": "search",
-      "relevanceScore": 0.914,
-      "featured": false,
-      "claudeCompatible": true,
-      "stale": false,
-      "addedAt": "2026-06-29T07:29:23.329Z",
-      "updatedAt": "2026-06-29T17:51:15.753Z"
-    },
-    {
-      "id": "skill:MemPalace/mempalace",
-      "type": "skill",
-      "name": "MemPalace/mempalace",
-      "owner": "MemPalace",
-      "url": "https://github.com/MemPalace/mempalace",
-      "description": "The best-benchmarked open-source AI memory system. And it's free.",
-      "summary_es": "The best-benchmarked open-source AI memory system. And it's free.",
-      "category": "claude-ai",
-      "tags": [
-        "ai",
-        "chromadb",
-        "llm",
-        "mcp",
-        "memory",
-        "python"
-      ],
-      "language": "Python",
-      "stars": 56730,
-      "starsDelta": 17,
-      "lastCommit": "2026-06-29T06:28:06Z",
-      "license": "MIT",
-      "source": "search",
-      "relevanceScore": 0.908,
-      "featured": false,
-      "claudeCompatible": true,
-      "stale": false,
-      "addedAt": "2026-06-29T07:29:23.329Z",
-      "updatedAt": "2026-06-29T17:51:15.753Z"
-    },
-    {
-      "id": "skill:Snailclimb/JavaGuide",
-      "type": "skill",
-      "name": "Snailclimb/JavaGuide",
-      "owner": "Snailclimb",
-      "url": "https://github.com/Snailclimb/JavaGuide",
-      "description": "Java 面试 & 后端通用面试指南，覆盖计算机基础、数据库、分布式、高并发、系统设计与 AI 应用开发",
-      "summary_es": "Java 面试 & 后端通用面试指南，覆盖计算机基础、数据库、分布式、高并发、系统设计与 AI 应用开发",
-      "category": "claude-ai",
-      "tags": [
-        "agent",
-        "ai",
-        "context-engineering",
-        "deepseek",
-        "interview",
-        "java"
-      ],
-      "language": "JavaScript",
-      "stars": 156689,
-      "starsDelta": 18,
-      "lastCommit": "2026-06-28T22:50:31Z",
-      "license": "Apache-2.0",
-      "source": "search",
-      "relevanceScore": 0.908,
-      "featured": false,
-      "claudeCompatible": true,
-      "stale": false,
-      "addedAt": "2026-06-29T07:29:23.329Z",
-      "updatedAt": "2026-06-29T17:51:15.753Z"
-    },
-    {
-      "id": "repo:paperless-ngx/paperless-ngx",
-      "type": "repo",
-      "name": "paperless-ngx/paperless-ngx",
-      "owner": "paperless-ngx",
-      "url": "https://github.com/paperless-ngx/paperless-ngx",
-      "description": "A community-supported supercharged document management system: scan, index and archive all your documents",
-      "summary_es": "A community-supported supercharged document management system: scan, index and archive all your documents",
-      "category": "angular-frontend",
-      "tags": [
-        "angular",
-        "archiving",
-        "django",
-        "dms",
-        "document-management",
-        "document-management-system"
-      ],
-      "language": "Python",
-      "stars": 42585,
-      "starsDelta": 12,
-      "lastCommit": "2026-06-29T13:43:37Z",
-      "license": "GPL-3.0",
-      "source": "search",
-      "relevanceScore": 0.906,
-      "featured": false,
-      "claudeCompatible": false,
-      "stale": false,
-      "addedAt": "2026-06-29T07:29:00.403Z",
-      "updatedAt": "2026-06-29T17:50:53.104Z"
-    },
-    {
-      "id": "skill:sansan0/TrendRadar",
-      "type": "skill",
-      "name": "sansan0/TrendRadar",
-      "owner": "sansan0",
-      "url": "https://github.com/sansan0/TrendRadar",
-      "description": "⭐AI-driven public opinion & trend monitor with multi-platform aggregation, RSS, and smart alerts.🎯 告别信息过载，你的 AI 舆情监控助手与热点筛选工具！聚合多平台热点 +  RSS 订阅，支持关键词精准筛选。AI 智能筛选新闻 + AI 翻译 +  AI 分析简报直推手机，也支持接入 MCP 架构，赋能 AI 自然语言对话分析、情感洞察与趋势预测等。支持 Docker ，数据本地/云端自持。集成微信/飞书/钉钉/Telegram/邮件/ntfy/bark/slack 等渠道智能推送。",
-      "summary_es": "⭐AI-driven public opinion & trend monitor with multi-platform aggregation, RSS, and smart alerts.🎯 告别信息过载，你的 AI 舆情监控助手与热点筛选工具！聚合多平台热点 +  RSS 订阅，支持关键词精准筛选。AI 智能筛选新闻 + AI 翻译 +  AI 分析简报直推手机，也支持接入 MCP 架…",
-      "category": "claude-ai",
-      "tags": [
-        "ai",
-        "bark",
-        "data-analysis",
-        "docker",
-        "hot-news",
-        "llm"
-      ],
-      "language": "Python",
-      "stars": 60036,
-      "starsDelta": 16,
-      "lastCommit": "2026-06-26T12:07:30Z",
-      "license": "GPL-3.0",
-      "source": "search",
-      "relevanceScore": 0.906,
-      "featured": false,
-      "claudeCompatible": true,
-      "stale": false,
-      "addedAt": "2026-06-29T07:29:23.329Z",
-      "updatedAt": "2026-06-29T17:51:15.753Z"
-    },
-    {
-      "id": "repo:jellyfin/jellyfin",
-      "type": "repo",
-      "name": "jellyfin/jellyfin",
-      "owner": "jellyfin",
-      "url": "https://github.com/jellyfin/jellyfin",
-      "description": "The Free Software Media System - Server Backend & API",
-      "summary_es": "The Free Software Media System - Server Backend & API",
-      "category": "dotnet-backend",
-      "tags": [
-        "csharp",
-        "dotnet",
-        "hacktoberfest",
-        "jellyfin"
-      ],
-      "language": "C#",
-      "stars": 53801,
-      "starsDelta": 10,
-      "lastCommit": "2026-06-29T16:06:14Z",
-      "license": "GPL-2.0",
-      "source": "search",
-      "relevanceScore": 0.905,
-      "featured": false,
-      "claudeCompatible": false,
-      "stale": false,
-      "addedAt": "2026-06-29T07:28:51.577Z",
-      "updatedAt": "2026-06-29T17:50:44.455Z"
-    },
-    {
-      "id": "repo:files-community/Files",
-      "type": "repo",
-      "name": "files-community/Files",
-      "owner": "files-community",
-      "url": "https://github.com/files-community/Files",
-      "description": "A modern file manager that helps users organize their files and folders.",
-      "summary_es": "A modern file manager that helps users organize their files and folders.",
-      "category": "dotnet-backend",
-      "tags": [
-        "alternatives",
-        "csharp",
-        "customization",
-        "developer-tools",
-        "dotnet",
-        "file-manager"
-      ],
-      "language": "C#",
-      "stars": 44089,
-      "starsDelta": 8,
-      "lastCommit": "2026-06-29T15:26:23Z",
-      "license": "MIT",
-      "source": "search",
-      "relevanceScore": 0.904,
-      "featured": false,
-      "claudeCompatible": false,
-      "stale": false,
-      "addedAt": "2026-06-29T07:28:51.577Z",
-      "updatedAt": "2026-06-29T17:50:44.455Z"
+      "addedAt": "2026-06-29T07:29:17.645Z",
+      "updatedAt": "2026-06-29T17:55:33.259Z"
     },
     {
       "id": "repo:storybookjs/storybook",
@@ -1901,195 +1515,17 @@
         "javascript"
       ],
       "language": "TypeScript",
-      "stars": 90471,
-      "starsDelta": 6,
+      "stars": 90473,
+      "starsDelta": 2,
       "lastCommit": "2026-06-29T17:47:22Z",
       "license": "MIT",
       "source": "search",
-      "relevanceScore": 0.903,
-      "featured": false,
-      "claudeCompatible": false,
-      "stale": false,
-      "addedAt": "2026-06-29T07:29:00.403Z",
-      "updatedAt": "2026-06-29T17:50:53.103Z"
-    },
-    {
-      "id": "repo:dotnet/aspnetcore",
-      "type": "repo",
-      "name": "dotnet/aspnetcore",
-      "owner": "dotnet",
-      "url": "https://github.com/dotnet/aspnetcore",
-      "description": "ASP.NET Core is a cross-platform .NET framework for building modern cloud-based web applications on Windows, Mac, or Linux.",
-      "summary_es": "ASP.NET Core is a cross-platform .NET framework for building modern cloud-based web applications on Windows, Mac, or Linux.",
-      "category": "dotnet-backend",
-      "tags": [
-        "aspnetcore",
-        "dotnet",
-        "hacktoberfest",
-        "help-wanted"
-      ],
-      "language": "C#",
-      "stars": 38163,
-      "starsDelta": 4,
-      "lastCommit": "2026-06-29T17:39:52Z",
-      "license": "MIT",
-      "source": "search",
-      "relevanceScore": 0.902,
-      "featured": false,
-      "claudeCompatible": false,
-      "stale": false,
-      "addedAt": "2026-06-29T07:28:51.577Z",
-      "updatedAt": "2026-06-29T17:50:44.455Z"
-    },
-    {
-      "id": "skill:netdata/netdata",
-      "type": "skill",
-      "name": "netdata/netdata",
-      "owner": "netdata",
-      "url": "https://github.com/netdata/netdata",
-      "description": "The fastest path to AI-powered full stack observability, even for lean teams.",
-      "summary_es": "The fastest path to AI-powered full stack observability, even for lean teams.",
-      "category": "claude-ai",
-      "tags": [
-        "ai",
-        "alerting",
-        "cncf",
-        "data-visualization",
-        "database",
-        "devops"
-      ],
-      "language": "Go",
-      "stars": 79444,
-      "starsDelta": 5,
-      "lastCommit": "2026-06-29T12:38:04Z",
-      "license": "GPL-3.0",
-      "source": "search",
-      "relevanceScore": 0.902,
-      "featured": false,
-      "claudeCompatible": true,
-      "stale": false,
-      "addedAt": "2026-06-29T07:29:23.329Z",
-      "updatedAt": "2026-06-29T17:51:15.753Z"
-    },
-    {
-      "id": "repo:nrwl/nx",
-      "type": "repo",
-      "name": "nrwl/nx",
-      "owner": "nrwl",
-      "url": "https://github.com/nrwl/nx",
-      "description": "The Monorepo Platform that amplifies both developers and AI agents. Nx optimizes your builds, scales your CI, and fixes failed PRs automatically. Ship in half the time.",
-      "summary_es": "The Monorepo Platform that amplifies both developers and AI agents. Nx optimizes your builds, scales your CI, and fixes failed PRs automatically. Ship in half the time.",
-      "category": "angular-frontend",
-      "tags": [
-        "angular",
-        "build",
-        "build-system",
-        "build-tool",
-        "building-tool",
-        "cli"
-      ],
-      "language": "TypeScript",
-      "stars": 29033,
-      "starsDelta": 4,
-      "lastCommit": "2026-06-29T17:40:07Z",
-      "license": "MIT",
-      "source": "search",
-      "relevanceScore": 0.902,
-      "featured": false,
-      "claudeCompatible": false,
-      "stale": false,
-      "addedAt": "2026-06-29T07:29:00.403Z",
-      "updatedAt": "2026-06-29T17:50:53.104Z"
-    },
-    {
-      "id": "repo:AvaloniaUI/Avalonia",
-      "type": "repo",
-      "name": "AvaloniaUI/Avalonia",
-      "owner": "AvaloniaUI",
-      "url": "https://github.com/AvaloniaUI/Avalonia",
-      "description": "Develop Desktop, Embedded, Mobile and WebAssembly apps with C# and XAML. The future of .NET UI",
-      "summary_es": "Develop Desktop, Embedded, Mobile and WebAssembly apps with C# and XAML. The future of .NET UI",
-      "category": "dotnet-backend",
-      "tags": [
-        "android",
-        "app-framework",
-        "avalonia",
-        "avaloniaui",
-        "browser",
-        "c-sharp"
-      ],
-      "language": "C#",
-      "stars": 31063,
-      "starsDelta": 3,
-      "lastCommit": "2026-06-29T12:31:05Z",
-      "license": "MIT",
-      "source": "search",
-      "relevanceScore": 0.901,
-      "featured": false,
-      "claudeCompatible": false,
-      "stale": false,
-      "addedAt": "2026-06-29T07:28:51.577Z",
-      "updatedAt": "2026-06-29T17:50:44.455Z"
-    },
-    {
-      "id": "repo:bitwarden/server",
-      "type": "repo",
-      "name": "bitwarden/server",
-      "owner": "bitwarden",
-      "url": "https://github.com/bitwarden/server",
-      "description": "Bitwarden infrastructure/backend (API, database, Docker, etc).",
-      "summary_es": "Bitwarden infrastructure/backend (API, database, Docker, etc).",
-      "category": "dotnet-backend",
-      "tags": [
-        "api",
-        "aspnet",
-        "aspnetcore",
-        "bitwarden",
-        "csharp",
-        "docker"
-      ],
-      "language": "C#",
-      "stars": 19312,
-      "starsDelta": 3,
-      "lastCommit": "2026-06-29T17:18:23Z",
-      "license": "NOASSERTION",
-      "source": "search",
-      "relevanceScore": 0.901,
-      "featured": false,
-      "claudeCompatible": false,
-      "stale": false,
-      "addedAt": "2026-06-29T07:28:51.578Z",
-      "updatedAt": "2026-06-29T17:50:44.456Z"
-    },
-    {
-      "id": "repo:wailsapp/wails",
-      "type": "repo",
-      "name": "wailsapp/wails",
-      "owner": "wailsapp",
-      "url": "https://github.com/wailsapp/wails",
-      "description": "Create beautiful applications using Go",
-      "summary_es": "Create beautiful applications using Go",
-      "category": "angular-frontend",
-      "tags": [
-        "angular",
-        "desktop-application",
-        "go",
-        "golang",
-        "javascript",
-        "linux"
-      ],
-      "language": "Go",
-      "stars": 35002,
-      "starsDelta": 2,
-      "lastCommit": "2026-06-29T16:20:43Z",
-      "license": "MIT",
-      "source": "search",
       "relevanceScore": 0.901,
       "featured": false,
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:29:00.403Z",
-      "updatedAt": "2026-06-29T17:50:53.104Z"
+      "updatedAt": "2026-06-29T17:55:16.317Z"
     },
     {
       "id": "repo:abpframework/abp",
@@ -2119,7 +1555,7 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:28:54.492Z",
-      "updatedAt": "2026-06-29T17:50:47.253Z"
+      "updatedAt": "2026-06-29T17:55:10.685Z"
     },
     {
       "id": "repo:angular/angular-cli",
@@ -2147,7 +1583,7 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:29:00.403Z",
-      "updatedAt": "2026-06-29T17:50:53.104Z"
+      "updatedAt": "2026-06-29T17:55:16.317Z"
     },
     {
       "id": "repo:angular/components",
@@ -2175,7 +1611,95 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:29:00.404Z",
-      "updatedAt": "2026-06-29T17:50:53.104Z"
+      "updatedAt": "2026-06-29T17:55:16.317Z"
+    },
+    {
+      "id": "repo:AvaloniaUI/Avalonia",
+      "type": "repo",
+      "name": "AvaloniaUI/Avalonia",
+      "owner": "AvaloniaUI",
+      "url": "https://github.com/AvaloniaUI/Avalonia",
+      "description": "Develop Desktop, Embedded, Mobile and WebAssembly apps with C# and XAML. The future of .NET UI",
+      "summary_es": "Develop Desktop, Embedded, Mobile and WebAssembly apps with C# and XAML. The future of .NET UI",
+      "category": "dotnet-backend",
+      "tags": [
+        "android",
+        "app-framework",
+        "avalonia",
+        "avaloniaui",
+        "browser",
+        "c-sharp"
+      ],
+      "language": "C#",
+      "stars": 31063,
+      "starsDelta": 0,
+      "lastCommit": "2026-06-29T12:31:05Z",
+      "license": "MIT",
+      "source": "search",
+      "relevanceScore": 0.9,
+      "featured": false,
+      "claudeCompatible": false,
+      "stale": false,
+      "addedAt": "2026-06-29T07:28:51.577Z",
+      "updatedAt": "2026-06-29T17:55:07.881Z"
+    },
+    {
+      "id": "repo:bitwarden/server",
+      "type": "repo",
+      "name": "bitwarden/server",
+      "owner": "bitwarden",
+      "url": "https://github.com/bitwarden/server",
+      "description": "Bitwarden infrastructure/backend (API, database, Docker, etc).",
+      "summary_es": "Bitwarden infrastructure/backend (API, database, Docker, etc).",
+      "category": "dotnet-backend",
+      "tags": [
+        "api",
+        "aspnet",
+        "aspnetcore",
+        "bitwarden",
+        "csharp",
+        "docker"
+      ],
+      "language": "C#",
+      "stars": 19312,
+      "starsDelta": 0,
+      "lastCommit": "2026-06-29T17:54:35Z",
+      "license": "NOASSERTION",
+      "source": "search",
+      "relevanceScore": 0.9,
+      "featured": false,
+      "claudeCompatible": false,
+      "stale": false,
+      "addedAt": "2026-06-29T07:28:51.578Z",
+      "updatedAt": "2026-06-29T17:55:07.881Z"
+    },
+    {
+      "id": "repo:dotnet/aspnetcore",
+      "type": "repo",
+      "name": "dotnet/aspnetcore",
+      "owner": "dotnet",
+      "url": "https://github.com/dotnet/aspnetcore",
+      "description": "ASP.NET Core is a cross-platform .NET framework for building modern cloud-based web applications on Windows, Mac, or Linux.",
+      "summary_es": "ASP.NET Core is a cross-platform .NET framework for building modern cloud-based web applications on Windows, Mac, or Linux.",
+      "category": "dotnet-backend",
+      "tags": [
+        "aspnetcore",
+        "dotnet",
+        "hacktoberfest",
+        "help-wanted"
+      ],
+      "language": "C#",
+      "stars": 38163,
+      "starsDelta": 0,
+      "lastCommit": "2026-06-29T17:39:52Z",
+      "license": "MIT",
+      "source": "search",
+      "relevanceScore": 0.9,
+      "featured": false,
+      "claudeCompatible": false,
+      "stale": false,
+      "addedAt": "2026-06-29T07:28:51.577Z",
+      "updatedAt": "2026-06-29T17:55:07.880Z"
     },
     {
       "id": "repo:dotnet/AspNetCore.Docs",
@@ -2204,7 +1728,7 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:28:54.492Z",
-      "updatedAt": "2026-06-29T17:50:47.253Z"
+      "updatedAt": "2026-06-29T17:55:10.685Z"
     },
     {
       "id": "repo:dotnet/maui",
@@ -2225,7 +1749,7 @@
       ],
       "language": "C#",
       "stars": 23279,
-      "starsDelta": 1,
+      "starsDelta": 0,
       "lastCommit": "2026-06-29T17:21:41Z",
       "license": "MIT",
       "source": "search",
@@ -2234,7 +1758,67 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:28:51.578Z",
-      "updatedAt": "2026-06-29T17:50:44.456Z"
+      "updatedAt": "2026-06-29T17:55:07.881Z"
+    },
+    {
+      "id": "repo:files-community/Files",
+      "type": "repo",
+      "name": "files-community/Files",
+      "owner": "files-community",
+      "url": "https://github.com/files-community/Files",
+      "description": "A modern file manager that helps users organize their files and folders.",
+      "summary_es": "A modern file manager that helps users organize their files and folders.",
+      "category": "dotnet-backend",
+      "tags": [
+        "alternatives",
+        "csharp",
+        "customization",
+        "developer-tools",
+        "dotnet",
+        "file-manager"
+      ],
+      "language": "C#",
+      "stars": 44089,
+      "starsDelta": 0,
+      "lastCommit": "2026-06-29T15:26:23Z",
+      "license": "MIT",
+      "source": "search",
+      "relevanceScore": 0.9,
+      "featured": false,
+      "claudeCompatible": false,
+      "stale": false,
+      "addedAt": "2026-06-29T07:28:51.577Z",
+      "updatedAt": "2026-06-29T17:55:07.880Z"
+    },
+    {
+      "id": "skill:headroomlabs-ai/headroom",
+      "type": "skill",
+      "name": "headroomlabs-ai/headroom",
+      "owner": "headroomlabs-ai",
+      "url": "https://github.com/headroomlabs-ai/headroom",
+      "description": "Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 60-95% fewer tokens, same answers. Library, proxy, MCP server.",
+      "summary_es": "Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 60-95% fewer tokens, same answers. Library, proxy, MCP server.",
+      "category": "claude-ai",
+      "tags": [
+        "agent",
+        "ai",
+        "anthropic",
+        "claude-code",
+        "compression",
+        "context-engineering"
+      ],
+      "language": "Python",
+      "stars": 53714,
+      "starsDelta": 0,
+      "lastCommit": "2026-06-29T16:07:18Z",
+      "license": "Apache-2.0",
+      "source": "search",
+      "relevanceScore": 0.9,
+      "featured": false,
+      "claudeCompatible": true,
+      "stale": false,
+      "addedAt": "2026-06-29T07:29:23.329Z",
+      "updatedAt": "2026-06-29T17:55:38.851Z"
     },
     {
       "id": "repo:icsharpcode/ILSpy",
@@ -2256,7 +1840,7 @@
       "language": "C#",
       "stars": 25518,
       "starsDelta": 0,
-      "lastCommit": "2026-06-29T06:48:22Z",
+      "lastCommit": "2026-06-29T17:54:46Z",
       "license": "MIT",
       "source": "search",
       "relevanceScore": 0.9,
@@ -2264,7 +1848,7 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:28:51.578Z",
-      "updatedAt": "2026-06-29T17:50:44.456Z"
+      "updatedAt": "2026-06-29T17:55:07.881Z"
     },
     {
       "id": "repo:ionic-team/ionic-framework",
@@ -2285,7 +1869,7 @@
       ],
       "language": "TypeScript",
       "stars": 52548,
-      "starsDelta": 1,
+      "starsDelta": 0,
       "lastCommit": "2026-06-29T16:36:17Z",
       "license": "MIT",
       "source": "search",
@@ -2294,7 +1878,35 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:29:00.403Z",
-      "updatedAt": "2026-06-29T17:50:53.104Z"
+      "updatedAt": "2026-06-29T17:55:16.317Z"
+    },
+    {
+      "id": "repo:jellyfin/jellyfin",
+      "type": "repo",
+      "name": "jellyfin/jellyfin",
+      "owner": "jellyfin",
+      "url": "https://github.com/jellyfin/jellyfin",
+      "description": "The Free Software Media System - Server Backend & API",
+      "summary_es": "The Free Software Media System - Server Backend & API",
+      "category": "dotnet-backend",
+      "tags": [
+        "csharp",
+        "dotnet",
+        "hacktoberfest",
+        "jellyfin"
+      ],
+      "language": "C#",
+      "stars": 53801,
+      "starsDelta": 0,
+      "lastCommit": "2026-06-29T16:06:14Z",
+      "license": "GPL-2.0",
+      "source": "search",
+      "relevanceScore": 0.9,
+      "featured": false,
+      "claudeCompatible": false,
+      "stale": false,
+      "addedAt": "2026-06-29T07:28:51.577Z",
+      "updatedAt": "2026-06-29T17:55:07.880Z"
     },
     {
       "id": "repo:jhipster/generator-jhipster",
@@ -2324,7 +1936,157 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:29:00.404Z",
-      "updatedAt": "2026-06-29T17:50:53.104Z"
+      "updatedAt": "2026-06-29T17:55:16.317Z"
+    },
+    {
+      "id": "skill:langgenius/dify",
+      "type": "skill",
+      "name": "langgenius/dify",
+      "owner": "langgenius",
+      "url": "https://github.com/langgenius/dify",
+      "description": "Production-ready platform for agentic workflow development.",
+      "summary_es": "Production-ready platform for agentic workflow development.",
+      "category": "claude-ai",
+      "tags": [
+        "agent",
+        "agentic-ai",
+        "agentic-framework",
+        "agentic-workflow",
+        "ai",
+        "automation"
+      ],
+      "language": "TypeScript",
+      "stars": 146989,
+      "starsDelta": 0,
+      "lastCommit": "2026-06-29T17:35:38Z",
+      "license": "NOASSERTION",
+      "source": "search",
+      "relevanceScore": 0.9,
+      "featured": false,
+      "claudeCompatible": true,
+      "stale": false,
+      "addedAt": "2026-06-29T07:29:23.329Z",
+      "updatedAt": "2026-06-29T17:55:38.851Z"
+    },
+    {
+      "id": "skill:lobehub/lobehub",
+      "type": "skill",
+      "name": "lobehub/lobehub",
+      "owner": "lobehub",
+      "url": "https://github.com/lobehub/lobehub",
+      "description": "🤯 LobeHub is your Chief Agent Operator, organizing your agents into 7×24 operations by hiring, scheduling, and reporting on your entire AI team.",
+      "summary_es": "🤯 LobeHub is your Chief Agent Operator, organizing your agents into 7×24 operations by hiring, scheduling, and reporting on your entire AI team.",
+      "category": "claude-ai",
+      "tags": [
+        "agent",
+        "agent-collaboration",
+        "agent-harness",
+        "ai",
+        "cao",
+        "chatgpt"
+      ],
+      "language": "TypeScript",
+      "stars": 79240,
+      "starsDelta": 1,
+      "lastCommit": "2026-06-29T17:51:24Z",
+      "license": "NOASSERTION",
+      "source": "search",
+      "relevanceScore": 0.9,
+      "featured": false,
+      "claudeCompatible": true,
+      "stale": false,
+      "addedAt": "2026-06-29T07:29:23.329Z",
+      "updatedAt": "2026-06-29T17:55:38.851Z"
+    },
+    {
+      "id": "skill:MemPalace/mempalace",
+      "type": "skill",
+      "name": "MemPalace/mempalace",
+      "owner": "MemPalace",
+      "url": "https://github.com/MemPalace/mempalace",
+      "description": "The best-benchmarked open-source AI memory system. And it's free.",
+      "summary_es": "The best-benchmarked open-source AI memory system. And it's free.",
+      "category": "claude-ai",
+      "tags": [
+        "ai",
+        "chromadb",
+        "llm",
+        "mcp",
+        "memory",
+        "python"
+      ],
+      "language": "Python",
+      "stars": 56730,
+      "starsDelta": 0,
+      "lastCommit": "2026-06-29T06:28:06Z",
+      "license": "MIT",
+      "source": "search",
+      "relevanceScore": 0.9,
+      "featured": false,
+      "claudeCompatible": true,
+      "stale": false,
+      "addedAt": "2026-06-29T07:29:23.329Z",
+      "updatedAt": "2026-06-29T17:55:38.851Z"
+    },
+    {
+      "id": "skill:n8n-io/n8n",
+      "type": "skill",
+      "name": "n8n-io/n8n",
+      "owner": "n8n-io",
+      "url": "https://github.com/n8n-io/n8n",
+      "description": "Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.",
+      "summary_es": "Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.",
+      "category": "claude-ai",
+      "tags": [
+        "ai",
+        "apis",
+        "automation",
+        "cli",
+        "data-flow",
+        "development"
+      ],
+      "language": "TypeScript",
+      "stars": 194515,
+      "starsDelta": 0,
+      "lastCommit": "2026-06-29T17:33:16Z",
+      "license": "NOASSERTION",
+      "source": "search",
+      "relevanceScore": 0.9,
+      "featured": false,
+      "claudeCompatible": true,
+      "stale": false,
+      "addedAt": "2026-06-29T07:29:23.329Z",
+      "updatedAt": "2026-06-29T17:55:38.851Z"
+    },
+    {
+      "id": "skill:netdata/netdata",
+      "type": "skill",
+      "name": "netdata/netdata",
+      "owner": "netdata",
+      "url": "https://github.com/netdata/netdata",
+      "description": "The fastest path to AI-powered full stack observability, even for lean teams.",
+      "summary_es": "The fastest path to AI-powered full stack observability, even for lean teams.",
+      "category": "claude-ai",
+      "tags": [
+        "ai",
+        "alerting",
+        "cncf",
+        "data-visualization",
+        "database",
+        "devops"
+      ],
+      "language": "Go",
+      "stars": 79444,
+      "starsDelta": 0,
+      "lastCommit": "2026-06-29T12:38:04Z",
+      "license": "GPL-3.0",
+      "source": "search",
+      "relevanceScore": 0.9,
+      "featured": false,
+      "claudeCompatible": true,
+      "stale": false,
+      "addedAt": "2026-06-29T07:29:23.329Z",
+      "updatedAt": "2026-06-29T17:55:38.851Z"
     },
     {
       "id": "repo:nopSolutions/nopCommerce",
@@ -2354,7 +2116,97 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:28:54.492Z",
-      "updatedAt": "2026-06-29T17:50:47.253Z"
+      "updatedAt": "2026-06-29T17:55:10.685Z"
+    },
+    {
+      "id": "repo:nrwl/nx",
+      "type": "repo",
+      "name": "nrwl/nx",
+      "owner": "nrwl",
+      "url": "https://github.com/nrwl/nx",
+      "description": "The Monorepo Platform that amplifies both developers and AI agents. Nx optimizes your builds, scales your CI, and fixes failed PRs automatically. Ship in half the time.",
+      "summary_es": "The Monorepo Platform that amplifies both developers and AI agents. Nx optimizes your builds, scales your CI, and fixes failed PRs automatically. Ship in half the time.",
+      "category": "angular-frontend",
+      "tags": [
+        "angular",
+        "build",
+        "build-system",
+        "build-tool",
+        "building-tool",
+        "cli"
+      ],
+      "language": "TypeScript",
+      "stars": 29033,
+      "starsDelta": 0,
+      "lastCommit": "2026-06-29T17:40:07Z",
+      "license": "MIT",
+      "source": "search",
+      "relevanceScore": 0.9,
+      "featured": false,
+      "claudeCompatible": false,
+      "stale": false,
+      "addedAt": "2026-06-29T07:29:00.403Z",
+      "updatedAt": "2026-06-29T17:55:16.317Z"
+    },
+    {
+      "id": "skill:open-webui/open-webui",
+      "type": "skill",
+      "name": "open-webui/open-webui",
+      "owner": "open-webui",
+      "url": "https://github.com/open-webui/open-webui",
+      "description": "User-friendly AI Interface (Supports Ollama, OpenAI API, ...)",
+      "summary_es": "User-friendly AI Interface (Supports Ollama, OpenAI API, ...)",
+      "category": "claude-ai",
+      "tags": [
+        "ai",
+        "llm",
+        "llm-ui",
+        "llm-webui",
+        "llms",
+        "mcp"
+      ],
+      "language": "Python",
+      "stars": 143441,
+      "starsDelta": 0,
+      "lastCommit": "2026-06-29T17:55:12Z",
+      "license": "NOASSERTION",
+      "source": "search",
+      "relevanceScore": 0.9,
+      "featured": false,
+      "claudeCompatible": true,
+      "stale": false,
+      "addedAt": "2026-06-29T07:29:23.329Z",
+      "updatedAt": "2026-06-29T17:55:38.851Z"
+    },
+    {
+      "id": "repo:paperless-ngx/paperless-ngx",
+      "type": "repo",
+      "name": "paperless-ngx/paperless-ngx",
+      "owner": "paperless-ngx",
+      "url": "https://github.com/paperless-ngx/paperless-ngx",
+      "description": "A community-supported supercharged document management system: scan, index and archive all your documents",
+      "summary_es": "A community-supported supercharged document management system: scan, index and archive all your documents",
+      "category": "angular-frontend",
+      "tags": [
+        "angular",
+        "archiving",
+        "django",
+        "dms",
+        "document-management",
+        "document-management-system"
+      ],
+      "language": "Python",
+      "stars": 42585,
+      "starsDelta": 0,
+      "lastCommit": "2026-06-29T13:43:37Z",
+      "license": "GPL-3.0",
+      "source": "search",
+      "relevanceScore": 0.9,
+      "featured": false,
+      "claudeCompatible": false,
+      "stale": false,
+      "addedAt": "2026-06-29T07:29:00.403Z",
+      "updatedAt": "2026-06-29T17:55:16.317Z"
     },
     {
       "id": "repo:prettier/prettier",
@@ -2384,7 +2236,7 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:29:00.403Z",
-      "updatedAt": "2026-06-29T17:50:53.104Z"
+      "updatedAt": "2026-06-29T17:55:16.317Z"
     },
     {
       "id": "repo:pubkey/rxdb",
@@ -2405,7 +2257,7 @@
       ],
       "language": "TypeScript",
       "stars": 23243,
-      "starsDelta": 1,
+      "starsDelta": 0,
       "lastCommit": "2026-06-29T13:47:58Z",
       "license": "Apache-2.0",
       "source": "search",
@@ -2414,7 +2266,7 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:29:00.404Z",
-      "updatedAt": "2026-06-29T17:50:53.104Z"
+      "updatedAt": "2026-06-29T17:55:16.317Z"
     },
     {
       "id": "repo:pulumi/pulumi",
@@ -2444,7 +2296,7 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:28:51.578Z",
-      "updatedAt": "2026-06-29T17:50:44.456Z"
+      "updatedAt": "2026-06-29T17:55:07.881Z"
     },
     {
       "id": "repo:SeleniumHQ/selenium",
@@ -2465,7 +2317,7 @@
       ],
       "language": "Java",
       "stars": 34236,
-      "starsDelta": 1,
+      "starsDelta": 0,
       "lastCommit": "2026-06-29T08:45:44Z",
       "license": "Apache-2.0",
       "source": "search",
@@ -2474,7 +2326,95 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:28:51.577Z",
-      "updatedAt": "2026-06-29T17:50:44.455Z"
+      "updatedAt": "2026-06-29T17:55:07.880Z"
+    },
+    {
+      "id": "skill:upstash/context7",
+      "type": "skill",
+      "name": "upstash/context7",
+      "owner": "upstash",
+      "url": "https://github.com/upstash/context7",
+      "description": "Context7 Platform -- Up-to-date code documentation for LLMs and AI code editors",
+      "summary_es": "Context7 Platform -- Up-to-date code documentation for LLMs and AI code editors",
+      "category": "claude-ai",
+      "tags": [
+        "llm",
+        "mcp",
+        "mcp-server",
+        "vibe-coding"
+      ],
+      "language": "TypeScript",
+      "stars": 58302,
+      "starsDelta": 0,
+      "lastCommit": "2026-06-29T14:06:13Z",
+      "license": "MIT",
+      "source": "search",
+      "relevanceScore": 0.9,
+      "featured": false,
+      "claudeCompatible": true,
+      "stale": false,
+      "addedAt": "2026-06-29T07:29:23.329Z",
+      "updatedAt": "2026-06-29T17:55:38.851Z"
+    },
+    {
+      "id": "repo:wailsapp/wails",
+      "type": "repo",
+      "name": "wailsapp/wails",
+      "owner": "wailsapp",
+      "url": "https://github.com/wailsapp/wails",
+      "description": "Create beautiful applications using Go",
+      "summary_es": "Create beautiful applications using Go",
+      "category": "angular-frontend",
+      "tags": [
+        "angular",
+        "desktop-application",
+        "go",
+        "golang",
+        "javascript",
+        "linux"
+      ],
+      "language": "Go",
+      "stars": 35002,
+      "starsDelta": 0,
+      "lastCommit": "2026-06-29T16:20:43Z",
+      "license": "MIT",
+      "source": "search",
+      "relevanceScore": 0.9,
+      "featured": false,
+      "claudeCompatible": false,
+      "stale": false,
+      "addedAt": "2026-06-29T07:29:00.403Z",
+      "updatedAt": "2026-06-29T17:55:16.317Z"
+    },
+    {
+      "id": "skill:D4Vinci/Scrapling",
+      "type": "skill",
+      "name": "D4Vinci/Scrapling",
+      "owner": "D4Vinci",
+      "url": "https://github.com/D4Vinci/Scrapling",
+      "description": "🕷️ An adaptive Web Scraping framework that handles everything from a single request to a full-scale crawl!",
+      "summary_es": "🕷️ An adaptive Web Scraping framework that handles everything from a single request to a full-scale crawl!",
+      "category": "claude-ai",
+      "tags": [
+        "ai",
+        "ai-scraping",
+        "automation",
+        "crawler",
+        "crawling",
+        "crawling-python"
+      ],
+      "language": "Python",
+      "stars": 67104,
+      "starsDelta": 2,
+      "lastCommit": "2026-06-26T08:59:06Z",
+      "license": "BSD-3-Clause",
+      "source": "search",
+      "relevanceScore": 0.899,
+      "featured": false,
+      "claudeCompatible": true,
+      "stale": false,
+      "addedAt": "2026-06-29T07:29:23.329Z",
+      "updatedAt": "2026-06-29T17:55:38.851Z"
     },
     {
       "id": "repo:jasontaylordev/CleanArchitecture",
@@ -2504,67 +2444,37 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:28:51.578Z",
-      "updatedAt": "2026-06-29T17:50:44.456Z"
+      "updatedAt": "2026-06-29T17:55:07.881Z"
     },
     {
-      "id": "repo:mehdihadeli/awesome-software-architecture",
-      "type": "repo",
-      "name": "mehdihadeli/awesome-software-architecture",
-      "owner": "mehdihadeli",
-      "url": "https://github.com/mehdihadeli/awesome-software-architecture",
-      "description": "📚 A curated list of awesome articles, videos, and other resources to learn and practice software architecture, patterns, and principles.",
-      "summary_es": "📚 A curated list of awesome articles, videos, and other resources to learn and practice software architecture, patterns, and principles.",
-      "category": "architecture-patterns",
+      "id": "skill:Snailclimb/JavaGuide",
+      "type": "skill",
+      "name": "Snailclimb/JavaGuide",
+      "owner": "Snailclimb",
+      "url": "https://github.com/Snailclimb/JavaGuide",
+      "description": "Java 面试 & 后端通用面试指南，覆盖计算机基础、数据库、分布式、高并发、系统设计与 AI 应用开发",
+      "summary_es": "Java 面试 & 后端通用面试指南，覆盖计算机基础、数据库、分布式、高并发、系统设计与 AI 应用开发",
+      "category": "claude-ai",
       "tags": [
-        "architectural-patterns",
-        "architectural-styles",
-        "architecture",
-        "awesome-list",
-        "clean-architecture",
-        "ddd"
+        "agent",
+        "ai",
+        "context-engineering",
+        "deepseek",
+        "interview",
+        "java"
       ],
-      "language": null,
-      "stars": 11302,
-      "starsDelta": 3,
-      "lastCommit": "2026-06-25T11:18:38Z",
-      "license": "CC0-1.0",
+      "language": "JavaScript",
+      "stars": 156689,
+      "starsDelta": 0,
+      "lastCommit": "2026-06-28T22:50:31Z",
+      "license": "Apache-2.0",
       "source": "search",
       "relevanceScore": 0.899,
       "featured": false,
-      "claudeCompatible": false,
+      "claudeCompatible": true,
       "stale": false,
-      "addedAt": "2026-06-29T07:29:06.198Z",
-      "updatedAt": "2026-06-29T17:50:58.857Z"
-    },
-    {
-      "id": "repo:NativeScript/NativeScript",
-      "type": "repo",
-      "name": "NativeScript/NativeScript",
-      "owner": "NativeScript",
-      "url": "https://github.com/NativeScript/NativeScript",
-      "description": "⚡ Write Native with TypeScript ✨ Best of all worlds (TypeScript, Swift, Objective C, Kotlin, Java, Dart). Use what you love ❤️ Angular, React, Solid, Svelte, Vue with: iOS (UIKit, SwiftUI), Android (View, Jetpack Compose), Flutter and you name it compatible.",
-      "summary_es": "⚡ Write Native with TypeScript ✨ Best of all worlds (TypeScript, Swift, Objective C, Kotlin, Java, Dart). Use what you love ❤️ Angular, React, Solid, Svelte, Vue with: iOS (UIKit, SwiftUI), Android (…",
-      "category": "angular-frontend",
-      "tags": [
-        "android",
-        "angular",
-        "capacitor",
-        "cross-platform",
-        "flutter",
-        "ios"
-      ],
-      "language": "TypeScript",
-      "stars": 25548,
-      "starsDelta": 1,
-      "lastCommit": "2026-06-26T21:42:54Z",
-      "license": "MIT",
-      "source": "search",
-      "relevanceScore": 0.899,
-      "featured": false,
-      "claudeCompatible": false,
-      "stale": false,
-      "addedAt": "2026-06-29T07:29:00.403Z",
-      "updatedAt": "2026-06-29T17:50:53.104Z"
+      "addedAt": "2026-06-29T07:29:23.329Z",
+      "updatedAt": "2026-06-29T17:55:38.851Z"
     },
     {
       "id": "repo:YSGStudyHards/DotNetGuide",
@@ -2585,7 +2495,7 @@
       ],
       "language": "C#",
       "stars": 10657,
-      "starsDelta": 1,
+      "starsDelta": 0,
       "lastCommit": "2026-06-28T01:17:33Z",
       "license": "MIT",
       "source": "search",
@@ -2594,7 +2504,7 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:28:54.492Z",
-      "updatedAt": "2026-06-29T17:50:47.253Z"
+      "updatedAt": "2026-06-29T17:55:10.685Z"
     },
     {
       "id": "repo:angular/angular",
@@ -2624,7 +2534,97 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:29:00.403Z",
-      "updatedAt": "2026-06-29T17:50:53.103Z"
+      "updatedAt": "2026-06-29T17:55:16.317Z"
+    },
+    {
+      "id": "repo:NativeScript/NativeScript",
+      "type": "repo",
+      "name": "NativeScript/NativeScript",
+      "owner": "NativeScript",
+      "url": "https://github.com/NativeScript/NativeScript",
+      "description": "⚡ Write Native with TypeScript ✨ Best of all worlds (TypeScript, Swift, Objective C, Kotlin, Java, Dart). Use what you love ❤️ Angular, React, Solid, Svelte, Vue with: iOS (UIKit, SwiftUI), Android (View, Jetpack Compose), Flutter and you name it compatible.",
+      "summary_es": "⚡ Write Native with TypeScript ✨ Best of all worlds (TypeScript, Swift, Objective C, Kotlin, Java, Dart). Use what you love ❤️ Angular, React, Solid, Svelte, Vue with: iOS (UIKit, SwiftUI), Android (…",
+      "category": "angular-frontend",
+      "tags": [
+        "android",
+        "angular",
+        "capacitor",
+        "cross-platform",
+        "flutter",
+        "ios"
+      ],
+      "language": "TypeScript",
+      "stars": 25548,
+      "starsDelta": 0,
+      "lastCommit": "2026-06-26T21:42:54Z",
+      "license": "MIT",
+      "source": "search",
+      "relevanceScore": 0.898,
+      "featured": false,
+      "claudeCompatible": false,
+      "stale": false,
+      "addedAt": "2026-06-29T07:29:00.403Z",
+      "updatedAt": "2026-06-29T17:55:16.317Z"
+    },
+    {
+      "id": "skill:sansan0/TrendRadar",
+      "type": "skill",
+      "name": "sansan0/TrendRadar",
+      "owner": "sansan0",
+      "url": "https://github.com/sansan0/TrendRadar",
+      "description": "⭐AI-driven public opinion & trend monitor with multi-platform aggregation, RSS, and smart alerts.🎯 告别信息过载，你的 AI 舆情监控助手与热点筛选工具！聚合多平台热点 +  RSS 订阅，支持关键词精准筛选。AI 智能筛选新闻 + AI 翻译 +  AI 分析简报直推手机，也支持接入 MCP 架构，赋能 AI 自然语言对话分析、情感洞察与趋势预测等。支持 Docker ，数据本地/云端自持。集成微信/飞书/钉钉/Telegram/邮件/ntfy/bark/slack 等渠道智能推送。",
+      "summary_es": "⭐AI-driven public opinion & trend monitor with multi-platform aggregation, RSS, and smart alerts.🎯 告别信息过载，你的 AI 舆情监控助手与热点筛选工具！聚合多平台热点 +  RSS 订阅，支持关键词精准筛选。AI 智能筛选新闻 + AI 翻译 +  AI 分析简报直推手机，也支持接入 MCP 架…",
+      "category": "claude-ai",
+      "tags": [
+        "ai",
+        "bark",
+        "data-analysis",
+        "docker",
+        "hot-news",
+        "llm"
+      ],
+      "language": "Python",
+      "stars": 60036,
+      "starsDelta": 0,
+      "lastCommit": "2026-06-26T12:07:30Z",
+      "license": "GPL-3.0",
+      "source": "search",
+      "relevanceScore": 0.898,
+      "featured": false,
+      "claudeCompatible": true,
+      "stale": false,
+      "addedAt": "2026-06-29T07:29:23.329Z",
+      "updatedAt": "2026-06-29T17:55:38.851Z"
+    },
+    {
+      "id": "repo:mehdihadeli/awesome-software-architecture",
+      "type": "repo",
+      "name": "mehdihadeli/awesome-software-architecture",
+      "owner": "mehdihadeli",
+      "url": "https://github.com/mehdihadeli/awesome-software-architecture",
+      "description": "📚 A curated list of awesome articles, videos, and other resources to learn and practice software architecture, patterns, and principles.",
+      "summary_es": "📚 A curated list of awesome articles, videos, and other resources to learn and practice software architecture, patterns, and principles.",
+      "category": "architecture-patterns",
+      "tags": [
+        "architectural-patterns",
+        "architectural-styles",
+        "architecture",
+        "awesome-list",
+        "clean-architecture",
+        "ddd"
+      ],
+      "language": null,
+      "stars": 11302,
+      "starsDelta": 0,
+      "lastCommit": "2026-06-25T11:18:38Z",
+      "license": "CC0-1.0",
+      "source": "search",
+      "relevanceScore": 0.897,
+      "featured": false,
+      "claudeCompatible": false,
+      "stale": false,
+      "addedAt": "2026-06-29T07:29:06.198Z",
+      "updatedAt": "2026-06-29T17:55:21.943Z"
     },
     {
       "id": "repo:dodyg/practical-aspnetcore",
@@ -2653,7 +2653,7 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:28:54.492Z",
-      "updatedAt": "2026-06-29T17:50:47.253Z"
+      "updatedAt": "2026-06-29T17:55:10.685Z"
     },
     {
       "id": "repo:ardalis/CleanArchitecture",
@@ -2683,7 +2683,7 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:28:51.578Z",
-      "updatedAt": "2026-06-29T17:50:44.456Z"
+      "updatedAt": "2026-06-29T17:55:07.881Z"
     },
     {
       "id": "repo:dotnet/core",
@@ -2709,7 +2709,7 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:28:51.578Z",
-      "updatedAt": "2026-06-29T17:50:44.456Z"
+      "updatedAt": "2026-06-29T17:55:07.881Z"
     },
     {
       "id": "repo:ThreeMammals/Ocelot",
@@ -2739,7 +2739,7 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:28:54.492Z",
-      "updatedAt": "2026-06-29T17:50:47.253Z"
+      "updatedAt": "2026-06-29T17:55:10.685Z"
     },
     {
       "id": "repo:aspnetboilerplate/aspnetboilerplate",
@@ -2769,7 +2769,7 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:28:54.492Z",
-      "updatedAt": "2026-06-29T17:50:47.253Z"
+      "updatedAt": "2026-06-29T17:55:10.685Z"
     },
     {
       "id": "repo:leonardomso/33-js-concepts",
@@ -2790,7 +2790,7 @@
       ],
       "language": "JavaScript",
       "stars": 66486,
-      "starsDelta": 1,
+      "starsDelta": 0,
       "lastCommit": "2026-06-06T07:18:32Z",
       "license": "MIT",
       "source": "search",
@@ -2799,7 +2799,7 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:29:00.403Z",
-      "updatedAt": "2026-06-29T17:50:53.104Z"
+      "updatedAt": "2026-06-29T17:55:16.317Z"
     },
     {
       "id": "repo:evrone/go-clean-template",
@@ -2829,7 +2829,7 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:29:06.198Z",
-      "updatedAt": "2026-06-29T17:50:58.857Z"
+      "updatedAt": "2026-06-29T17:55:21.943Z"
     },
     {
       "id": "repo:igorwojda/android-showcase",
@@ -2859,7 +2859,7 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:29:06.198Z",
-      "updatedAt": "2026-06-29T17:50:58.857Z"
+      "updatedAt": "2026-06-29T17:55:21.943Z"
     },
     {
       "id": "repo:RicoSuter/NSwag",
@@ -2880,46 +2880,16 @@
       ],
       "language": "C#",
       "stars": 7346,
-      "starsDelta": 1,
+      "starsDelta": 0,
       "lastCommit": "2026-06-21T10:29:45Z",
       "license": "MIT",
       "source": "search",
-      "relevanceScore": 0.88,
+      "relevanceScore": 0.879,
       "featured": false,
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:28:54.493Z",
-      "updatedAt": "2026-06-29T17:50:47.253Z"
-    },
-    {
-      "id": "repo:fullstackhero/dotnet-starter-kit",
-      "type": "repo",
-      "name": "fullstackhero/dotnet-starter-kit",
-      "owner": "fullstackhero",
-      "url": "https://github.com/fullstackhero/dotnet-starter-kit",
-      "description": "Production Grade Cloud-Ready .NET 10 Starter Kit (Web API + React Client) with Multitenancy Support, and Clean/Modular Architecture that saves roughly 200+ Development Hours! All Batteries Included.",
-      "summary_es": "Production Grade Cloud-Ready .NET 10 Starter Kit (Web API + React Client) with Multitenancy Support, and Clean/Modular Architecture that saves roughly 200+ Development Hours! All Batteries Included.",
-      "category": "dotnet-backend",
-      "tags": [
-        "aws",
-        "blazor",
-        "boilerplate",
-        "clean-architechture",
-        "clean-architecture",
-        "codewithmukesh"
-      ],
-      "language": "C#",
-      "stars": 6604,
-      "starsDelta": 1,
-      "lastCommit": "2026-06-25T21:42:03Z",
-      "license": "MIT",
-      "source": "search",
-      "relevanceScore": 0.878,
-      "featured": false,
-      "claudeCompatible": false,
-      "stale": false,
-      "addedAt": "2026-06-29T07:29:06.198Z",
-      "updatedAt": "2026-06-29T17:50:58.857Z"
+      "updatedAt": "2026-06-29T17:55:10.685Z"
     },
     {
       "id": "repo:AdrienTorris/awesome-blazor",
@@ -2949,7 +2919,37 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:28:54.492Z",
-      "updatedAt": "2026-06-29T17:50:47.253Z"
+      "updatedAt": "2026-06-29T17:55:10.685Z"
+    },
+    {
+      "id": "repo:fullstackhero/dotnet-starter-kit",
+      "type": "repo",
+      "name": "fullstackhero/dotnet-starter-kit",
+      "owner": "fullstackhero",
+      "url": "https://github.com/fullstackhero/dotnet-starter-kit",
+      "description": "Production Grade Cloud-Ready .NET 10 Starter Kit (Web API + React Client) with Multitenancy Support, and Clean/Modular Architecture that saves roughly 200+ Development Hours! All Batteries Included.",
+      "summary_es": "Production Grade Cloud-Ready .NET 10 Starter Kit (Web API + React Client) with Multitenancy Support, and Clean/Modular Architecture that saves roughly 200+ Development Hours! All Batteries Included.",
+      "category": "dotnet-backend",
+      "tags": [
+        "aws",
+        "blazor",
+        "boilerplate",
+        "clean-architechture",
+        "clean-architecture",
+        "codewithmukesh"
+      ],
+      "language": "C#",
+      "stars": 6604,
+      "starsDelta": 0,
+      "lastCommit": "2026-06-25T21:42:03Z",
+      "license": "MIT",
+      "source": "search",
+      "relevanceScore": 0.877,
+      "featured": false,
+      "claudeCompatible": false,
+      "stale": false,
+      "addedAt": "2026-06-29T07:29:06.198Z",
+      "updatedAt": "2026-06-29T17:55:21.943Z"
     },
     {
       "id": "repo:openiddict/openiddict-core",
@@ -2968,7 +2968,7 @@
       ],
       "language": "C#",
       "stars": 5179,
-      "starsDelta": 1,
+      "starsDelta": 0,
       "lastCommit": "2026-06-25T05:19:24Z",
       "license": "Apache-2.0",
       "source": "search",
@@ -2977,7 +2977,7 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:28:54.493Z",
-      "updatedAt": "2026-06-29T17:50:47.253Z"
+      "updatedAt": "2026-06-29T17:55:10.685Z"
     },
     {
       "id": "repo:kudoleh/iOS-Clean-Architecture-MVVM",
@@ -3007,7 +3007,7 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:29:06.199Z",
-      "updatedAt": "2026-06-29T17:50:58.857Z"
+      "updatedAt": "2026-06-29T17:55:21.943Z"
     },
     {
       "id": "repo:sudheerj/javascript-interview-questions",
@@ -3037,7 +3037,7 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:29:00.403Z",
-      "updatedAt": "2026-06-29T17:50:53.104Z"
+      "updatedAt": "2026-06-29T17:55:16.317Z"
     },
     {
       "id": "repo:simplcommerce/SimplCommerce",
@@ -3067,7 +3067,7 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:28:54.493Z",
-      "updatedAt": "2026-06-29T17:50:47.253Z"
+      "updatedAt": "2026-06-29T17:55:10.685Z"
     },
     {
       "id": "repo:ardalis/GuardClauses",
@@ -3088,7 +3088,7 @@
       ],
       "language": "C#",
       "stars": 3307,
-      "starsDelta": 1,
+      "starsDelta": 0,
       "lastCommit": "2026-06-23T12:24:46Z",
       "license": "MIT",
       "source": "search",
@@ -3097,7 +3097,7 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:29:06.199Z",
-      "updatedAt": "2026-06-29T17:50:58.857Z"
+      "updatedAt": "2026-06-29T17:55:21.943Z"
     },
     {
       "id": "repo:quozd/awesome-dotnet",
@@ -3118,7 +3118,7 @@
       ],
       "language": null,
       "stars": 21437,
-      "starsDelta": 1,
+      "starsDelta": 0,
       "lastCommit": "2026-03-26T05:16:53Z",
       "license": "CC0-1.0",
       "source": "search",
@@ -3127,37 +3127,7 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:28:51.578Z",
-      "updatedAt": "2026-06-29T17:50:44.456Z"
-    },
-    {
-      "id": "repo:BeyondDimension/SteamTools",
-      "type": "repo",
-      "name": "BeyondDimension/SteamTools",
-      "owner": "BeyondDimension",
-      "url": "https://github.com/BeyondDimension/SteamTools",
-      "description": "🛠「Watt Toolkit」是一个开源跨平台的多功能 Steam 工具箱。",
-      "summary_es": "🛠「Watt Toolkit」是一个开源跨平台的多功能 Steam 工具箱。",
-      "category": "dotnet-backend",
-      "tags": [
-        "android-app",
-        "avalonia",
-        "avaloniaui",
-        "cross-platform",
-        "crossplatform",
-        "csharp"
-      ],
-      "language": "C#",
-      "stars": 26011,
-      "starsDelta": 9,
-      "lastCommit": "2026-03-11T16:59:36Z",
-      "license": "GPL-3.0",
-      "source": "search",
-      "relevanceScore": 0.829,
-      "featured": false,
-      "claudeCompatible": false,
-      "stale": false,
-      "addedAt": "2026-06-29T07:28:51.577Z",
-      "updatedAt": "2026-06-29T17:50:44.455Z"
+      "updatedAt": "2026-06-29T17:55:07.881Z"
     },
     {
       "id": "repo:EduardoPires/EquinoxProject",
@@ -3187,7 +3157,37 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:28:54.493Z",
-      "updatedAt": "2026-06-29T17:50:47.253Z"
+      "updatedAt": "2026-06-29T17:55:10.685Z"
+    },
+    {
+      "id": "repo:BeyondDimension/SteamTools",
+      "type": "repo",
+      "name": "BeyondDimension/SteamTools",
+      "owner": "BeyondDimension",
+      "url": "https://github.com/BeyondDimension/SteamTools",
+      "description": "🛠「Watt Toolkit」是一个开源跨平台的多功能 Steam 工具箱。",
+      "summary_es": "🛠「Watt Toolkit」是一个开源跨平台的多功能 Steam 工具箱。",
+      "category": "dotnet-backend",
+      "tags": [
+        "android-app",
+        "avalonia",
+        "avaloniaui",
+        "cross-platform",
+        "crossplatform",
+        "csharp"
+      ],
+      "language": "C#",
+      "stars": 26011,
+      "starsDelta": 0,
+      "lastCommit": "2026-03-11T16:59:36Z",
+      "license": "GPL-3.0",
+      "source": "search",
+      "relevanceScore": 0.825,
+      "featured": false,
+      "claudeCompatible": false,
+      "stale": false,
+      "addedAt": "2026-06-29T07:28:51.577Z",
+      "updatedAt": "2026-06-29T17:55:07.881Z"
     },
     {
       "id": "repo:thangchung/clean-code-dotnet",
@@ -3217,7 +3217,7 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:29:06.198Z",
-      "updatedAt": "2026-06-29T17:50:58.857Z"
+      "updatedAt": "2026-06-29T17:55:21.943Z"
     },
     {
       "id": "repo:evolutionary-architecture/evolutionary-architecture-by-example",
@@ -3247,7 +3247,7 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:29:06.199Z",
-      "updatedAt": "2026-06-29T17:50:58.857Z"
+      "updatedAt": "2026-06-29T17:55:21.943Z"
     },
     {
       "id": "repo:MoienTajik/AspNetCore-Developer-Roadmap",
@@ -3268,16 +3268,16 @@
       ],
       "language": null,
       "stars": 19620,
-      "starsDelta": 1,
+      "starsDelta": 0,
       "lastCommit": "2026-01-29T14:44:09Z",
       "license": null,
       "source": "search",
-      "relevanceScore": 0.797,
+      "relevanceScore": 0.796,
       "featured": false,
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:28:51.578Z",
-      "updatedAt": "2026-06-29T17:50:44.456Z"
+      "updatedAt": "2026-06-29T17:55:07.881Z"
     },
     {
       "id": "repo:gotson/komga",
@@ -3298,16 +3298,16 @@
       ],
       "language": "Kotlin",
       "stars": 6399,
-      "starsDelta": 3,
+      "starsDelta": 0,
       "lastCommit": "2026-06-25T02:57:50Z",
       "license": "MIT",
       "source": "search",
-      "relevanceScore": 0.789,
+      "relevanceScore": 0.788,
       "featured": false,
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:29:08.954Z",
-      "updatedAt": "2026-06-29T17:51:01.725Z"
+      "updatedAt": "2026-06-29T17:55:24.725Z"
     },
     {
       "id": "repo:amitshekhariitbhu/go-backend-clean-architecture",
@@ -3337,7 +3337,7 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:29:06.199Z",
-      "updatedAt": "2026-06-29T17:50:58.857Z"
+      "updatedAt": "2026-06-29T17:55:21.943Z"
     },
     {
       "id": "repo:ivanpaulovich/clean-architecture-manga",
@@ -3367,7 +3367,7 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:28:57.408Z",
-      "updatedAt": "2026-06-29T17:50:50.163Z"
+      "updatedAt": "2026-06-29T17:55:13.532Z"
     },
     {
       "id": "repo:AxonIQ/AxonFramework",
@@ -3397,37 +3397,7 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:29:08.954Z",
-      "updatedAt": "2026-06-29T17:51:01.725Z"
-    },
-    {
-      "id": "repo:Asabeneh/30-Days-Of-JavaScript",
-      "type": "repo",
-      "name": "Asabeneh/30-Days-Of-JavaScript",
-      "owner": "Asabeneh",
-      "url": "https://github.com/Asabeneh/30-Days-Of-JavaScript",
-      "description": "30 days of JavaScript programming challenge is a step-by-step guide to learn JavaScript programming language in 30 days. This challenge may take more than 100 days,  please just follow your own pace. These videos may help too: https://www.youtube.com/channel/UC7PNRuno1rzYPb1xLa4yktw",
-      "summary_es": "30 days of JavaScript programming challenge is a step-by-step guide to learn JavaScript programming language in 30 days. This challenge may take more than 100 days,  please just follow your own pace.…",
-      "category": "angular-frontend",
-      "tags": [
-        "30daysofjavascript",
-        "angular",
-        "challenge",
-        "css",
-        "d3",
-        "d3js"
-      ],
-      "language": "JavaScript",
-      "stars": 46511,
-      "starsDelta": 2,
-      "lastCommit": "2025-12-06T11:12:48Z",
-      "license": null,
-      "source": "search",
-      "relevanceScore": 0.76,
-      "featured": false,
-      "claudeCompatible": false,
-      "stale": false,
-      "addedAt": "2026-06-29T07:29:00.403Z",
-      "updatedAt": "2026-06-29T17:50:53.104Z"
+      "updatedAt": "2026-06-29T17:55:24.725Z"
     },
     {
       "id": "repo:ddd-crew/ddd-starter-modelling-process",
@@ -3452,7 +3422,37 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:29:08.954Z",
-      "updatedAt": "2026-06-29T17:51:01.725Z"
+      "updatedAt": "2026-06-29T17:55:24.725Z"
+    },
+    {
+      "id": "repo:Asabeneh/30-Days-Of-JavaScript",
+      "type": "repo",
+      "name": "Asabeneh/30-Days-Of-JavaScript",
+      "owner": "Asabeneh",
+      "url": "https://github.com/Asabeneh/30-Days-Of-JavaScript",
+      "description": "30 days of JavaScript programming challenge is a step-by-step guide to learn JavaScript programming language in 30 days. This challenge may take more than 100 days,  please just follow your own pace. These videos may help too: https://www.youtube.com/channel/UC7PNRuno1rzYPb1xLa4yktw",
+      "summary_es": "30 days of JavaScript programming challenge is a step-by-step guide to learn JavaScript programming language in 30 days. This challenge may take more than 100 days,  please just follow your own pace.…",
+      "category": "angular-frontend",
+      "tags": [
+        "30daysofjavascript",
+        "angular",
+        "challenge",
+        "css",
+        "d3",
+        "d3js"
+      ],
+      "language": "JavaScript",
+      "stars": 46511,
+      "starsDelta": 0,
+      "lastCommit": "2025-12-06T11:12:48Z",
+      "license": null,
+      "source": "search",
+      "relevanceScore": 0.759,
+      "featured": false,
+      "claudeCompatible": false,
+      "stale": false,
+      "addedAt": "2026-06-29T07:29:00.403Z",
+      "updatedAt": "2026-06-29T17:55:16.317Z"
     },
     {
       "id": "repo:event-catalog/eventcatalog",
@@ -3482,7 +3482,7 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:29:08.954Z",
-      "updatedAt": "2026-06-29T17:51:01.725Z"
+      "updatedAt": "2026-06-29T17:55:24.726Z"
     },
     {
       "id": "repo:teaql/teaql-agent-kit",
@@ -3512,7 +3512,7 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:29:08.954Z",
-      "updatedAt": "2026-06-29T17:51:01.725Z"
+      "updatedAt": "2026-06-29T17:55:24.725Z"
     },
     {
       "id": "repo:ErikEJ/EFCorePowerTools",
@@ -3542,7 +3542,7 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:28:57.408Z",
-      "updatedAt": "2026-06-29T17:50:50.164Z"
+      "updatedAt": "2026-06-29T17:55:13.532Z"
     },
     {
       "id": "repo:phongnguyend/Practical.CleanArchitecture",
@@ -3572,7 +3572,7 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:29:08.954Z",
-      "updatedAt": "2026-06-29T17:51:01.725Z"
+      "updatedAt": "2026-06-29T17:55:24.726Z"
     },
     {
       "id": "repo:gothinkster/aspnetcore-realworld-example-app",
@@ -3602,7 +3602,7 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:28:57.408Z",
-      "updatedAt": "2026-06-29T17:50:50.164Z"
+      "updatedAt": "2026-06-29T17:55:13.532Z"
     },
     {
       "id": "repo:borisdj/EFCore.BulkExtensions",
@@ -3632,7 +3632,7 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:28:57.408Z",
-      "updatedAt": "2026-06-29T17:50:50.164Z"
+      "updatedAt": "2026-06-29T17:55:13.532Z"
     },
     {
       "id": "repo:npgsql/efcore.pg",
@@ -3653,16 +3653,16 @@
       ],
       "language": "C#",
       "stars": 1830,
-      "starsDelta": 1,
+      "starsDelta": 0,
       "lastCommit": "2026-06-29T13:23:44Z",
       "license": "PostgreSQL",
       "source": "search",
-      "relevanceScore": 0.736,
+      "relevanceScore": 0.735,
       "featured": false,
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:28:57.408Z",
-      "updatedAt": "2026-06-29T17:50:50.164Z"
+      "updatedAt": "2026-06-29T17:55:13.532Z"
     },
     {
       "id": "repo:zzzprojects/EntityFramework-Plus",
@@ -3692,7 +3692,7 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:28:57.408Z",
-      "updatedAt": "2026-06-29T17:50:50.164Z"
+      "updatedAt": "2026-06-29T17:55:13.532Z"
     },
     {
       "id": "repo:dotnet/EntityFramework.Docs",
@@ -3721,7 +3721,7 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:28:57.408Z",
-      "updatedAt": "2026-06-29T17:50:50.164Z"
+      "updatedAt": "2026-06-29T17:55:13.532Z"
     },
     {
       "id": "repo:zzzprojects/System.Linq.Dynamic.Core",
@@ -3751,7 +3751,7 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:28:57.408Z",
-      "updatedAt": "2026-06-29T17:50:50.164Z"
+      "updatedAt": "2026-06-29T17:55:13.532Z"
     },
     {
       "id": "repo:collinbarrett/FilterLists",
@@ -3781,7 +3781,7 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:28:57.408Z",
-      "updatedAt": "2026-06-29T17:50:50.164Z"
+      "updatedAt": "2026-06-29T17:55:13.532Z"
     },
     {
       "id": "repo:Snailclimb/JavaGuide",
@@ -3802,46 +3802,16 @@
       ],
       "language": "JavaScript",
       "stars": 156689,
-      "starsDelta": 18,
+      "starsDelta": 0,
       "lastCommit": "2026-06-28T22:50:31Z",
       "license": "Apache-2.0",
       "source": "search",
-      "relevanceScore": 0.727,
+      "relevanceScore": 0.72,
       "featured": false,
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:29:11.843Z",
-      "updatedAt": "2026-06-29T17:51:04.545Z"
-    },
-    {
-      "id": "repo:systemdesign42/system-design-academy",
-      "type": "repo",
-      "name": "systemdesign42/system-design-academy",
-      "owner": "systemdesign42",
-      "url": "https://github.com/systemdesign42/system-design-academy",
-      "description": "If you want to become good at system design, join this newsletter now 👇",
-      "summary_es": "If you want to become good at system design, join this newsletter now 👇",
-      "category": "architecture-patterns",
-      "tags": [
-        "computer-science",
-        "development",
-        "distributed-systems",
-        "high-level-design",
-        "interview-questions",
-        "programming"
-      ],
-      "language": null,
-      "stars": 25849,
-      "starsDelta": 3,
-      "lastCommit": "2026-06-26T13:44:24Z",
-      "license": "NOASSERTION",
-      "source": "search",
-      "relevanceScore": 0.719,
-      "featured": false,
-      "claudeCompatible": false,
-      "stale": false,
-      "addedAt": "2026-06-29T07:29:11.843Z",
-      "updatedAt": "2026-06-29T17:51:04.545Z"
+      "updatedAt": "2026-06-29T17:55:27.502Z"
     },
     {
       "id": "repo:go2ismail/Asp.Net-Core-Inventory-Order-Management-System",
@@ -3871,7 +3841,37 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:28:57.408Z",
-      "updatedAt": "2026-06-29T17:50:50.164Z"
+      "updatedAt": "2026-06-29T17:55:13.532Z"
+    },
+    {
+      "id": "repo:systemdesign42/system-design-academy",
+      "type": "repo",
+      "name": "systemdesign42/system-design-academy",
+      "owner": "systemdesign42",
+      "url": "https://github.com/systemdesign42/system-design-academy",
+      "description": "If you want to become good at system design, join this newsletter now 👇",
+      "summary_es": "If you want to become good at system design, join this newsletter now 👇",
+      "category": "architecture-patterns",
+      "tags": [
+        "computer-science",
+        "development",
+        "distributed-systems",
+        "high-level-design",
+        "interview-questions",
+        "programming"
+      ],
+      "language": null,
+      "stars": 25849,
+      "starsDelta": 0,
+      "lastCommit": "2026-06-26T13:44:24Z",
+      "license": "NOASSERTION",
+      "source": "search",
+      "relevanceScore": 0.718,
+      "featured": false,
+      "claudeCompatible": false,
+      "stale": false,
+      "addedAt": "2026-06-29T07:29:11.843Z",
+      "updatedAt": "2026-06-29T17:55:27.502Z"
     },
     {
       "id": "repo:ahmedkhaleel2004/gitdiagram",
@@ -3890,16 +3890,16 @@
       ],
       "language": "TypeScript",
       "stars": 15754,
-      "starsDelta": 3,
+      "starsDelta": 0,
       "lastCommit": "2026-06-22T13:14:51Z",
       "license": "MIT",
       "source": "search",
-      "relevanceScore": 0.717,
+      "relevanceScore": 0.716,
       "featured": false,
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:29:11.843Z",
-      "updatedAt": "2026-06-29T17:51:04.545Z"
+      "updatedAt": "2026-06-29T17:55:27.502Z"
     },
     {
       "id": "repo:ThreeDotsLabs/wild-workouts-go-ddd-example",
@@ -3929,37 +3929,7 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:29:06.199Z",
-      "updatedAt": "2026-06-29T17:50:58.857Z"
-    },
-    {
-      "id": "repo:alirezadir/Machine-Learning-Interviews",
-      "type": "repo",
-      "name": "alirezadir/Machine-Learning-Interviews",
-      "owner": "alirezadir",
-      "url": "https://github.com/alirezadir/Machine-Learning-Interviews",
-      "description": "This repo is meant to serve as a guide for Machine Learning/AI technical interviews. ",
-      "summary_es": "This repo is meant to serve as a guide for Machine Learning/AI technical interviews. ",
-      "category": "claude-ai",
-      "tags": [
-        "agentic",
-        "ai",
-        "ai-agents",
-        "ai-engineering",
-        "deep-learning",
-        "interview"
-      ],
-      "language": "Jupyter Notebook",
-      "stars": 8491,
-      "starsDelta": 3,
-      "lastCommit": "2026-06-20T06:39:46Z",
-      "license": "MIT",
-      "source": "search",
-      "relevanceScore": 0.71,
-      "featured": false,
-      "claudeCompatible": false,
-      "stale": false,
-      "addedAt": "2026-06-29T07:29:11.843Z",
-      "updatedAt": "2026-06-29T17:51:04.545Z"
+      "updatedAt": "2026-06-29T17:55:21.943Z"
     },
     {
       "id": "repo:ardalis/SmartEnum",
@@ -3989,7 +3959,7 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:29:08.954Z",
-      "updatedAt": "2026-06-29T17:51:01.725Z"
+      "updatedAt": "2026-06-29T17:55:24.726Z"
     },
     {
       "id": "repo:ngrx/platform",
@@ -4019,7 +3989,37 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:29:03.290Z",
-      "updatedAt": "2026-06-29T17:50:55.989Z"
+      "updatedAt": "2026-06-29T17:55:19.212Z"
+    },
+    {
+      "id": "repo:alirezadir/Machine-Learning-Interviews",
+      "type": "repo",
+      "name": "alirezadir/Machine-Learning-Interviews",
+      "owner": "alirezadir",
+      "url": "https://github.com/alirezadir/Machine-Learning-Interviews",
+      "description": "This repo is meant to serve as a guide for Machine Learning/AI technical interviews. ",
+      "summary_es": "This repo is meant to serve as a guide for Machine Learning/AI technical interviews. ",
+      "category": "claude-ai",
+      "tags": [
+        "agentic",
+        "ai",
+        "ai-agents",
+        "ai-engineering",
+        "deep-learning",
+        "interview"
+      ],
+      "language": "Jupyter Notebook",
+      "stars": 8491,
+      "starsDelta": 0,
+      "lastCommit": "2026-06-20T06:39:46Z",
+      "license": "MIT",
+      "source": "search",
+      "relevanceScore": 0.708,
+      "featured": false,
+      "claudeCompatible": false,
+      "stale": false,
+      "addedAt": "2026-06-29T07:29:11.843Z",
+      "updatedAt": "2026-06-29T17:55:27.502Z"
     },
     {
       "id": "repo:undergroundwires/privacy.sexy",
@@ -4040,16 +4040,16 @@
       ],
       "language": "TypeScript",
       "stars": 5627,
-      "starsDelta": 3,
+      "starsDelta": 0,
       "lastCommit": "2026-02-13T10:55:07Z",
       "license": "AGPL-3.0",
       "source": "search",
-      "relevanceScore": 0.702,
+      "relevanceScore": 0.701,
       "featured": false,
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:29:08.954Z",
-      "updatedAt": "2026-06-29T17:51:01.725Z"
+      "updatedAt": "2026-06-29T17:55:24.725Z"
     },
     {
       "id": "repo:altair-graphql/altair",
@@ -4070,16 +4070,16 @@
       ],
       "language": "TypeScript",
       "stars": 5415,
-      "starsDelta": 1,
+      "starsDelta": 0,
       "lastCommit": "2026-06-26T12:23:53Z",
       "license": "MIT",
       "source": "search",
-      "relevanceScore": 0.695,
+      "relevanceScore": 0.694,
       "featured": false,
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:29:03.290Z",
-      "updatedAt": "2026-06-29T17:50:55.989Z"
+      "updatedAt": "2026-06-29T17:55:19.212Z"
     },
     {
       "id": "repo:ngxs/store",
@@ -4109,7 +4109,7 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:29:03.290Z",
-      "updatedAt": "2026-06-29T17:50:55.989Z"
+      "updatedAt": "2026-06-29T17:55:19.212Z"
     },
     {
       "id": "repo:Giorgi/EntityFramework.Exceptions",
@@ -4130,16 +4130,16 @@
       ],
       "language": "C#",
       "stars": 1727,
-      "starsDelta": 1,
+      "starsDelta": 0,
       "lastCommit": "2026-03-29T19:42:55Z",
       "license": "NOASSERTION",
       "source": "search",
-      "relevanceScore": 0.677,
+      "relevanceScore": 0.676,
       "featured": false,
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:28:57.408Z",
-      "updatedAt": "2026-06-29T17:50:50.164Z"
+      "updatedAt": "2026-06-29T17:55:13.532Z"
     },
     {
       "id": "repo:yangshun/tech-interview-handbook",
@@ -4160,16 +4160,16 @@
       ],
       "language": "TypeScript",
       "stars": 140509,
-      "starsDelta": 8,
+      "starsDelta": 0,
       "lastCommit": "2026-04-05T23:58:25Z",
       "license": "MIT",
       "source": "search",
-      "relevanceScore": 0.677,
+      "relevanceScore": 0.674,
       "featured": false,
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:29:11.843Z",
-      "updatedAt": "2026-06-29T17:51:04.545Z"
+      "updatedAt": "2026-06-29T17:55:27.502Z"
     },
     {
       "id": "repo:karanpratapsingh/system-design",
@@ -4190,16 +4190,16 @@
       ],
       "language": null,
       "stars": 44273,
-      "starsDelta": 10,
+      "starsDelta": 0,
       "lastCommit": "2026-04-02T05:06:07Z",
       "license": "NOASSERTION",
       "source": "search",
-      "relevanceScore": 0.675,
+      "relevanceScore": 0.671,
       "featured": false,
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:29:11.843Z",
-      "updatedAt": "2026-06-29T17:51:04.545Z"
+      "updatedAt": "2026-06-29T17:55:27.502Z"
     },
     {
       "id": "repo:trungvose/angular-spotify",
@@ -4229,7 +4229,7 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:29:03.290Z",
-      "updatedAt": "2026-06-29T17:50:55.989Z"
+      "updatedAt": "2026-06-29T17:55:19.212Z"
     },
     {
       "id": "repo:colinlet/PHP-Interview-QA",
@@ -4259,7 +4259,7 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:29:11.843Z",
-      "updatedAt": "2026-06-29T17:51:04.545Z"
+      "updatedAt": "2026-06-29T17:55:27.502Z"
     },
     {
       "id": "repo:rafaelfgx/Architecture",
@@ -4289,37 +4289,7 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:29:11.843Z",
-      "updatedAt": "2026-06-29T17:51:04.545Z"
-    },
-    {
-      "id": "repo:ashishps1/awesome-system-design-resources",
-      "type": "repo",
-      "name": "ashishps1/awesome-system-design-resources",
-      "owner": "ashishps1",
-      "url": "https://github.com/ashishps1/awesome-system-design-resources",
-      "description": "Learn System Design concepts and prepare for interviews using free resources.",
-      "summary_es": "Learn System Design concepts and prepare for interviews using free resources.",
-      "category": "architecture-patterns",
-      "tags": [
-        "awesome",
-        "backend",
-        "computer-science",
-        "distributed-systems",
-        "high-level-design",
-        "hld"
-      ],
-      "language": "Java",
-      "stars": 39215,
-      "starsDelta": 17,
-      "lastCommit": "2026-02-16T18:32:29Z",
-      "license": "GPL-3.0",
-      "source": "search",
-      "relevanceScore": 0.654,
-      "featured": false,
-      "claudeCompatible": false,
-      "stale": false,
-      "addedAt": "2026-06-29T07:29:11.843Z",
-      "updatedAt": "2026-06-29T17:51:04.545Z"
+      "updatedAt": "2026-06-29T17:55:27.502Z"
     },
     {
       "id": "repo:labs42io/clean-code-typescript",
@@ -4349,7 +4319,37 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:29:06.198Z",
-      "updatedAt": "2026-06-29T17:50:58.857Z"
+      "updatedAt": "2026-06-29T17:55:21.943Z"
+    },
+    {
+      "id": "repo:ashishps1/awesome-system-design-resources",
+      "type": "repo",
+      "name": "ashishps1/awesome-system-design-resources",
+      "owner": "ashishps1",
+      "url": "https://github.com/ashishps1/awesome-system-design-resources",
+      "description": "Learn System Design concepts and prepare for interviews using free resources.",
+      "summary_es": "Learn System Design concepts and prepare for interviews using free resources.",
+      "category": "architecture-patterns",
+      "tags": [
+        "awesome",
+        "backend",
+        "computer-science",
+        "distributed-systems",
+        "high-level-design",
+        "hld"
+      ],
+      "language": "Java",
+      "stars": 39216,
+      "starsDelta": 1,
+      "lastCommit": "2026-02-16T18:32:29Z",
+      "license": "GPL-3.0",
+      "source": "search",
+      "relevanceScore": 0.648,
+      "featured": false,
+      "claudeCompatible": false,
+      "stale": false,
+      "addedAt": "2026-06-29T07:29:11.843Z",
+      "updatedAt": "2026-06-29T17:55:27.502Z"
     },
     {
       "id": "repo:greatfrontend/awesome-front-end-system-design",
@@ -4370,16 +4370,16 @@
       ],
       "language": null,
       "stars": 8362,
-      "starsDelta": 2,
+      "starsDelta": 0,
       "lastCommit": "2026-03-03T13:55:49Z",
       "license": "MIT",
       "source": "search",
-      "relevanceScore": 0.649,
+      "relevanceScore": 0.648,
       "featured": false,
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:29:11.843Z",
-      "updatedAt": "2026-06-29T17:51:04.545Z"
+      "updatedAt": "2026-06-29T17:55:27.502Z"
     },
     {
       "id": "repo:dotnetcore/sharding-core",
@@ -4408,7 +4408,7 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:28:57.408Z",
-      "updatedAt": "2026-06-29T17:50:50.164Z"
+      "updatedAt": "2026-06-29T17:55:13.532Z"
     },
     {
       "id": "repo:nalexn/clean-architecture-swiftui",
@@ -4438,7 +4438,7 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:29:06.198Z",
-      "updatedAt": "2026-06-29T17:50:58.857Z"
+      "updatedAt": "2026-06-29T17:55:21.943Z"
     },
     {
       "id": "repo:subhashchy/The-Accidental-CTO",
@@ -4455,7 +4455,7 @@
       ],
       "language": "TypeScript",
       "stars": 3524,
-      "starsDelta": 1,
+      "starsDelta": 0,
       "lastCommit": "2026-04-09T12:35:25Z",
       "license": null,
       "source": "search",
@@ -4464,37 +4464,7 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:29:11.843Z",
-      "updatedAt": "2026-06-29T17:51:04.545Z"
-    },
-    {
-      "id": "repo:binhnguyennus/awesome-scalability",
-      "type": "repo",
-      "name": "binhnguyennus/awesome-scalability",
-      "owner": "binhnguyennus",
-      "url": "https://github.com/binhnguyennus/awesome-scalability",
-      "description": "The Patterns of Scalable, Reliable, and Performant Large-Scale Systems",
-      "summary_es": "The Patterns of Scalable, Reliable, and Performant Large-Scale Systems",
-      "category": "architecture-patterns",
-      "tags": [
-        "architecture",
-        "awesome",
-        "awesome-list",
-        "backend",
-        "big-data",
-        "computer-science"
-      ],
-      "language": null,
-      "stars": 72100,
-      "starsDelta": 12,
-      "lastCommit": "2026-01-04T03:51:47Z",
-      "license": "MIT",
-      "source": "search",
-      "relevanceScore": 0.628,
-      "featured": false,
-      "claudeCompatible": false,
-      "stale": false,
-      "addedAt": "2026-06-29T07:29:11.843Z",
-      "updatedAt": "2026-06-29T17:51:04.545Z"
+      "updatedAt": "2026-06-29T17:55:27.502Z"
     },
     {
       "id": "repo:stefanoslig/angular-ngrx-nx-realworld-example-app",
@@ -4524,7 +4494,7 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:29:03.290Z",
-      "updatedAt": "2026-06-29T17:50:55.989Z"
+      "updatedAt": "2026-06-29T17:55:19.212Z"
     },
     {
       "id": "repo:eventflow/EventFlow",
@@ -4554,7 +4524,37 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:29:08.954Z",
-      "updatedAt": "2026-06-29T17:51:01.725Z"
+      "updatedAt": "2026-06-29T17:55:24.726Z"
+    },
+    {
+      "id": "repo:binhnguyennus/awesome-scalability",
+      "type": "repo",
+      "name": "binhnguyennus/awesome-scalability",
+      "owner": "binhnguyennus",
+      "url": "https://github.com/binhnguyennus/awesome-scalability",
+      "description": "The Patterns of Scalable, Reliable, and Performant Large-Scale Systems",
+      "summary_es": "The Patterns of Scalable, Reliable, and Performant Large-Scale Systems",
+      "category": "architecture-patterns",
+      "tags": [
+        "architecture",
+        "awesome",
+        "awesome-list",
+        "backend",
+        "big-data",
+        "computer-science"
+      ],
+      "language": null,
+      "stars": 72100,
+      "starsDelta": 0,
+      "lastCommit": "2026-01-04T03:51:47Z",
+      "license": "MIT",
+      "source": "search",
+      "relevanceScore": 0.623,
+      "featured": false,
+      "claudeCompatible": false,
+      "stale": false,
+      "addedAt": "2026-06-29T07:29:11.843Z",
+      "updatedAt": "2026-06-29T17:55:27.502Z"
     },
     {
       "id": "repo:dependabot/dependabot-core",
@@ -4575,7 +4575,7 @@
       ],
       "language": "Ruby",
       "stars": 5664,
-      "starsDelta": 2,
+      "starsDelta": 0,
       "lastCommit": "2026-06-29T16:08:19Z",
       "license": "MIT",
       "source": "search",
@@ -4584,7 +4584,7 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:29:26.216Z",
-      "updatedAt": "2026-06-29T17:51:18.582Z"
+      "updatedAt": "2026-06-29T17:55:41.652Z"
     },
     {
       "id": "repo:linkedin/school-of-sre",
@@ -4614,7 +4614,7 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:29:11.843Z",
-      "updatedAt": "2026-06-29T17:51:04.545Z"
+      "updatedAt": "2026-06-29T17:55:27.502Z"
     },
     {
       "id": "repo:testcontainers/testcontainers-dotnet",
@@ -4644,7 +4644,7 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:29:26.216Z",
-      "updatedAt": "2026-06-29T17:51:18.582Z"
+      "updatedAt": "2026-06-29T17:55:41.652Z"
     },
     {
       "id": "repo:lando/lando",
@@ -4674,7 +4674,7 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:29:26.216Z",
-      "updatedAt": "2026-06-29T17:51:18.582Z"
+      "updatedAt": "2026-06-29T17:55:41.652Z"
     },
     {
       "id": "repo:angular-university/ngrx-course",
@@ -4704,7 +4704,7 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:29:03.290Z",
-      "updatedAt": "2026-06-29T17:50:55.989Z"
+      "updatedAt": "2026-06-29T17:55:19.212Z"
     },
     {
       "id": "repo:angular/angularfire",
@@ -4734,7 +4734,7 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:29:03.290Z",
-      "updatedAt": "2026-06-29T17:50:55.989Z"
+      "updatedAt": "2026-06-29T17:55:19.212Z"
     },
     {
       "id": "repo:aliasvault/aliasvault",
@@ -4755,16 +4755,16 @@
       ],
       "language": "TypeScript",
       "stars": 2875,
-      "starsDelta": 1,
+      "starsDelta": 0,
       "lastCommit": "2026-06-29T11:27:18Z",
       "license": "AGPL-3.0",
       "source": "search",
-      "relevanceScore": 0.588,
+      "relevanceScore": 0.587,
       "featured": false,
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:29:26.216Z",
-      "updatedAt": "2026-06-29T17:51:18.582Z"
+      "updatedAt": "2026-06-29T17:55:41.653Z"
     },
     {
       "id": "repo:tomalaforge/angular-challenges",
@@ -4794,7 +4794,7 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:29:03.290Z",
-      "updatedAt": "2026-06-29T17:50:55.989Z"
+      "updatedAt": "2026-06-29T17:55:19.212Z"
     },
     {
       "id": "repo:Dotnet-Boxed/Templates",
@@ -4824,7 +4824,7 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:29:26.216Z",
-      "updatedAt": "2026-06-29T17:51:18.582Z"
+      "updatedAt": "2026-06-29T17:55:41.653Z"
     },
     {
       "id": "repo:immichFrame/ImmichFrame",
@@ -4845,7 +4845,7 @@
       ],
       "language": "C#",
       "stars": 2165,
-      "starsDelta": 1,
+      "starsDelta": 0,
       "lastCommit": "2026-06-25T12:26:56Z",
       "license": "GPL-3.0",
       "source": "search",
@@ -4854,7 +4854,7 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:29:26.216Z",
-      "updatedAt": "2026-06-29T17:51:18.582Z"
+      "updatedAt": "2026-06-29T17:55:41.653Z"
     },
     {
       "id": "repo:angular-architects/ngrx-toolkit",
@@ -4880,7 +4880,7 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:29:03.290Z",
-      "updatedAt": "2026-06-29T17:50:55.989Z"
+      "updatedAt": "2026-06-29T17:55:19.212Z"
     },
     {
       "id": "repo:PomeloFoundation/Pomelo.EntityFrameworkCore.MySql",
@@ -4910,7 +4910,7 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:28:57.408Z",
-      "updatedAt": "2026-06-29T17:50:50.164Z"
+      "updatedAt": "2026-06-29T17:55:13.532Z"
     },
     {
       "id": "repo:DSpace/dspace-angular",
@@ -4940,7 +4940,7 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:29:03.290Z",
-      "updatedAt": "2026-06-29T17:50:55.989Z"
+      "updatedAt": "2026-06-29T17:55:19.212Z"
     },
     {
       "id": "repo:wiremock/WireMock.Net",
@@ -4970,7 +4970,7 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:29:26.216Z",
-      "updatedAt": "2026-06-29T17:51:18.582Z"
+      "updatedAt": "2026-06-29T17:55:41.653Z"
     },
     {
       "id": "repo:undb-io/undb",
@@ -5000,7 +5000,7 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:29:08.954Z",
-      "updatedAt": "2026-06-29T17:51:01.725Z"
+      "updatedAt": "2026-06-29T17:55:24.725Z"
     },
     {
       "id": "repo:gabrielguerrero/ngrx-traits",
@@ -5026,35 +5026,7 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:29:03.290Z",
-      "updatedAt": "2026-06-29T17:50:55.989Z"
-    },
-    {
-      "id": "repo:InterviewReady/system-design-resources",
-      "type": "repo",
-      "name": "InterviewReady/system-design-resources",
-      "owner": "InterviewReady",
-      "url": "https://github.com/InterviewReady/system-design-resources",
-      "description": "These are the best resources for System Design on the Internet",
-      "summary_es": "These are the best resources for System Design on the Internet",
-      "category": "architecture-patterns",
-      "tags": [
-        "cache",
-        "fault-tolerance",
-        "scalability",
-        "system-design"
-      ],
-      "language": null,
-      "stars": 18209,
-      "starsDelta": 2,
-      "lastCommit": "2025-07-16T22:41:39Z",
-      "license": "GPL-3.0",
-      "source": "search",
-      "relevanceScore": 0.53,
-      "featured": false,
-      "claudeCompatible": false,
-      "stale": false,
-      "addedAt": "2026-06-29T07:29:11.843Z",
-      "updatedAt": "2026-06-29T17:51:04.545Z"
+      "updatedAt": "2026-06-29T17:55:19.212Z"
     },
     {
       "id": "repo:lampo1024/DncZeus",
@@ -5084,7 +5056,35 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:28:57.408Z",
-      "updatedAt": "2026-06-29T17:50:50.164Z"
+      "updatedAt": "2026-06-29T17:55:13.532Z"
+    },
+    {
+      "id": "repo:InterviewReady/system-design-resources",
+      "type": "repo",
+      "name": "InterviewReady/system-design-resources",
+      "owner": "InterviewReady",
+      "url": "https://github.com/InterviewReady/system-design-resources",
+      "description": "These are the best resources for System Design on the Internet",
+      "summary_es": "These are the best resources for System Design on the Internet",
+      "category": "architecture-patterns",
+      "tags": [
+        "cache",
+        "fault-tolerance",
+        "scalability",
+        "system-design"
+      ],
+      "language": null,
+      "stars": 18209,
+      "starsDelta": 0,
+      "lastCommit": "2025-07-16T22:41:39Z",
+      "license": "GPL-3.0",
+      "source": "search",
+      "relevanceScore": 0.529,
+      "featured": false,
+      "claudeCompatible": false,
+      "stale": false,
+      "addedAt": "2026-06-29T07:29:11.843Z",
+      "updatedAt": "2026-06-29T17:55:27.502Z"
     },
     {
       "id": "repo:NathanWalker/angular-seed-advanced",
@@ -5114,7 +5114,7 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:29:03.290Z",
-      "updatedAt": "2026-06-29T17:50:55.989Z"
+      "updatedAt": "2026-06-29T17:55:19.212Z"
     },
     {
       "id": "repo:nikosanif/angular-authentication",
@@ -5144,7 +5144,7 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:29:03.290Z",
-      "updatedAt": "2026-06-29T17:50:55.989Z"
+      "updatedAt": "2026-06-29T17:55:19.212Z"
     },
     {
       "id": "repo:nilsmehlhorn/ngrx-wieder",
@@ -5172,7 +5172,7 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:29:03.290Z",
-      "updatedAt": "2026-06-29T17:50:55.989Z"
+      "updatedAt": "2026-06-29T17:55:19.212Z"
     },
     {
       "id": "repo:meysamhadeli/booking-modular-monolith",
@@ -5202,7 +5202,7 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:29:26.216Z",
-      "updatedAt": "2026-06-29T17:51:18.582Z"
+      "updatedAt": "2026-06-29T17:55:41.653Z"
     },
     {
       "id": "repo:timdeschryver/ngrx-immer",
@@ -5230,7 +5230,7 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:29:03.290Z",
-      "updatedAt": "2026-06-29T17:50:55.989Z"
+      "updatedAt": "2026-06-29T17:55:19.212Z"
     },
     {
       "id": "repo:TheAxelander/OpenBudgeteer",
@@ -5260,7 +5260,7 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:29:26.216Z",
-      "updatedAt": "2026-06-29T17:51:18.582Z"
+      "updatedAt": "2026-06-29T17:55:41.653Z"
     },
     {
       "id": "repo:sanjusss/aliyun-ddns",
@@ -5290,7 +5290,7 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:29:26.216Z",
-      "updatedAt": "2026-06-29T17:51:18.582Z"
+      "updatedAt": "2026-06-29T17:55:41.653Z"
     },
     {
       "id": "repo:pdevito3/craftsman",
@@ -5320,7 +5320,7 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:29:26.216Z",
-      "updatedAt": "2026-06-29T17:51:18.582Z"
+      "updatedAt": "2026-06-29T17:55:41.653Z"
     },
     {
       "id": "repo:sixeyed/diamol",
@@ -5350,7 +5350,7 @@
       "claudeCompatible": false,
       "stale": false,
       "addedAt": "2026-06-29T07:29:26.216Z",
-      "updatedAt": "2026-06-29T17:51:18.582Z"
+      "updatedAt": "2026-06-29T17:55:41.653Z"
     }
   ]
 }
