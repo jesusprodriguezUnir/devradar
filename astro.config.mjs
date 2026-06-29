@@ -4,7 +4,7 @@ import { defineConfig } from "astro/config";
 // Para un repo project-page: https://<usuario>.github.io/<repo>
 // Si usas dominio propio o user-page, deja base en "/".
 export default defineConfig({
-  site: process.env.SITE_URL ?? "https://jesusprodriguez.github.io",
+  site: process.env.SITE_URL ?? "https://jesusprodriguezunir.github.io",
   base: process.env.BASE_PATH ?? "/devradar",
   trailingSlash: "ignore",
   build: {
