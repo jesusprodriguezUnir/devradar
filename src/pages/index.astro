@@ -145,9 +145,12 @@ const searchOf = (r: (typeof rows)[number]) =>
             <button id="dr-theme" class="dr-btn-ghost" type="button" aria-label="Cambiar tema">
               <span data-theme-label>☾ Oscuro</span>
             </button>
-            <a class="dr-btn-solid" href="https://github.com/jesusprodriguez/devradar" target="_blank" rel="noopener">
+            <button id="dr-token" class="dr-btn-ghost" type="button" aria-label="Configurar token de escritura">
+              <span data-token-label>🔑 Token</span>
+            </button>
+            <button id="dr-add" class="dr-btn-solid" type="button">
               + Añadir fuente
-            </a>
+            </button>
           </div>
         </header>
 
@@ -218,6 +221,14 @@ const searchOf = (r: (typeof rows)[number]) =>
                     aria-pressed="false"
                     onclick="event.preventDefault(); event.stopPropagation();"
                   >+ GUARDAR</button>
+                  <button
+                    class="dr-del"
+                    type="button"
+                    data-del={r.id}
+                    aria-label="Eliminar del radar"
+                    title="Eliminar del radar"
+                    onclick="event.preventDefault(); event.stopPropagation();"
+                  >✕</button>
                 </a>
               ))}
               <p class="dr-empty" data-empty hidden>Sin resultados con esos filtros.</p>
@@ -284,6 +295,33 @@ const searchOf = (r: (typeof rows)[number]) =>
       </div>
     </div>
 
+    <!-- ===== MODAL: añadir fuente ===== -->
+    <div class="dr-modal" id="dr-add-modal" hidden>
+      <div class="dr-modal-backdrop" data-close></div>
+      <form class="dr-modal-box" id="dr-add-form">
+        <h2 class="dr-modal-title">Añadir fuente</h2>
+        <p class="dr-modal-hint">Pega la URL de un repo de GitHub (o <code>owner/name</code>).</p>
+        <label class="dr-field">
+          <span>Repositorio</span>
+          <input id="dr-add-url" type="text" placeholder="https://github.com/owner/name" autocomplete="off" required />
+        </label>
+        <label class="dr-field">
+          <span>Categoría (opcional)</span>
+          <select id="dr-add-cat">
+            <option value="">— Sin categoría —</option>
+            {cats.map((c) => (
+              <option value={c.slug}>{shortLabel(c.slug)}</option>
+            ))}
+          </select>
+        </label>
+        <p class="dr-modal-err" data-add-err hidden></p>
+        <div class="dr-modal-actions">
+          <button type="button" class="dr-btn-ghost" data-close>Cancelar</button>
+          <button type="submit" class="dr-btn-solid" id="dr-add-submit">Añadir</button>
+        </div>
+      </form>
+    </div>
+
     <script is:inline>
       (() => {
         const $ = (s, r = document) => r.querySelector(s);
@@ -291,6 +329,141 @@ const searchOf = (r: (typeof rows)[number]) =>
         const SAVED_KEY = "devradar:saved";
         const THEME_KEY = "devradar:theme";
         const SORT_KEY = "devradar:sort";
+        const TOKEN_KEY = "devradar:token";
+        const API = "/api";
+
+        // ----- etiquetas y formato (espejo de index.astro) -----
+        const SHORT_LABEL = {
+          "dotnet-backend": ".NET",
+          "angular-frontend": "Angular",
+          "architecture-patterns": "Arquitectura",
+          "claude-ai": "Claude",
+          "devops-tooling": "DevOps",
+          "learning-reference": "Aprendizaje",
+        };
+        const shortLabel = (slug) => SHORT_LABEL[slug] || slug || "";
+        const formatStars = (n) => {
+          if (n === null || n === undefined) return "";
+          if (n >= 1000) return (n / 1000).toFixed(1).replace(/\.0$/, "") + "k";
+          return String(n);
+        };
+        // Posición determinista del blip (espejo de blip() en el frontmatter).
+        const blip = (id) => {
+          let h = 2166136261;
+          for (let i = 0; i < id.length; i++) {
+            h ^= id.charCodeAt(i);
+            h = Math.imul(h, 16777619);
+          }
+          h >>>= 0;
+          const angle = (h % 360) * (Math.PI / 180);
+          const radius = 11 + (((h >>> 9) % 1000) / 1000) * 34;
+          return {
+            x: +(50 + radius * Math.cos(angle)).toFixed(2),
+            y: +(50 + radius * Math.sin(angle)).toFixed(2),
+          };
+        };
+        const searchOf = (r) =>
+          [r.name, r.summary_es, (r.tags || []).join(" "), r.language || "", shortLabel(r.category)]
+            .join(" ")
+            .toLowerCase();
+
+        // ----- token de escritura (localStorage) -----
+        const getToken = () => {
+          try { return localStorage.getItem(TOKEN_KEY) || ""; } catch (e) { return ""; }
+        };
+        const setToken = (t) => {
+          try { t ? localStorage.setItem(TOKEN_KEY, t) : localStorage.removeItem(TOKEN_KEY); } catch (e) {}
+          syncTokenUI();
+        };
+        const syncTokenUI = () => {
+          const has = !!getToken();
+          document.body.classList.toggle("has-token", has);
+          const label = $("[data-token-label]");
+          if (label) label.textContent = has ? "🔑 Token ✓" : "🔑 Token";
+        };
+
+        // ----- construye una fila .dr-row (para repos manuales) -----
+        const renderRow = (r) => {
+          const a = document.createElement("a");
+          a.className = "dr-row js-row";
+          a.href = r.url;
+          a.target = "_blank";
+          a.rel = "noopener noreferrer";
+          a.dataset.category = r.category || "";
+          a.dataset.id = r.id;
+          a.dataset.new = "0";
+          a.dataset.stars = r.stars === null || r.stars === undefined ? -1 : r.stars;
+          a.dataset.relevance = 100000; // los añadidos a mano, arriba del todo en "relevancia"
+          a.dataset.added = r.addedAt || "";
+          a.dataset.name = (r.name || "").toLowerCase();
+          a.dataset.search = searchOf(r);
+          a.dataset.manual = "1";
+
+          const num = document.createElement("span");
+          num.className = "dr-row-num";
+
+          const body = document.createElement("span");
+          body.className = "dr-row-body";
+          const line = document.createElement("span");
+          line.className = "dr-row-line";
+          const name = document.createElement("span");
+          name.className = "dr-row-name";
+          name.textContent = r.name || r.id;
+          const cat = document.createElement("span");
+          cat.className = "dr-row-cat";
+          cat.textContent = shortLabel(r.category);
+          line.append(name, cat);
+          const desc = document.createElement("span");
+          desc.className = "dr-row-desc";
+          desc.textContent = r.summary_es || r.description || "";
+          body.append(line, desc);
+
+          const meta = document.createElement("span");
+          meta.className = "dr-row-meta";
+          const stars = document.createElement("span");
+          if (r.stars !== null && r.stars !== undefined) {
+            stars.className = "dr-row-stars";
+            stars.textContent = "★ " + formatStars(r.stars);
+          } else {
+            stars.className = "dr-row-stars dr-muted";
+            stars.textContent = r.language || "—";
+          }
+          meta.append(stars);
+
+          const save = document.createElement("button");
+          save.className = "dr-save";
+          save.type = "button";
+          save.dataset.save = r.id;
+          save.setAttribute("aria-pressed", "false");
+          save.textContent = "+ GUARDAR";
+          save.addEventListener("click", (e) => { e.preventDefault(); e.stopPropagation(); });
+
+          const del = document.createElement("button");
+          del.className = "dr-del";
+          del.type = "button";
+          del.dataset.del = r.id;
+          del.setAttribute("aria-label", "Eliminar del radar");
+          del.title = "Eliminar del radar";
+          del.textContent = "✕";
+          del.addEventListener("click", (e) => { e.preventDefault(); e.stopPropagation(); });
+
+          a.append(num, body, meta, save, del);
+          return a;
+        };
+
+        // Añade un blip al radar para un recurso inyectado.
+        const addBlip = (r) => {
+          const radar = $(".dr-radar");
+          if (!radar) return;
+          const p = blip(r.id);
+          const b = document.createElement("span");
+          b.className = "dr-blip";
+          b.dataset.blip = r.id;
+          b.dataset.category = r.category || "";
+          b.style.left = p.x + "%";
+          b.style.top = p.y + "%";
+          radar.appendChild(b);
+        };
 
         // ----- estado guardado (localStorage) -----
         const loadSaved = () => {
@@ -302,7 +475,7 @@ const searchOf = (r: (typeof rows)[number]) =>
           try { localStorage.setItem(SAVED_KEY, JSON.stringify([...saved])); } catch (e) {}
         };
 
-        const rows = $$(".js-row");
+        let rows = $$(".js-row");
         const listEl = $(".dr-list");
         const chips = $$("[data-chip]");
         const navItems = $$("[data-nav]");
@@ -363,17 +536,57 @@ const searchOf = (r: (typeof rows)[number]) =>
           $$("[data-saved-count]").forEach((el) => (el.textContent = n));
         };
 
-        $$(".dr-save").forEach((btn) => {
-          btn.addEventListener("click", (e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            const id = btn.dataset.save;
-            if (saved.has(id)) saved.delete(id); else saved.add(id);
-            persist();
-            refreshSavedUI();
-            apply();
-          });
-        });
+        // POST/DELETE contra la API (best-effort; localStorage es la fuente optimista).
+        const syncSaved = (id, on) => {
+          const opts = { method: on ? "POST" : "DELETE", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ id }) };
+          fetch(`${API}/saved`, opts).catch(() => {});
+        };
+        const deleteResource = (row) => {
+          const id = row.dataset.id;
+          const token = getToken();
+          if (!token) { alert("Configura un token de escritura para eliminar."); return; }
+          if (!confirm("¿Eliminar este recurso del radar?")) return;
+          fetch(`${API}/repos`, {
+            method: "DELETE",
+            headers: { "Content-Type": "application/json", Authorization: `Bearer ${token}` },
+            body: JSON.stringify({ id }),
+          })
+            .then((res) => {
+              if (!res.ok) throw new Error(String(res.status));
+              // Quita la fila y su blip; refresca listas y vista.
+              const b = $(`[data-blip="${CSS.escape(id)}"]`);
+              if (b) b.remove();
+              row.remove();
+              if (saved.has(id)) { saved.delete(id); persist(); syncSaved(id, false); }
+              rows = $$(".js-row");
+              refreshSavedUI();
+              sortRows();
+              apply();
+            })
+            .catch((err) => alert("No se pudo eliminar: " + err.message));
+        };
+
+        // Engancha los botones de una fila (idempotente).
+        const bindRow = (row) => {
+          if (row.dataset.bound === "1") return;
+          row.dataset.bound = "1";
+          const save = $(".dr-save", row);
+          if (save) {
+            save.addEventListener("click", (e) => {
+              e.preventDefault();
+              e.stopPropagation();
+              const id = save.dataset.save;
+              const on = !saved.has(id);
+              if (on) saved.add(id); else saved.delete(id);
+              persist();
+              syncSaved(id, on);
+              refreshSavedUI();
+              apply();
+            });
+          }
+          const del = $(".dr-del", row);
+          if (del) del.addEventListener("click", (e) => { e.preventDefault(); e.stopPropagation(); deleteResource(row); });
+        };
 
         // ----- filtrado -----
         const apply = () => {
@@ -448,11 +661,100 @@ const searchOf = (r: (typeof rows)[number]) =>
           syncThemeLabel();
         });
 
+        // ----- token + modal de añadir fuente -----
+        const tokenBtn = $("#dr-token");
+        if (tokenBtn) tokenBtn.addEventListener("click", () => {
+          const next = prompt("Token de escritura (Bearer). Déjalo vacío para borrarlo:", getToken());
+          if (next !== null) setToken(next.trim());
+        });
+
+        const modal = $("#dr-add-modal");
+        const addForm = $("#dr-add-form");
+        const addUrl = $("#dr-add-url");
+        const addCat = $("#dr-add-cat");
+        const addErr = $("[data-add-err]");
+        const addSubmit = $("#dr-add-submit");
+        const openModal = () => { if (!modal) return; addErr.hidden = true; modal.hidden = false; addUrl.focus(); };
+        const closeModal = () => { if (modal) modal.hidden = true; };
+        const addBtn = $("#dr-add");
+        if (addBtn) addBtn.addEventListener("click", openModal);
+        $$("[data-close]").forEach((el) => el.addEventListener("click", closeModal));
+        document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeModal(); });
+
+        // Inyecta un repo en la lista + radar y refresca todo.
+        const injectRepo = (r) => {
+          if (!r || rows.some((row) => row.dataset.id === r.id)) return;
+          const el = renderRow(r);
+          listEl.appendChild(el);
+          bindRow(el);
+          addBlip(r);
+          rows = $$(".js-row");
+          refreshSavedUI();
+          sortRows();
+          apply();
+        };
+
+        if (addForm) addForm.addEventListener("submit", (e) => {
+          e.preventDefault();
+          const token = getToken();
+          if (!token) { addErr.textContent = "Configura primero un token de escritura (🔑)."; addErr.hidden = false; return; }
+          const url = addUrl.value.trim();
+          if (!url) return;
+          addSubmit.disabled = true;
+          addErr.hidden = true;
+          fetch(`${API}/repos`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json", Authorization: `Bearer ${token}` },
+            body: JSON.stringify({ url, category: addCat.value || null }),
+          })
+            .then(async (res) => {
+              const data = await res.json().catch(() => ({}));
+              if (!res.ok) throw new Error(data.error || ("Error " + res.status));
+              injectRepo(data.repo);
+              addUrl.value = "";
+              closeModal();
+            })
+            .catch((err) => { addErr.textContent = err.message; addErr.hidden = false; })
+            .finally(() => { addSubmit.disabled = false; });
+        });
+
         // ----- init -----
         syncThemeLabel();
+        syncTokenUI();
+        rows.forEach(bindRow);
         refreshSavedUI();
         sortRows();
         apply();
+
+        // Capa dinámica: fusiona el estado del servidor (D1) sobre el catálogo estático.
+        fetch(`${API}/state`)
+          .then((res) => (res.ok ? res.json() : null))
+          .then((state) => {
+            if (!state) return;
+            const removed = new Set(state.removedIds || []);
+            rows.forEach((row) => {
+              if (removed.has(row.dataset.id)) {
+                row.remove();
+                const b = $(`[data-blip="${CSS.escape(row.dataset.id)}"]`);
+                if (b) b.remove();
+              }
+            });
+            (state.manualRepos || []).forEach((r) => {
+              if (!removed.has(r.id)) {
+                const el = renderRow(r);
+                listEl.appendChild(el);
+                bindRow(el);
+                addBlip(r);
+              }
+            });
+            (state.saved || []).forEach((id) => saved.add(id));
+            persist();
+            rows = $$(".js-row");
+            refreshSavedUI();
+            sortRows();
+            apply();
+          })
+          .catch(() => {});
       })();
     </script>
   </body>

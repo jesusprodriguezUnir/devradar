@@ -53,6 +53,44 @@ Producción: **https://devradar-9ns.pages.dev**
 
 > Para GitHub Pages (project page) usarías `BASE_PATH=/devradar`; en Cloudflare el sitio va en la raíz, por eso `BASE_PATH=/`.
 
+## Backend dinámico (Cloudflare D1 + Pages Functions)
+
+Sobre el catálogo estático (`data/resources.json`) se aplica en runtime una **capa dinámica**
+servida por la API, para añadir/eliminar fuentes y sincronizar guardados **sin rebuild**:
+
+- **`manual_repos`** — repos añadidos a mano (sobreviven a la ingesta).
+- **`removed_ids`** — IDs ocultados (eliminar sin borrar la fuente).
+- **`saved`** — IDs guardados (espeja el `localStorage` para sincronizar entre dispositivos).
+
+Al cargar, el cliente hace `GET /api/state`, oculta los `removed_ids`, inyecta los
+`manual_repos` y fusiona `saved`.
+
+### Endpoints (`functions/api/`, servidos automáticamente por Pages)
+- `GET /api/state` → `{ manualRepos, removedIds, saved }` (público).
+- `POST /api/repos` *(auth)* — body `{ url | "owner/name", category? }`; resuelve metadatos vía GitHub e inserta.
+- `DELETE /api/repos` *(auth)* — body `{ id }`; borra el manual o, si es estático, lo oculta.
+- `GET/POST/DELETE /api/saved` — lista/añade/quita guardados (sin auth, sincronización ligera).
+
+Las escrituras requieren `Authorization: Bearer <WRITE_TOKEN>`. En la UI, el botón **🔑 Token**
+guarda ese token en `localStorage` (`devradar:token`); sin token la interfaz queda en modo
+sólo-lectura (sin añadir/eliminar).
+
+### Puesta en marcha (una vez)
+```bash
+# 1. Crea la base D1 y pega el database_id en wrangler.toml
+npx wrangler d1 create devradar
+
+# 2. Aplica el esquema
+npx wrangler d1 execute devradar --file=schema.sql
+```
+Luego, en *Cloudflare Pages → Settings → Functions*:
+- **Variables/Secretos**: `WRITE_TOKEN` (token de escritura) y, opcional, `GITHUB_TOKEN`
+  (para resolver metadatos en `POST /api/repos` con más rate limit).
+- **D1 bindings**: enlaza la base `devradar` al binding `DB`.
+
+El deploy actual (`wrangler pages deploy dist`) ya publica `functions/`; no hay que tocar el
+workflow, sólo asegurar el binding D1 y las variables en el proyecto Pages.
+
 ## Estructura
 ```
 config/queries.yaml        # consultas a la GitHub Search API

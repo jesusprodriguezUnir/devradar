@@ -304,7 +304,40 @@ input::placeholder { color: var(--placeholder); }
   background: var(--inv-bg); color: var(--inv-text);
   border-color: var(--inv-bg); font-weight: 600;
 }
+/* botón eliminar: sólo visible cuando hay token de escritura configurado */
+.dr-del {
+  display: none;
+  flex-shrink: 0; width: 30px; text-align: center; padding: 8px 0;
+  font-size: 12px; color: var(--ink3);
+  border: 1px solid var(--chip-border); background: transparent;
+}
+.dr-del:hover { border-color: var(--accent); color: var(--accent); }
+body.has-token .dr-del { display: block; }
 .dr-empty { color: var(--ink3); padding: 2rem 0; text-align: center; font-size: 13px; }
+
+/* ===== modal: añadir fuente ===== */
+.dr-modal { position: fixed; inset: 0; z-index: 50; display: flex; align-items: center; justify-content: center; }
+.dr-modal[hidden] { display: none; }
+.dr-modal-backdrop { position: absolute; inset: 0; background: rgba(0, 0, 0, 0.45); }
+.dr-modal-box {
+  position: relative; z-index: 1;
+  width: min(440px, calc(100vw - 32px));
+  background: var(--bg); color: var(--ink);
+  border: 1px solid var(--line-strong);
+  padding: 24px; display: flex; flex-direction: column; gap: 14px;
+}
+.dr-modal-title { font-family: "Space Grotesk", sans-serif; font-size: 20px; font-weight: 700; margin: 0; }
+.dr-modal-hint { font-size: 12px; color: var(--ink3); margin: 0; }
+.dr-modal-hint code { font-family: inherit; color: var(--ink2); }
+.dr-field { display: flex; flex-direction: column; gap: 6px; font-size: 12px; color: var(--ink3); }
+.dr-field input, .dr-field select {
+  border: 1px solid var(--chip-border); background: transparent;
+  padding: 9px 12px; font-family: inherit; font-size: 13px; color: var(--ink);
+}
+.dr-field input:focus, .dr-field select:focus { outline: none; border-color: var(--line-strong); }
+.dr-modal-err { font-size: 12px; color: var(--accent); margin: 0; }
+.dr-modal-actions { display: flex; justify-content: flex-end; gap: 10px; margin-top: 4px; }
+.dr-btn-solid:disabled { opacity: 0.6; cursor: progress; }
 
 /* RIGHT aside */
 .dr-aside { overflow-y: auto; padding: 22px 30px 28px; }
