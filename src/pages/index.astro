@@ -165,7 +165,18 @@ const searchOf = (r: (typeof rows)[number]) =>
                   >{c.label}</button>
                 ))}
               </div>
-              <span class="dr-count"><span data-count>{rows.length}</span> resultados</span>
+              <div class="dr-list-head-right">
+                <label class="dr-sort">
+                  <span class="dr-sort-label">Ordenar por</span>
+                  <select id="dr-sort" aria-label="Ordenar por">
+                    <option value="relevance">Relevancia</option>
+                    <option value="stars">Estrellas</option>
+                    <option value="recent">Recientes</option>
+                    <option value="name">Nombre</option>
+                  </select>
+                </label>
+                <span class="dr-count"><span data-count>{rows.length}</span> resultados</span>
+              </div>
             </div>
 
             <div class="dr-scroll dr-list">
@@ -178,6 +189,10 @@ const searchOf = (r: (typeof rows)[number]) =>
                   data-category={r.category}
                   data-id={r.id}
                   data-new={newThisWeek.some((n) => n.id === r.id) ? "1" : "0"}
+                  data-stars={r.stars ?? -1}
+                  data-relevance={r.relevanceScore}
+                  data-added={r.addedAt}
+                  data-name={r.name.toLowerCase()}
                   data-search={searchOf(r)}
                 >
                   <span class="dr-row-num"></span>
@@ -275,6 +290,7 @@ const searchOf = (r: (typeof rows)[number]) =>
         const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
         const SAVED_KEY = "devradar:saved";
         const THEME_KEY = "devradar:theme";
+        const SORT_KEY = "devradar:sort";
 
         // ----- estado guardado (localStorage) -----
         const loadSaved = () => {
@@ -287,15 +303,46 @@ const searchOf = (r: (typeof rows)[number]) =>
         };
 
         const rows = $$(".js-row");
+        const listEl = $(".dr-list");
         const chips = $$("[data-chip]");
         const navItems = $$("[data-nav]");
         const q = $("#dr-q");
         const emptyEl = $("[data-empty]");
         const countEl = $("[data-count]");
         const filterLabelEl = $("[data-filter-label]");
+        const sortSelect = $("#dr-sort");
 
         let category = "all";   // chip activo
         let scope = "all";      // nav: all | new | saved
+
+        // ----- orden (localStorage) -----
+        const loadSort = () => {
+          try { return localStorage.getItem(SORT_KEY) || "relevance"; }
+          catch (e) { return "relevance"; }
+        };
+        let sortMode = loadSort();
+        const num = (v) => Number(v);
+        const comparators = {
+          // Relevancia: orden de build (desc), desempate por nombre.
+          relevance: (a, b) =>
+            num(b.dataset.relevance) - num(a.dataset.relevance) ||
+            a.dataset.name.localeCompare(b.dataset.name),
+          // Estrellas desc; los sin estrellas (-1) quedan al final.
+          stars: (a, b) =>
+            num(b.dataset.stars) - num(a.dataset.stars) ||
+            num(b.dataset.relevance) - num(a.dataset.relevance),
+          // Recientes: addedAt (ISO) desc.
+          recent: (a, b) => (b.dataset.added || "").localeCompare(a.dataset.added || ""),
+          // Nombre asc.
+          name: (a, b) => a.dataset.name.localeCompare(b.dataset.name),
+        };
+        // Filas en el orden visual actual (las usa apply() para numerar).
+        let orderedRows = rows.slice();
+        const sortRows = () => {
+          const cmp = comparators[sortMode] || comparators.relevance;
+          orderedRows = rows.slice().sort(cmp);
+          orderedRows.forEach((row) => listEl.appendChild(row));
+        };
 
         const labelFor = (slug) => {
           const chip = chips.find((c) => c.dataset.chip === slug);
@@ -332,7 +379,7 @@ const searchOf = (r: (typeof rows)[number]) =>
         const apply = () => {
           const text = (q.value || "").trim().toLowerCase();
           let visible = 0;
-          rows.forEach((row) => {
+          orderedRows.forEach((row) => {
             const okCat = category === "all" || row.dataset.category === category;
             const okScope =
               scope === "all" ||
@@ -378,6 +425,14 @@ const searchOf = (r: (typeof rows)[number]) =>
 
         q.addEventListener("input", apply);
 
+        sortSelect.value = sortMode;
+        sortSelect.addEventListener("change", () => {
+          sortMode = sortSelect.value;
+          try { localStorage.setItem(SORT_KEY, sortMode); } catch (e) {}
+          sortRows();
+          apply();
+        });
+
         // ----- tema -----
         const themeBtn = $("#dr-theme");
         const themeLabel = $("[data-theme-label]");
@@ -396,6 +451,7 @@ const searchOf = (r: (typeof rows)[number]) =>
         // ----- init -----
         syncThemeLabel();
         refreshSavedUI();
+        sortRows();
         apply();
       })();
     </script>

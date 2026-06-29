@@ -1,5 +1,7 @@
 # DevRadar
 
+> **Producción:** **[devradar-9ns.pages.dev](https://devradar-9ns.pages.dev/)**
+
 Panel estático y auto-actualizado que cura y categoriza los recursos más relevantes para mi día a día: **repositorios** de GitHub (.NET, Angular, arquitectura), **webs de referencia** y **skills** para Claude / agentes IA.
 
 Arquitectura completa y diagramas en [`../Arquitectura-DevRadar.md`](../Arquitectura-DevRadar.md).
