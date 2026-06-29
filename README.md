@@ -38,14 +38,18 @@ Copia `.env.example` a `.env` y rellena lo que quieras:
 - **Categorías y reglas**: `scripts/ingest/categories.ts` (y su espejo en `src/lib/categories.ts`).
 - **Relevancia**: pesos en `scripts/ingest/score.ts`.
 
-## Despliegue (GitHub Pages)
-1. Sube el repo a GitHub. En *Settings → Pages*, fuente: **GitHub Actions**.
-2. En *Settings → Secrets and variables → Actions*:
-   - *Secrets*: `ANTHROPIC_API_KEY` (si usas Claude).
-   - *Variables*: `SITE_URL` (p. ej. `https://<usuario>.github.io`) y `BASE_PATH` (p. ej. `/devradar`).
-3. El workflow `.github/workflows/build.yml` ya hace ingesta + build + deploy cada 12 h y bajo demanda (`workflow_dispatch`).
+## Despliegue (Cloudflare Pages)
+Producción: **https://devradar-9ns.pages.dev**
 
-> Ajusta `site`/`base` en `astro.config.mjs` si usas dominio propio o *user page* (en ese caso `BASE_PATH=/`).
+1. En *Settings → Secrets and variables → Actions* del repo:
+   - *Secrets*: `CLOUDFLARE_API_TOKEN` (permiso *Account → Cloudflare Pages → Edit*),
+     `CLOUDFLARE_ACCOUNT_ID` y, opcional, `ANTHROPIC_API_KEY` (si usas Claude).
+   - *Variables*: `SITE_URL` (p. ej. `https://devradar-9ns.pages.dev`) y `BASE_PATH=/`.
+2. El proyecto Cloudflare Pages debe existir con el nombre `devradar` (el primer deploy no lo crea solo).
+3. El workflow `.github/workflows/build.yml` hace ingesta + build + `wrangler pages deploy` cada 12 h
+   y bajo demanda (`workflow_dispatch`).
+
+> Para GitHub Pages (project page) usarías `BASE_PATH=/devradar`; en Cloudflare el sitio va en la raíz, por eso `BASE_PATH=/`.
 
 ## Estructura
 ```

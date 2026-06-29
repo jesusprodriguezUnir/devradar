@@ -1,11 +1,10 @@
 import { defineConfig } from "astro/config";
 
-// Ajusta `site` y `base` a tu usuario/repo de GitHub Pages.
-// Para un repo project-page: https://<usuario>.github.io/<repo>
-// Si usas dominio propio o user-page, deja base en "/".
+// Despliegue en Cloudflare Pages (raíz del subdominio *.pages.dev).
+// `site` y `base` se sobreescriben en CI con las Variables SITE_URL/BASE_PATH.
 export default defineConfig({
-  site: process.env.SITE_URL ?? "https://jesusprodriguezunir.github.io",
-  base: process.env.BASE_PATH ?? "/devradar",
+  site: process.env.SITE_URL ?? "https://devradar-9ns.pages.dev",
+  base: process.env.BASE_PATH ?? "/",
   trailingSlash: "ignore",
   build: {
     format: "directory",
