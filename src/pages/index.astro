@@ -1,25 +1,403 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-import FilterBar from "../components/FilterBar.astro";
-import NewThisWeek from "../components/NewThisWeek.astro";
-import CategorySection from "../components/CategorySection.astro";
-import { categoriesWithCounts, allResources, generatedAt } from "../lib/resources.ts";
+import "../styles/dashboard.css";
+import {
+  allResources,
+  newThisWeek,
+  categoriesWithCounts,
+  formatStars,
+  generatedAt,
+} from "../lib/resources.ts";
 
+const base = import.meta.env.BASE_URL;
+
+// Etiquetas cortas para chips y badges (la taxonomía completa vive en categories.ts).
+const SHORT_LABEL: Record<string, string> = {
+  "dotnet-backend": ".NET",
+  "angular-frontend": "Angular",
+  "architecture-patterns": "Arquitectura",
+  "claude-ai": "Claude",
+  "devops-tooling": "DevOps",
+  "learning-reference": "Aprendizaje",
+};
+const shortLabel = (slug: string) => SHORT_LABEL[slug] ?? slug;
+
+// Filas: todos los recursos ordenados por relevancia.
+const rows = [...allResources].sort(
+  (a, b) => b.relevanceScore - a.relevanceScore || a.name.localeCompare(b.name)
+);
+
+// Posiciones deterministas de los blips dentro del círculo del radar (en %).
+function blip(id: string) {
+  let h = 2166136261;
+  for (let i = 0; i < id.length; i++) {
+    h ^= id.charCodeAt(i);
+    h = Math.imul(h, 16777619);
+  }
+  h >>>= 0;
+  const angle = (h % 360) * (Math.PI / 180);
+  const radius = 11 + ((h >>> 9) % 1000) / 1000 * 34; // 11%..45%
+  return {
+    x: +(50 + radius * Math.cos(angle)).toFixed(2),
+    y: +(50 + radius * Math.sin(angle)).toFixed(2),
+  };
+}
+
+// Desglose por categoría (solo no vacías) para las barras de la derecha.
 const cats = categoriesWithCounts();
+const maxCount = Math.max(1, ...cats.map((c) => c.items.length));
+
+// Chips de filtro: "Todas" + categorías con recursos.
+const chips = [{ slug: "all", label: "Todas" }, ...cats.map((c) => ({ slug: c.slug, label: shortLabel(c.slug) }))];
+
 const total = allResources.length;
-const updated = new Date(generatedAt).toLocaleDateString("es-ES", { dateStyle: "long" });
+const newCount = newThisWeek.length;
+const updatedShort = new Date(generatedAt).toLocaleString("es-ES", { dateStyle: "medium", timeStyle: "short" });
+
+const searchOf = (r: (typeof rows)[number]) =>
+  [r.name, r.summary_es, r.tags.join(" "), r.language ?? "", shortLabel(r.category)]
+    .join(" ")
+    .toLowerCase();
 ---
-<BaseLayout title="DevRadar — tu radar de repos, webs y skills">
-  <section class="hero">
-    <h1>Tu radar de desarrollo</h1>
-    <p>Repositorios, webs de referencia y skills relevantes para .NET, Angular, arquitectura y para trabajar con Claude — curados y categorizados automáticamente.</p>
-    <p class="meta">{total} recursos · actualizado el {updated}</p>
-  </section>
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DevRadar — tu radar de repos, webs y skills</title>
+    <meta
+      name="description"
+      content="Dashboard que cura y categoriza repos, webs y skills relevantes para .NET, Angular, arquitectura y Claude."
+    />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><text y='14' font-size='14'>📡</text></svg>" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Aplica el tema guardado antes de pintar para evitar parpadeo. -->
+    <script is:inline>
+      (() => {
+        try {
+          const t = localStorage.getItem("devradar:theme");
+          document.documentElement.dataset.theme = t === "dark" ? "dark" : "light";
+        } catch (e) {
+          document.documentElement.dataset.theme = "light";
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div class="dr-app">
+      <!-- ===== SIDEBAR ===== -->
+      <aside class="dr-side">
+        <a class="dr-logo" href={base}>
+          <span class="dr-logo-radar"><span class="dr-logo-sweep"></span></span>
+          <span class="dr-logo-word">devradar</span>
+        </a>
 
-  <FilterBar />
-  <NewThisWeek />
+        <nav class="dr-nav">
+          <button class="dr-navitem is-active" data-nav="all">
+            <span>Mi radar</span>
+          </button>
+          <button class="dr-navitem" data-nav="new">
+            <span>Tendencias</span>
+            {newCount > 0 && <span class="dr-badge dr-badge-accent">{newCount}</span>}
+          </button>
+          <button class="dr-navitem" data-nav="saved">
+            <span>Guardados</span>
+            <span class="dr-badge" data-saved-count>0</span>
+          </button>
+          <a class="dr-navitem" href={`${base}acerca`}>
+            <span>Acerca</span>
+          </a>
+        </nav>
 
-  {cats.map((c) => (
-    <CategorySection icon={c.icon} label={c.label} slug={c.slug} items={c.items} />
-  ))}
-</BaseLayout>
+        <div class="dr-spacer"></div>
+
+        <div class="dr-scan">
+          <div class="dr-scan-top"><span class="dr-dot"></span> Escaneo activo</div>
+          <div class="dr-scan-sub">Último barrido: {updatedShort} · {total} recursos</div>
+        </div>
+
+        <div class="dr-user">
+          <div class="dr-avatar">J</div>
+          <div>
+            <div class="dr-user-name">Jesús P.</div>
+            <div class="dr-user-plan">plan dev</div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- ===== MAIN ===== -->
+      <div class="dr-main">
+        <!-- topbar -->
+        <header class="dr-top">
+          <div>
+            <h1 class="dr-title">Mi radar</h1>
+            <div class="dr-subtitle">Repos, webs y skills relevantes para .NET, Angular, arquitectura y Claude</div>
+          </div>
+          <div class="dr-tools">
+            <div class="dr-search">
+              <span class="dr-search-ico">⌕</span>
+              <input id="dr-q" type="search" placeholder="Buscar repos, herramientas…" autocomplete="off" />
+            </div>
+            <button id="dr-theme" class="dr-btn-ghost" type="button" aria-label="Cambiar tema">
+              <span data-theme-label>☾ Oscuro</span>
+            </button>
+            <a class="dr-btn-solid" href="https://github.com/jesusprodriguez/devradar" target="_blank" rel="noopener">
+              + Añadir fuente
+            </a>
+          </div>
+        </header>
+
+        <!-- content -->
+        <div class="dr-content">
+          <!-- LEFT: list -->
+          <section class="dr-list-pane">
+            <div class="dr-list-head">
+              <div class="dr-chips" role="group" aria-label="Filtrar por categoría">
+                {chips.map((c, i) => (
+                  <button
+                    class={`dr-chip ${i === 0 ? "is-active" : ""}`}
+                    data-chip={c.slug}
+                    aria-pressed={i === 0 ? "true" : "false"}
+                  >{c.label}</button>
+                ))}
+              </div>
+              <span class="dr-count"><span data-count>{rows.length}</span> resultados</span>
+            </div>
+
+            <div class="dr-scroll dr-list">
+              {rows.map((r) => (
+                <a
+                  class="dr-row js-row"
+                  href={r.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-category={r.category}
+                  data-id={r.id}
+                  data-new={newThisWeek.some((n) => n.id === r.id) ? "1" : "0"}
+                  data-search={searchOf(r)}
+                >
+                  <span class="dr-row-num"></span>
+                  <span class="dr-row-body">
+                    <span class="dr-row-line">
+                      <span class="dr-row-name">{r.name}</span>
+                      <span class="dr-row-cat">{shortLabel(r.category)}</span>
+                    </span>
+                    <span class="dr-row-desc">{r.summary_es}</span>
+                  </span>
+                  <span class="dr-row-meta">
+                    {r.stars !== null ? (
+                      <span class="dr-row-stars">★ {formatStars(r.stars)}</span>
+                    ) : (
+                      <span class="dr-row-stars dr-muted">{r.language ?? "—"}</span>
+                    )}
+                    {r.starsDelta > 0 && <span class="dr-row-delta">+{r.starsDelta}</span>}
+                  </span>
+                  <button
+                    class="dr-save"
+                    type="button"
+                    data-save={r.id}
+                    aria-pressed="false"
+                    onclick="event.preventDefault(); event.stopPropagation();"
+                  >+ GUARDAR</button>
+                </a>
+              ))}
+              <p class="dr-empty" data-empty hidden>Sin resultados con esos filtros.</p>
+            </div>
+          </section>
+
+          <!-- RIGHT: radar + stats + categorías -->
+          <aside class="dr-scroll dr-aside">
+            <div class="dr-radar-card">
+              <div class="dr-card-head">
+                <span class="dr-card-title">RADAR</span>
+                <span class="dr-card-sub" data-filter-label>todas las categorías</span>
+              </div>
+              <div class="dr-radar-wrap">
+                <div class="dr-radar">
+                  <div class="dr-radar-sweep"></div>
+                  <div class="dr-radar-vline"></div>
+                  <div class="dr-radar-hline"></div>
+                  <div class="dr-radar-core"></div>
+                  {rows.map((r) => {
+                    const p = blip(r.id);
+                    return (
+                      <span
+                        class="dr-blip"
+                        data-blip={r.id}
+                        data-category={r.category}
+                        style={`left:${p.x}%; top:${p.y}%;`}
+                      ></span>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+
+            <div class="dr-stats">
+              <div class="dr-stat">
+                <div class="dr-stat-num">{total}</div>
+                <div class="dr-stat-label">en radar</div>
+              </div>
+              <div class="dr-stat">
+                <div class="dr-stat-num dr-accent">+{newCount}</div>
+                <div class="dr-stat-label">esta semana</div>
+              </div>
+              <div class="dr-stat">
+                <div class="dr-stat-num" data-saved-count>0</div>
+                <div class="dr-stat-label">guardados</div>
+              </div>
+            </div>
+
+            <div class="dr-catbreak">
+              <span class="dr-card-title">POR CATEGORÍA</span>
+              {cats.map((c) => (
+                <div class="dr-catrow">
+                  <span class="dr-cat-label">{shortLabel(c.slug)}</span>
+                  <span class="dr-cat-track">
+                    <span class="dr-cat-bar" style={`width:${(c.items.length / maxCount) * 100}%`}></span>
+                  </span>
+                  <span class="dr-cat-count">{c.items.length}</span>
+                </div>
+              ))}
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+
+    <script is:inline>
+      (() => {
+        const $ = (s, r = document) => r.querySelector(s);
+        const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
+        const SAVED_KEY = "devradar:saved";
+        const THEME_KEY = "devradar:theme";
+
+        // ----- estado guardado (localStorage) -----
+        const loadSaved = () => {
+          try { return new Set(JSON.parse(localStorage.getItem(SAVED_KEY) || "[]")); }
+          catch (e) { return new Set(); }
+        };
+        let saved = loadSaved();
+        const persist = () => {
+          try { localStorage.setItem(SAVED_KEY, JSON.stringify([...saved])); } catch (e) {}
+        };
+
+        const rows = $$(".js-row");
+        const chips = $$("[data-chip]");
+        const navItems = $$("[data-nav]");
+        const q = $("#dr-q");
+        const emptyEl = $("[data-empty]");
+        const countEl = $("[data-count]");
+        const filterLabelEl = $("[data-filter-label]");
+
+        let category = "all";   // chip activo
+        let scope = "all";      // nav: all | new | saved
+
+        const labelFor = (slug) => {
+          const chip = chips.find((c) => c.dataset.chip === slug);
+          return slug === "all" ? "todas las categorías" : (chip ? chip.textContent.trim() : slug);
+        };
+
+        // ----- guardado por fila -----
+        const refreshSavedUI = () => {
+          rows.forEach((row) => {
+            const btn = $(".dr-save", row);
+            const isSaved = saved.has(row.dataset.id);
+            btn.classList.toggle("is-saved", isSaved);
+            btn.setAttribute("aria-pressed", String(isSaved));
+            btn.textContent = isSaved ? "✓ GUARDADO" : "+ GUARDAR";
+          });
+          $$("[data-blip]").forEach((b) => b.classList.toggle("is-saved", saved.has(b.dataset.blip)));
+          const n = String(saved.size);
+          $$("[data-saved-count]").forEach((el) => (el.textContent = n));
+        };
+
+        $$(".dr-save").forEach((btn) => {
+          btn.addEventListener("click", (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            const id = btn.dataset.save;
+            if (saved.has(id)) saved.delete(id); else saved.add(id);
+            persist();
+            refreshSavedUI();
+            apply();
+          });
+        });
+
+        // ----- filtrado -----
+        const apply = () => {
+          const text = (q.value || "").trim().toLowerCase();
+          let visible = 0;
+          rows.forEach((row) => {
+            const okCat = category === "all" || row.dataset.category === category;
+            const okScope =
+              scope === "all" ||
+              (scope === "new" && row.dataset.new === "1") ||
+              (scope === "saved" && saved.has(row.dataset.id));
+            const okText = !text || (row.dataset.search || "").includes(text);
+            const show = okCat && okScope && okText;
+            row.classList.toggle("is-hidden", !show);
+            if (show) {
+              visible++;
+              $(".dr-row-num", row).textContent = String(visible).padStart(2, "0");
+            }
+          });
+          countEl.textContent = String(visible);
+          emptyEl.hidden = visible !== 0;
+
+          // radar: enciende los blips de la categoría activa
+          $$("[data-blip]").forEach((b) => {
+            b.classList.toggle("is-off", !(category === "all" || b.dataset.category === category));
+          });
+          filterLabelEl.textContent = labelFor(category);
+        };
+
+        chips.forEach((chip) => {
+          chip.addEventListener("click", () => {
+            category = chip.dataset.chip;
+            chips.forEach((c) => {
+              const on = c === chip;
+              c.classList.toggle("is-active", on);
+              c.setAttribute("aria-pressed", String(on));
+            });
+            apply();
+          });
+        });
+
+        navItems.forEach((item) => {
+          item.addEventListener("click", () => {
+            scope = item.dataset.nav;
+            navItems.forEach((n) => n.classList.toggle("is-active", n === item));
+            apply();
+          });
+        });
+
+        q.addEventListener("input", apply);
+
+        // ----- tema -----
+        const themeBtn = $("#dr-theme");
+        const themeLabel = $("[data-theme-label]");
+        const syncThemeLabel = () => {
+          const dark = document.documentElement.dataset.theme === "dark";
+          themeLabel.textContent = dark ? "☀ Claro" : "☾ Oscuro";
+        };
+        themeBtn.addEventListener("click", () => {
+          const dark = document.documentElement.dataset.theme === "dark";
+          const next = dark ? "light" : "dark";
+          document.documentElement.dataset.theme = next;
+          try { localStorage.setItem(THEME_KEY, next); } catch (e) {}
+          syncThemeLabel();
+        });
+
+        // ----- init -----
+        syncThemeLabel();
+        refreshSavedUI();
+        apply();
+      })();
+    </script>
+  </body>
+</html>
