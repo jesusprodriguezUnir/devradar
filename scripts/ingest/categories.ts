@@ -49,16 +49,42 @@ const RULES: Array<{ category: string; match: string[] }> = [
   },
 ];
 
+const escapeRe = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
 /**
- * Categorizacion determinista. Devuelve la categoria si hay match claro,
- * o null si es ambiguo (candidato para Claude / categoria por defecto de la query).
+ * ¿La keyword aparece en las señales como *palabra/topic completo*, no como substring?
+ * - keyword con guion (topic tipo "clean-architecture"): match exacto de topic o frase
+ *   con límites de palabra en texto libre.
+ * - keyword de un token ("dotnet", "rag"): debe ser un token completo de alguna señal.
+ * Esto evita falsos positivos como "rag" ⊂ "storage" o "ddd" ⊂ "adddress".
+ */
+function keywordMatches(kw: string, signals: string[], tokenSets: Set<string>[]): boolean {
+  if (kw.includes("-")) {
+    const re = new RegExp(`(^|[^a-z0-9])${escapeRe(kw)}([^a-z0-9]|$)`, "i");
+    return signals.some((s) => s === kw || re.test(s));
+  }
+  return tokenSets.some((set) => set.has(kw));
+}
+
+/**
+ * Categorizacion determinista por *scoring*: cuenta cuántas keywords de cada regla
+ * matchean (como palabra completa) y elige la categoría con más aciertos. Empates a
+ * favor del orden de RULES (más específico primero). Devuelve null si nadie matchea
+ * (candidato para Claude / categoria por defecto de la query).
  */
 export function categorizeByRules(signals: string[]): string | null {
-  const haystack = signals.map((s) => s.toLowerCase());
+  const norm = signals.map((s) => (s ?? "").toLowerCase());
+  const tokenSets = norm.map((s) => new Set(s.split(/[^a-z0-9]+/).filter(Boolean)));
+
+  let best: string | null = null;
+  let bestScore = 0;
   for (const rule of RULES) {
-    if (rule.match.some((kw) => haystack.includes(kw) || haystack.some((h) => h.includes(kw)))) {
-      return rule.category;
+    const score = rule.match.filter((kw) => keywordMatches(kw, norm, tokenSets)).length;
+    // `>` (no `>=`) => en empate gana la regla anterior (orden = prioridad).
+    if (score > bestScore) {
+      bestScore = score;
+      best = rule.category;
     }
   }
-  return null;
+  return best;
 }

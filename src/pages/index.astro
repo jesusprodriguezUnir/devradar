@@ -101,7 +101,7 @@ const searchOf = (r: (typeof rows)[number]) =>
             <span>Mi radar</span>
           </button>
           <button class="dr-navitem" data-nav="new">
-            <span>Tendencias</span>
+            <span>Novedades</span>
             {newCount > 0 && <span class="dr-badge dr-badge-accent">{newCount}</span>}
           </button>
           <button class="dr-navitem" data-nav="saved">
@@ -739,8 +739,12 @@ const searchOf = (r: (typeof rows)[number]) =>
                 if (b) b.remove();
               }
             });
+            // IDs realmente presentes tras las eliminaciones: evita inyectar duplicados
+            // de un repo manual que también existe (con el mismo id) en el catálogo estático.
+            const present = new Set($$(".js-row").map((row) => row.dataset.id));
             (state.manualRepos || []).forEach((r) => {
-              if (!removed.has(r.id)) {
+              if (!removed.has(r.id) && !present.has(r.id)) {
+                present.add(r.id);
                 const el = renderRow(r);
                 listEl.appendChild(el);
                 bindRow(el);

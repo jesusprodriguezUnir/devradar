@@ -12,11 +12,27 @@ const { category } = Astro.props;
 const items = byCategory(category.slug).sort((a, b) => b.relevanceScore - a.relevanceScore);
 ---
 <BaseLayout title={`${category.label} — DevRadar`}>
-  <section class="hero">
+  <section class="hero" data-page-category={category.slug}>
     <h1>{category.icon} {category.label}</h1>
-    <p class="meta">{items.length} recursos en esta categoría</p>
+    <p class="meta"><span data-count>{items.length}</span> recursos en esta categoría</p>
   </section>
-  {items.length === 0
-    ? <p class="empty">Aún no hay recursos en esta categoría.</p>
-    : <div class="grid">{items.map((r) => <ResourceCard resource={r} />)}</div>}
+  <div class="grid" data-grid hidden={items.length === 0}>
+    {items.map((r) => <ResourceCard resource={r} />)}
+  </div>
+  <p class="empty" data-empty hidden={items.length !== 0}>Aún no hay recursos en esta categoría.</p>
+
+  <script>
+    import { applyDynamicLayer } from "../../lib/dynamicCard.ts";
+    const root = document.querySelector<HTMLElement>("[data-page-category]");
+    const grid = document.querySelector<HTMLElement>("[data-grid]");
+    const slug = root?.dataset.pageCategory ?? "";
+    if (grid) {
+      applyDynamicLayer({
+        filter: (r) => (r.category || "") === slug,
+        grid,
+        empty: document.querySelector<HTMLElement>("[data-empty]"),
+        count: document.querySelector<HTMLElement>("[data-count]"),
+      });
+    }
+  </script>
 </BaseLayout>

@@ -13,11 +13,27 @@ const items = byType(type).sort((a, b) => b.relevanceScore - a.relevanceScore);
 const labels: Record<string, string> = { repo: "Repositorios", skill: "Skills", website: "Webs de referencia" };
 ---
 <BaseLayout title={`${labels[type]} — DevRadar`}>
-  <section class="hero">
+  <section class="hero" data-page-type={type}>
     <h1>{labels[type]}</h1>
-    <p class="meta">{items.length} recursos de tipo «{TYPE_LABELS[type]}»</p>
+    <p class="meta"><span data-count>{items.length}</span> recursos de tipo «{TYPE_LABELS[type]}»</p>
   </section>
-  {items.length === 0
-    ? <p class="empty">Aún no hay recursos de este tipo.</p>
-    : <div class="grid">{items.map((r) => <ResourceCard resource={r} />)}</div>}
+  <div class="grid" data-grid hidden={items.length === 0}>
+    {items.map((r) => <ResourceCard resource={r} />)}
+  </div>
+  <p class="empty" data-empty hidden={items.length !== 0}>Aún no hay recursos de este tipo.</p>
+
+  <script>
+    import { applyDynamicLayer } from "../../lib/dynamicCard.ts";
+    const root = document.querySelector<HTMLElement>("[data-page-type]");
+    const grid = document.querySelector<HTMLElement>("[data-grid]");
+    const type = root?.dataset.pageType ?? "";
+    if (grid) {
+      applyDynamicLayer({
+        filter: (r) => (r.type || "repo") === type,
+        grid,
+        empty: document.querySelector<HTMLElement>("[data-empty]"),
+        count: document.querySelector<HTMLElement>("[data-count]"),
+      });
+    }
+  </script>
 </BaseLayout>

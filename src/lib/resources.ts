@@ -62,10 +62,6 @@ export function categoriesWithCounts() {
   })).filter((c) => c.items.length > 0);
 }
 
-export function languages(): string[] {
-  return [...new Set(allResources.map((r) => r.language).filter(Boolean) as string[])].sort();
-}
-
 export function categoryLabel(slug: string): string {
   return CATEGORY_BY_SLUG.get(slug)?.label ?? slug;
 }

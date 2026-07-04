@@ -3,20 +3,22 @@ import { json, error, readJson } from "../_lib/http.ts";
 import { isAuthorized } from "../_lib/auth.ts";
 import { parseRepoRef, resolveRepo } from "../_lib/github.ts";
 import { insertManualRepo, isManualRepo } from "../_lib/db.ts";
+import { validCategory, isValidId } from "../_lib/validate.ts";
 
 type Ctx = { request: Request; env: Env };
 
 // POST /api/repos (auth) — body { url | "owner/name", category? }
 // Resuelve metadatos vía GitHub, inserta en manual_repos y lo des-oculta si estaba removido.
 export const onRequestPost = async ({ request, env }: Ctx): Promise<Response> => {
-  if (!isAuthorized(request, env)) return error("No autorizado", 401);
+  if (!(await isAuthorized(request, env))) return error("No autorizado", 401);
 
   const body = await readJson<{ url?: string; category?: string }>(request);
   const ref = parseRepoRef(body?.url ?? "");
   if (!ref) return error("Falta una URL o 'owner/name' de GitHub válida", 400);
 
   try {
-    const repo = await resolveRepo(ref, body?.category?.trim() || null, env);
+    // Categoría inválida o vacía => null (no persistimos slugs arbitrarios).
+    const repo = await resolveRepo(ref, validCategory(body?.category), env);
     await insertManualRepo(env, repo);
     // Si estaba oculto, lo reactivamos.
     await env.DB.prepare("DELETE FROM removed_ids WHERE id = ?").bind(repo.id).run();

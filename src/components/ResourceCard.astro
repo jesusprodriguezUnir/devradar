@@ -8,6 +8,7 @@ const searchText = [r.name, r.summary_es, r.tags.join(" "), r.language ?? ""].jo
 ---
 <article
   class={`card js-card ${r.stale ? "stale" : ""}`}
+  data-id={r.id}
   data-type={r.type}
   data-category={r.category}
   data-language={r.language ?? ""}

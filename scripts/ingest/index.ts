@@ -49,6 +49,8 @@ async function main() {
   const since = sinceDate(pushedSinceDays);
 
   const byId = new Map<string, Resource>();
+  // Evita que un mismo repo aparezca dos veces con distinto tipo (p.ej. repo: y skill:).
+  const seenFullNames = new Set<string>();
   let claudeCalls = 0;
   let collectError = false;
 
@@ -70,7 +72,8 @@ async function main() {
 
     for (const repo of repos) {
       const id = `${query.type}:${repo.full_name}`;
-      if (byId.has(id)) continue;
+      // Ya visto (misma query, o el mismo repo bajo otro tipo en otra query): lo saltamos.
+      if (byId.has(id) || seenFullNames.has(repo.full_name)) continue;
 
       const topics = repo.topics ?? [];
       const signals = [...topics, repo.name, repo.language ?? "", repo.description ?? ""];
@@ -111,6 +114,7 @@ async function main() {
       stars.record(id, repo.stargazers_count);
 
       const prev = previous.get(id);
+      seenFullNames.add(repo.full_name);
       byId.set(id, {
         id,
         type: query.type,
@@ -147,7 +151,12 @@ async function main() {
   for (const s of skillsSeed) {
     const id = `skill:${s.repo ?? s.name}`;
     let repo: GithubRepo | null = null;
-    if (s.repo) repo = await getRepo(s.repo);
+    if (s.repo) {
+      repo = await getRepo(s.repo);
+      // El seed es la versión canónica: si la búsqueda ya trajo ese repo, lo reemplaza.
+      byId.delete(`repo:${s.repo}`);
+      seenFullNames.add(s.repo);
+    }
 
     const prev = previous.get(id);
     byId.set(id, {
