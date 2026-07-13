@@ -31,11 +31,11 @@ export const onRequestPost = async ({ request, env }: Ctx): Promise<Response> =>
 // DELETE /api/repos (auth) — body { id }
 // Si es manual lo borra; si es del catálogo estático lo añade a removed_ids (ocultar).
 export const onRequestDelete = async ({ request, env }: Ctx): Promise<Response> => {
-  if (!isAuthorized(request, env)) return error("No autorizado", 401);
+  if (!(await isAuthorized(request, env))) return error("No autorizado", 401);
 
   const body = await readJson<{ id?: string }>(request);
   const id = body?.id?.trim();
-  if (!id) return error("Falta el 'id' a eliminar", 400);
+  if (!isValidId(id)) return error("Falta un 'id' válido a eliminar", 400);
 
   try {
     if (await isManualRepo(env, id)) {
