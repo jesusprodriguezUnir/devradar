@@ -6,19 +6,24 @@
   "description": "Panel estatico que cura y categoriza repos, webs y skills relevantes para .NET, Angular, arquitectura y Claude.",
   "scripts": {
     "ingest": "tsx scripts/ingest/index.ts",
+    "validate:taxonomy": "tsx scripts/ops/validate-taxonomy.ts",
+    "audit:data": "tsx scripts/ops/audit-dataset.ts",
+    "audit:dynamic": "tsx scripts/ops/audit-dynamic-state.ts",
+    "refresh:all": "npm run ingest && npm run validate:taxonomy && npm run audit:data && npm run check && npm run build",
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
     "check": "astro check"
   },
   "dependencies": {
+    "@astrojs/check": "^0.9.9",
     "astro": "^5.2.0",
     "zod": "^3.23.8"
   },
   "devDependencies": {
     "@types/node": "^22.10.0",
     "tsx": "^4.19.2",
-    "typescript": "^5.7.0",
+    "typescript": "^5.9.3",
     "yaml": "^2.6.0"
   }
 }

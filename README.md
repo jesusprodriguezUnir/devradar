@@ -23,6 +23,14 @@ npm install
 # 1. Genera el catálogo (usa GITHUB_TOKEN y ANTHROPIC_API_KEY si los defines en .env)
 npm run ingest
 
+# Validaciones operativas
+npm run validate:taxonomy
+npm run audit:data
+npm run audit:dynamic
+
+# Flujo completo recomendado de actualizacion semanal
+npm run refresh:all
+
 # 2. Levanta el sitio
 npm run dev        # http://localhost:4321
 
@@ -101,6 +109,8 @@ data/resources.json        # catálogo generado (versionado)
 src/                       # sitio Astro (componentes, páginas, lib)
 .github/workflows/         # CI: cron + deploy
 ```
+
+Runbook operativo semanal: `docs/actualizacion-semanal.md`.
 
 ## Notas de diseño
 - **Sin backend**: todo es estático; los filtros/búsqueda son client-side sobre `data-*`.

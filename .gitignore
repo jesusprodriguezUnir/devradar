@@ -4,6 +4,7 @@ dist/
 .env
 .DS_Store
 npm-debug.log*
+scripts/ops/out/
 
 # La cache de clasificaciones SI se versiona (reproducibilidad y coste cero en estado estacionario).
 # Si prefieres no versionarla, descomenta:

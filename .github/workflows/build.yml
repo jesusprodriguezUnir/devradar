@@ -36,6 +36,11 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: npm run ingest
 
+      - name: Validar taxonomia y dataset
+        run: |
+          npm run validate:taxonomy
+          npm run audit:data
+
       - name: Commit de datos si cambiaron
         run: |
           git config user.name "github-actions[bot]"
@@ -51,8 +56,13 @@ jobs:
         run: npm run build
 
       - name: Deploy a Cloudflare Pages
+        if: ${{ secrets.CLOUDFLARE_API_TOKEN != '' && secrets.CLOUDFLARE_ACCOUNT_ID != '' }}
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: pages deploy dist --project-name=devradar --branch=main --commit-dirty=true
+
+      - name: Saltar despliegue Cloudflare sin credenciales
+        if: ${{ secrets.CLOUDFLARE_API_TOKEN == '' || secrets.CLOUDFLARE_ACCOUNT_ID == '' }}
+        run: echo "Se omite el despliegue a Cloudflare Pages porque faltan secretos de configuración."

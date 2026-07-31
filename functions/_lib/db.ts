@@ -51,8 +51,16 @@ export async function listManualRepos(env: Env): Promise<ManualRepo[]> {
   return results.map(rowToRepo);
 }
 
-export async function listIds(env: Env, table: "removed_ids" | "saved"): Promise<string[]> {
-  const { results } = await env.DB.prepare(`SELECT id FROM ${table}`).all<{ id: string }>();
+export async function listIds(
+  env: Env,
+  table: "removed_ids" | "saved",
+  limit = 5000
+): Promise<string[]> {
+  const query =
+    table === "saved"
+      ? "SELECT id FROM saved ORDER BY saved_at DESC LIMIT ?"
+      : "SELECT id FROM removed_ids ORDER BY removed_at DESC LIMIT ?";
+  const { results } = await env.DB.prepare(query).bind(limit).all<{ id: string }>();
   return results.map((r) => r.id);
 }
 

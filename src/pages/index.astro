@@ -136,6 +136,7 @@ const searchOf = (r: (typeof rows)[number]) =>
           <div>
             <h1 class="dr-title">Mi radar</h1>
             <div class="dr-subtitle">Repos, webs y skills relevantes para .NET, Angular, arquitectura y Claude</div>
+            <p class="dr-alert" data-alert role="status" aria-live="polite" hidden></p>
           </div>
           <div class="dr-tools">
             <div class="dr-search">
@@ -219,7 +220,6 @@ const searchOf = (r: (typeof rows)[number]) =>
                     type="button"
                     data-save={r.id}
                     aria-pressed="false"
-                    onclick="event.preventDefault(); event.stopPropagation();"
                   >+ GUARDAR</button>
                   <button
                     class="dr-del"
@@ -227,7 +227,6 @@ const searchOf = (r: (typeof rows)[number]) =>
                     data-del={r.id}
                     aria-label="Eliminar del radar"
                     title="Eliminar del radar"
-                    onclick="event.preventDefault(); event.stopPropagation();"
                   >✕</button>
                 </a>
               ))}
@@ -484,6 +483,25 @@ const searchOf = (r: (typeof rows)[number]) =>
         const countEl = $("[data-count]");
         const filterLabelEl = $("[data-filter-label]");
         const sortSelect = $("#dr-sort");
+        const alertEl = $("[data-alert]");
+
+        let alertTimer = null;
+        const showAlert = (message, tone = "info") => {
+          if (!alertEl || !message) return;
+          if (alertTimer) clearTimeout(alertTimer);
+          alertEl.textContent = message;
+          alertEl.dataset.tone = tone;
+          alertEl.hidden = false;
+          alertTimer = setTimeout(() => {
+            alertEl.hidden = true;
+          }, 4200);
+        };
+
+        const setButtonBusy = (btn, busy) => {
+          if (!btn) return;
+          btn.disabled = busy;
+          btn.classList.toggle("is-busy", busy);
+        };
 
         let category = "all";   // chip activo
         let scope = "all";      // nav: all | new | saved
@@ -526,6 +544,7 @@ const searchOf = (r: (typeof rows)[number]) =>
         const refreshSavedUI = () => {
           rows.forEach((row) => {
             const btn = $(".dr-save", row);
+            if (!btn) return;
             const isSaved = saved.has(row.dataset.id);
             btn.classList.toggle("is-saved", isSaved);
             btn.setAttribute("aria-pressed", String(isSaved));
@@ -537,33 +556,53 @@ const searchOf = (r: (typeof rows)[number]) =>
         };
 
         // POST/DELETE contra la API (best-effort; localStorage es la fuente optimista).
-        const syncSaved = (id, on) => {
+        const syncSaved = async (id, on) => {
           const opts = { method: on ? "POST" : "DELETE", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ id }) };
-          fetch(`${API}/saved`, opts).catch(() => {});
+          const res = await fetch(`${API}/saved`, opts);
+          if (!res.ok) {
+            const data = await res.json().catch(() => ({}));
+            throw new Error(data.error || `Error ${res.status}`);
+          }
         };
-        const deleteResource = (row) => {
+        const deleteResource = async (row) => {
           const id = row.dataset.id;
           const token = getToken();
-          if (!token) { alert("Configura un token de escritura para eliminar."); return; }
+          if (!token) {
+            showAlert("Configura un token de escritura para eliminar.", "warn");
+            return;
+          }
           if (!confirm("¿Eliminar este recurso del radar?")) return;
-          fetch(`${API}/repos`, {
-            method: "DELETE",
-            headers: { "Content-Type": "application/json", Authorization: `Bearer ${token}` },
-            body: JSON.stringify({ id }),
-          })
-            .then((res) => {
-              if (!res.ok) throw new Error(String(res.status));
-              // Quita la fila y su blip; refresca listas y vista.
-              const b = $(`[data-blip="${CSS.escape(id)}"]`);
-              if (b) b.remove();
-              row.remove();
-              if (saved.has(id)) { saved.delete(id); persist(); syncSaved(id, false); }
-              rows = $$(".js-row");
-              refreshSavedUI();
-              sortRows();
-              apply();
-            })
-            .catch((err) => alert("No se pudo eliminar: " + err.message));
+
+          const delBtn = $(".dr-del", row);
+          setButtonBusy(delBtn, true);
+          try {
+            const res = await fetch(`${API}/repos`, {
+              method: "DELETE",
+              headers: { "Content-Type": "application/json", Authorization: `Bearer ${token}` },
+              body: JSON.stringify({ id }),
+            });
+            const data = await res.json().catch(() => ({}));
+            if (!res.ok) throw new Error(data.error || `Error ${res.status}`);
+
+            // Quita la fila y su blip; refresca listas y vista.
+            const b = $(`[data-blip="${CSS.escape(id)}"]`);
+            if (b) b.remove();
+            row.remove();
+            if (saved.has(id)) {
+              saved.delete(id);
+              persist();
+              syncSaved(id, false).catch(() => {});
+            }
+            rows = $$(".js-row");
+            refreshSavedUI();
+            sortRows();
+            apply();
+            showAlert("Recurso eliminado del radar.", "success");
+          } catch (err) {
+            showAlert("No se pudo eliminar: " + err.message, "error");
+          } finally {
+            setButtonBusy(delBtn, false);
+          }
         };
 
         // Engancha los botones de una fila (idempotente).
@@ -572,20 +611,38 @@ const searchOf = (r: (typeof rows)[number]) =>
           row.dataset.bound = "1";
           const save = $(".dr-save", row);
           if (save) {
-            save.addEventListener("click", (e) => {
+            save.addEventListener("click", async (e) => {
               e.preventDefault();
               e.stopPropagation();
               const id = save.dataset.save;
+              const wasSaved = saved.has(id);
               const on = !saved.has(id);
               if (on) saved.add(id); else saved.delete(id);
               persist();
-              syncSaved(id, on);
               refreshSavedUI();
               apply();
+
+              setButtonBusy(save, true);
+              try {
+                await syncSaved(id, on);
+              } catch (err) {
+                // rollback local si falla la sincronización remota
+                if (wasSaved) saved.add(id); else saved.delete(id);
+                persist();
+                refreshSavedUI();
+                apply();
+                showAlert("No se pudo sincronizar guardados: " + err.message, "error");
+              } finally {
+                setButtonBusy(save, false);
+              }
             });
           }
           const del = $(".dr-del", row);
-          if (del) del.addEventListener("click", (e) => { e.preventDefault(); e.stopPropagation(); deleteResource(row); });
+          if (del) del.addEventListener("click", (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            deleteResource(row);
+          });
         };
 
         // ----- filtrado -----
@@ -697,7 +754,12 @@ const searchOf = (r: (typeof rows)[number]) =>
         if (addForm) addForm.addEventListener("submit", (e) => {
           e.preventDefault();
           const token = getToken();
-          if (!token) { addErr.textContent = "Configura primero un token de escritura (🔑)."; addErr.hidden = false; return; }
+          if (!token) {
+            addErr.textContent = "Configura primero un token de escritura (🔑).";
+            addErr.hidden = false;
+            showAlert("Falta token de escritura.", "warn");
+            return;
+          }
           const url = addUrl.value.trim();
           if (!url) return;
           addSubmit.disabled = true;
@@ -713,8 +775,13 @@ const searchOf = (r: (typeof rows)[number]) =>
               injectRepo(data.repo);
               addUrl.value = "";
               closeModal();
+              showAlert("Fuente añadida al radar.", "success");
             })
-            .catch((err) => { addErr.textContent = err.message; addErr.hidden = false; })
+            .catch((err) => {
+              addErr.textContent = err.message;
+              addErr.hidden = false;
+              showAlert("No se pudo añadir la fuente.", "error");
+            })
             .finally(() => { addSubmit.disabled = false; });
         });
 
@@ -730,7 +797,10 @@ const searchOf = (r: (typeof rows)[number]) =>
         fetch(`${API}/state`)
           .then((res) => (res.ok ? res.json() : null))
           .then((state) => {
-            if (!state) return;
+            if (!state) {
+              showAlert("No se pudo cargar el estado dinámico. Se usa solo catálogo estático.", "warn");
+              return;
+            }
             const removed = new Set(state.removedIds || []);
             rows.forEach((row) => {
               if (removed.has(row.dataset.id)) {
@@ -758,7 +828,9 @@ const searchOf = (r: (typeof rows)[number]) =>
             sortRows();
             apply();
           })
-          .catch(() => {});
+          .catch(() => {
+            showAlert("Error de red al cargar estado dinámico.", "warn");
+          });
       })();
     </script>
   </body>
